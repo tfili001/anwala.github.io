@@ -25,7 +25,7 @@ Place: Dragas Hall, r. 1102
 * Week 1 - January 9 : [Web Science, Web Architecture](https://docs.google.com/presentation/d/1iqEp6SZgZ-P0IOUt80Gs1wpxKlO26glFSJipnHMMItY/edit?usp=sharing)
 * Week 2 - January 16 : [Introduction to Python](https://drive.google.com/file/d/1dRkD-FneQTIdcNaMEKx4PqfGt1VaQk-m/view?usp=sharing)
 * Week 3 - January 23 : [Introduction to R](https://drive.google.com/file/d/1ET4w96hr5qGDx_lq6aM78Nyc9tn4WUuz/view?usp=sharing)
-* Week 4 - January 30 - [Measuring and Archiving the Web](https://raw.githubusercontent.com/phonedude/cs532-s17/master/slides/week-04-measure-archive.ppt)
+* Week 4 - January 30 : [Measuring and Archiving the Web](https://docs.google.com/presentation/d/1WLPlpCS8OtTE_o-rQcoXyeKc-b_US1ZzTFsiwv9sU4A/edit?usp=sharing)
 * Week 5 - February 6 - [Searching the Web](https://raw.githubusercontent.com/phonedude/cs532-s17/master/slides/week-05-searching.ppt)
 * Week 6 - February 13 - No Class
 * Week 7 - February 20 - [Social Networks](https://raw.githubusercontent.com/phonedude/cs532-s17/master/slides/week-07-social-networks.ppt)
@@ -41,3 +41,4 @@ Place: Dragas Hall, r. 1102
 
 ### Assignments (subject to change)
 * [A1 due 2017-01-28](./assignments/a1.txt)
+* [A2 due 2017-02-11](./assignments/a2.txt)
