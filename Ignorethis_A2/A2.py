@@ -1,6 +1,6 @@
 import tweepy
-import credentials
 import json
+import sys
 from tweepy import Stream
 from tweepy import OAuthHandler
 from tweepy.streaming import StreamListener
@@ -9,41 +9,45 @@ consumer_secret = "pYMZVGBSUkwsnD8bw8goF22t1cFKm1AFk2xFWnL4OIGioCRvLW"
 access_token = "913237521202638849-DqK1BQAH6CDHj5EINNPXbgJdmN3YdJS"
 access_token_secret = "kDXDinKcG9MEX5CGLS8Hv0K0oSvAabSVmAVUlPcUjGGQS"
 
-#https://t.co/DyxQbz33eh
-
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
-api = tweepy.API(auth)
+api = tweepy.API(auth, wait_on_rate_limit=True)
+
 public_tweets = api.home_timeline()
-count = 10
-class MyStreamListener(tweepy.StreamListener):
 
+#   TODO
+#Check if links are in twitter domain
+#Check if final URI is unique
+class StreamObj(tweepy.StreamListener):
+    k = 0
+    URIlist = []
     def on_data(self, data):
-        global count
+        print("On Data")
+        limit = 3
         out = json.loads(data)
-        if count <= 0:
-            import sys
-            sys.exit()
-        else:
-            try:
+        try:
+            if StreamObj.k >= limit:
+               return False
+
+            else:
                 for url in out["entities"]["urls"]:
-                    count -= 1
-                    print(count,':', "%s" % url["expanded_url"] + "\r\n\n")
-            except KeyError:
-                print (data.keys())
+                    StreamObj.k += 1
+                    StreamObj.URIlist.append(url["expanded_url"])
+                    
+        except KeyError:
+            print("data keys")
+            print(data.keys())   
 
-
-
-#def on_status(self, status):
-#print(status.text)
-
+def checkURI(StreamObj strObj):
+    for x in strObj.URIlist
+        print(x)
 
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
-
-myStreamListener = MyStreamListener()
-myStream = tweepy.Stream(auth = api.auth, listener=myStreamListener)
+streamObj = StreamObj()
+myStream = tweepy.Stream(auth = api.auth, listener=streamObj)
 
 myStream.filter(track=['python'])
 
+checkURI(streamObj)
 
