@@ -18,11 +18,11 @@ public_tweets = api.home_timeline()
 #   TODO
 #Check if links are in twitter domain
 #Check if final URI is unique
+file = open("input.txt","w")
 class StreamObj(tweepy.StreamListener):
     k = 0
     URIlist = []
     def on_data(self, data):
-        print("On Data")
         limit = 3
         out = json.loads(data)
         try:
@@ -33,13 +33,16 @@ class StreamObj(tweepy.StreamListener):
                 for url in out["entities"]["urls"]:
                     StreamObj.k += 1
                     StreamObj.URIlist.append(url["expanded_url"])
+               #     sys.os.system("clear")
+                    print(StreamObj.k)
                     
         except KeyError:
             print("data keys")
             print(data.keys())   
 
-def checkURI(StreamObj strObj):
-    for x in strObj.URIlist
+def checkURI(strObj = StreamObj()):
+    for x in strObj.URIlist:
+        file.write(x+"\n")
         print(x)
 
 auth = OAuthHandler(consumer_key, consumer_secret)
