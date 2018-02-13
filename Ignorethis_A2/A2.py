@@ -1,4 +1,5 @@
 import tweepy
+import requests
 import json
 import sys
 from tweepy import Stream
@@ -18,12 +19,12 @@ public_tweets = api.home_timeline()
 #   TODO
 #Check if links are in twitter domain
 #Check if final URI is unique
-file = open("input.txt","w")
+file = open("input.txt","r+")
 class StreamObj(tweepy.StreamListener):
     k = 0
     URIlist = []
     def on_data(self, data):
-        limit = 3
+        limit = 2000
         out = json.loads(data)
         try:
             if StreamObj.k >= limit:
@@ -40,17 +41,44 @@ class StreamObj(tweepy.StreamListener):
             print("data keys")
             print(data.keys())   
 
-def checkURI(strObj = StreamObj()):
+
+
+
+def writeURI(strObj = StreamObj()):
     for x in strObj.URIlist:
         file.write(x+"\n")
         print(x)
+        
 
+
+def checkURI():
+    i=0
+    # file = open("input.txt","r")
+    URI_refine = file.readlines()
+    for x in URI_refine:
+        i=i+1
+        site = requests.get(x)
+        #print(i," ",x)
+       # print(site.url)
+        print("_________________________")
+        if "twitter" in site.url:
+            print(i," TWITTER FOUND")
+        else:
+            URI_refine.append(site.url)
+            print(i," site.url=",site.url)
+       
+'''
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 streamObj = StreamObj()
 myStream = tweepy.Stream(auth = api.auth, listener=streamObj)
 
 myStream.filter(track=['python'])
+writeURI(streamObj)
+'''
+#file.close()
 
-checkURI(streamObj)
+checkURI()
+
+
 
