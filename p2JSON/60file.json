@@ -1,0 +1,162 @@
+{
+  "original_uri": "http://www.davekuhlman.org/python_book_01.html%0A",
+  "self": "https://memgator.cs.odu.edu/timemap/json/http://www.davekuhlman.org/python_book_01.html%0A",
+  "mementos": {
+    "list": [
+      {
+        "datetime": "2014-10-11T07:17:39Z",
+        "uri": "http://web.archive.org/web/20141011071739/http://www.davekuhlman.org/python_book_01.html"
+      },
+      {
+        "datetime": "2014-11-08T00:05:04Z",
+        "uri": "http://web.archive.org/web/20141108000504/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2014-12-31T08:47:46Z",
+        "uri": "http://web.archive.org/web/20141231084746/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2015-02-07T01:42:56Z",
+        "uri": "http://web.archive.org/web/20150207014256/http://www.davekuhlman.org/python_book_01.html"
+      },
+      {
+        "datetime": "2015-02-18T22:56:17Z",
+        "uri": "http://web.archive.org/web/20150218225617/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2015-03-21T15:12:46Z",
+        "uri": "http://web.archive.org/web/20150321151246/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2015-04-28T14:32:11Z",
+        "uri": "http://web.archive.org/web/20150428143211/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2015-08-02T13:50:34Z",
+        "uri": "http://web.archive.org/web/20150802135034/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2015-08-14T16:23:32Z",
+        "uri": "http://web.archive.org/web/20150814162332/http://www.davekuhlman.org/python_book_01.html"
+      },
+      {
+        "datetime": "2015-09-02T02:59:22Z",
+        "uri": "http://web.archive.org/web/20150902025922/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2015-09-20T16:12:06Z",
+        "uri": "http://web.archive.org/web/20150920161206/http://www.davekuhlman.org/python_book_01.html"
+      },
+      {
+        "datetime": "2015-10-03T10:59:41Z",
+        "uri": "http://web.archive.org/web/20151003105941/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2015-11-04T07:47:50Z",
+        "uri": "http://web.archive.org/web/20151104074750/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2015-11-26T05:41:15Z",
+        "uri": "http://web.archive.org/web/20151126054115/http://www.davekuhlman.org/python_book_01.html"
+      },
+      {
+        "datetime": "2015-12-09T18:57:24Z",
+        "uri": "http://web.archive.org/web/20151209185724/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2016-01-15T03:30:28Z",
+        "uri": "http://web.archive.org/web/20160115033028/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2016-02-22T14:39:42Z",
+        "uri": "http://web.archive.org/web/20160222143942/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2016-03-24T08:31:42Z",
+        "uri": "http://web.archive.org/web/20160324083142/http://www.davekuhlman.org/python_book_01.html"
+      },
+      {
+        "datetime": "2016-03-25T04:33:25Z",
+        "uri": "http://web.archive.org/web/20160325043325/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2016-04-26T12:00:47Z",
+        "uri": "http://web.archive.org/web/20160426120047/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2016-05-29T15:59:21Z",
+        "uri": "http://web.archive.org/web/20160529155921/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2016-06-30T04:27:01Z",
+        "uri": "http://web.archive.org/web/20160630042701/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2016-08-01T20:28:55Z",
+        "uri": "http://web.archive.org/web/20160801202855/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2016-09-05T19:19:56Z",
+        "uri": "http://web.archive.org/web/20160905191956/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2016-10-07T08:51:15Z",
+        "uri": "http://web.archive.org/web/20161007085115/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2016-11-08T00:14:23Z",
+        "uri": "http://web.archive.org/web/20161108001423/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2016-11-19T08:56:05Z",
+        "uri": "http://web.archive.org/web/20161119085605/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2016-12-02T11:12:43Z",
+        "uri": "http://web.archive.org/web/20161202111243/http://www.davekuhlman.org/python_book_01.html"
+      },
+      {
+        "datetime": "2017-03-04T09:01:46Z",
+        "uri": "http://web.archive.org/web/20170304090146/http://www.davekuhlman.org/python_book_01.html"
+      },
+      {
+        "datetime": "2017-05-12T01:56:17Z",
+        "uri": "http://web.archive.org/web/20170512015617/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2017-06-10T09:28:47Z",
+        "uri": "http://web.archive.org/web/20170610092847/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2017-07-08T01:16:58Z",
+        "uri": "http://web.archive.org/web/20170708011658/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2017-07-11T17:48:11Z",
+        "uri": "http://web.archive.org/web/20170711174811/http://www.davekuhlman.org/python_book_01.html"
+      },
+      {
+        "datetime": "2017-08-08T18:30:43Z",
+        "uri": "http://web.archive.org/web/20170808183043/http://www.davekuhlman.org:80/python_book_01.html"
+      },
+      {
+        "datetime": "2017-09-01T09:42:46Z",
+        "uri": "http://web.archive.org/web/20170901094246/http://www.davekuhlman.org/python_book_01.html"
+      }
+    ],
+    "first": {
+      "datetime": "2014-10-11T07:17:39Z",
+      "uri": "http://web.archive.org/web/20141011071739/http://www.davekuhlman.org/python_book_01.html"
+    },
+    "last": {
+      "datetime": "2017-09-01T09:42:46Z",
+      "uri": "http://web.archive.org/web/20170901094246/http://www.davekuhlman.org/python_book_01.html"
+    }
+  },
+  "timemap_uri": {
+    "link_format": "https://memgator.cs.odu.edu/timemap/link/http://www.davekuhlman.org/python_book_01.html%0A",
+    "json_format": "https://memgator.cs.odu.edu/timemap/json/http://www.davekuhlman.org/python_book_01.html%0A",
+    "cdxj_format": "https://memgator.cs.odu.edu/timemap/cdxj/http://www.davekuhlman.org/python_book_01.html%0A"
+  },
+  "timegate_uri": "https://memgator.cs.odu.edu/timegate/http://www.davekuhlman.org/python_book_01.html%0A"
+}

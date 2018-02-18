@@ -1,0 +1,38 @@
+{
+  "original_uri": "https://hackernoon.com/a-brief-tour-of-python-3-7-data-classes-22ee5e046517%0A",
+  "self": "https://memgator.cs.odu.edu/timemap/json/https://hackernoon.com/a-brief-tour-of-python-3-7-data-classes-22ee5e046517%0A",
+  "mementos": {
+    "list": [
+      {
+        "datetime": "2018-01-25T09:16:36Z",
+        "uri": "http://web.archive.org/web/20180125091636/https://hackernoon.com/a-brief-tour-of-python-3-7-data-classes-22ee5e046517"
+      },
+      {
+        "datetime": "2018-02-01T10:43:58Z",
+        "uri": "http://web.archive.org/web/20180201104358/https://hackernoon.com/a-brief-tour-of-python-3-7-data-classes-22ee5e046517"
+      },
+      {
+        "datetime": "2018-02-03T08:57:09Z",
+        "uri": "http://web.archive.org/web/20180203085709/https://hackernoon.com/a-brief-tour-of-python-3-7-data-classes-22ee5e046517"
+      },
+      {
+        "datetime": "2018-02-12T12:39:38Z",
+        "uri": "http://web.archive.org/web/20180212123938/https://hackernoon.com/a-brief-tour-of-python-3-7-data-classes-22ee5e046517"
+      }
+    ],
+    "first": {
+      "datetime": "2018-01-25T09:16:36Z",
+      "uri": "http://web.archive.org/web/20180125091636/https://hackernoon.com/a-brief-tour-of-python-3-7-data-classes-22ee5e046517"
+    },
+    "last": {
+      "datetime": "2018-02-12T12:39:38Z",
+      "uri": "http://web.archive.org/web/20180212123938/https://hackernoon.com/a-brief-tour-of-python-3-7-data-classes-22ee5e046517"
+    }
+  },
+  "timemap_uri": {
+    "link_format": "https://memgator.cs.odu.edu/timemap/link/https://hackernoon.com/a-brief-tour-of-python-3-7-data-classes-22ee5e046517%0A",
+    "json_format": "https://memgator.cs.odu.edu/timemap/json/https://hackernoon.com/a-brief-tour-of-python-3-7-data-classes-22ee5e046517%0A",
+    "cdxj_format": "https://memgator.cs.odu.edu/timemap/cdxj/https://hackernoon.com/a-brief-tour-of-python-3-7-data-classes-22ee5e046517%0A"
+  },
+  "timegate_uri": "https://memgator.cs.odu.edu/timegate/https://hackernoon.com/a-brief-tour-of-python-3-7-data-classes-22ee5e046517%0A"
+}
