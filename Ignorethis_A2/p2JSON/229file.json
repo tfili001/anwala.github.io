@@ -1,0 +1,70 @@
+{
+  "original_uri": "https://note.nkmk.me/python-pandas-datareader-stock-population/%0A",
+  "self": "https://memgator.cs.odu.edu/timemap/json/https://note.nkmk.me/python-pandas-datareader-stock-population/%0A",
+  "mementos": {
+    "list": [
+      {
+        "datetime": "2018-02-10T19:09:01Z",
+        "uri": "http://web.archive.org/web/20180210190901/https://note.nkmk.me/python-pandas-datareader-stock-population/"
+      },
+      {
+        "datetime": "2018-02-11T01:09:45Z",
+        "uri": "http://web.archive.org/web/20180211010945/https://note.nkmk.me/python-pandas-datareader-stock-population/"
+      },
+      {
+        "datetime": "2018-02-11T02:39:24Z",
+        "uri": "http://web.archive.org/web/20180211023924/https://note.nkmk.me/python-pandas-datareader-stock-population/"
+      },
+      {
+        "datetime": "2018-02-11T03:08:53Z",
+        "uri": "http://web.archive.org/web/20180211030853/https://note.nkmk.me/python-pandas-datareader-stock-population/"
+      },
+      {
+        "datetime": "2018-02-11T04:09:12Z",
+        "uri": "http://web.archive.org/web/20180211040912/https://note.nkmk.me/python-pandas-datareader-stock-population/"
+      },
+      {
+        "datetime": "2018-02-11T04:40:06Z",
+        "uri": "http://web.archive.org/web/20180211044006/https://note.nkmk.me/python-pandas-datareader-stock-population/"
+      },
+      {
+        "datetime": "2018-02-11T05:38:02Z",
+        "uri": "http://web.archive.org/web/20180211053802/https://note.nkmk.me/python-pandas-datareader-stock-population/"
+      },
+      {
+        "datetime": "2018-02-11T06:10:17Z",
+        "uri": "http://web.archive.org/web/20180211061017/https://note.nkmk.me/python-pandas-datareader-stock-population/"
+      },
+      {
+        "datetime": "2018-02-11T07:00:45Z",
+        "uri": "http://web.archive.org/web/20180211070045/https://note.nkmk.me/python-pandas-datareader-stock-population/"
+      },
+      {
+        "datetime": "2018-02-11T09:56:17Z",
+        "uri": "http://web.archive.org/web/20180211095617/https://note.nkmk.me/python-pandas-datareader-stock-population/"
+      },
+      {
+        "datetime": "2018-02-11T10:10:18Z",
+        "uri": "http://web.archive.org/web/20180211101018/https://note.nkmk.me/python-pandas-datareader-stock-population/"
+      },
+      {
+        "datetime": "2018-02-11T11:31:19Z",
+        "uri": "http://web.archive.org/web/20180211113119/https://note.nkmk.me/python-pandas-datareader-stock-population/"
+      }
+    ],
+    "first": {
+      "datetime": "2018-02-10T19:09:01Z",
+      "uri": "http://web.archive.org/web/20180210190901/https://note.nkmk.me/python-pandas-datareader-stock-population/"
+    },
+    "last": {
+      "datetime": "2018-02-11T11:31:19Z",
+      "uri": "http://web.archive.org/web/20180211113119/https://note.nkmk.me/python-pandas-datareader-stock-population/"
+    }
+  },
+  "timemap_uri": {
+    "link_format": "https://memgator.cs.odu.edu/timemap/link/https://note.nkmk.me/python-pandas-datareader-stock-population/%0A",
+    "json_format": "https://memgator.cs.odu.edu/timemap/json/https://note.nkmk.me/python-pandas-datareader-stock-population/%0A",
+    "cdxj_format": "https://memgator.cs.odu.edu/timemap/cdxj/https://note.nkmk.me/python-pandas-datareader-stock-population/%0A"
+  },
+  "timegate_uri": "https://memgator.cs.odu.edu/timegate/https://note.nkmk.me/python-pandas-datareader-stock-population/%0A"
+}

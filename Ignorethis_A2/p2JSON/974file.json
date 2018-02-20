@@ -1,0 +1,42 @@
+{
+  "original_uri": "http://dbader.org/python-tricks%0A",
+  "self": "https://memgator.cs.odu.edu/timemap/json/http://dbader.org/python-tricks%0A",
+  "mementos": {
+    "list": [
+      {
+        "datetime": "2017-07-07T16:06:46Z",
+        "uri": "http://web.archive.org/web/20170707160646/https://dbader.org/python-tricks"
+      },
+      {
+        "datetime": "2017-10-05T11:42:25Z",
+        "uri": "http://web.archive.org/web/20171005114225/https://dbader.org/python-tricks"
+      },
+      {
+        "datetime": "2018-01-20T08:03:02Z",
+        "uri": "http://web.archive.org/web/20180120080302/https://dbader.org/python-tricks"
+      },
+      {
+        "datetime": "2018-01-21T18:47:49Z",
+        "uri": "http://web.archive.org/web/20180121184749/https://dbader.org/python-tricks"
+      },
+      {
+        "datetime": "2018-02-02T21:00:09Z",
+        "uri": "http://web.archive.org/web/20180202210009/http://dbader.org/python-tricks"
+      }
+    ],
+    "first": {
+      "datetime": "2017-07-07T16:06:46Z",
+      "uri": "http://web.archive.org/web/20170707160646/https://dbader.org/python-tricks"
+    },
+    "last": {
+      "datetime": "2018-02-02T21:00:09Z",
+      "uri": "http://web.archive.org/web/20180202210009/http://dbader.org/python-tricks"
+    }
+  },
+  "timemap_uri": {
+    "link_format": "https://memgator.cs.odu.edu/timemap/link/http://dbader.org/python-tricks%0A",
+    "json_format": "https://memgator.cs.odu.edu/timemap/json/http://dbader.org/python-tricks%0A",
+    "cdxj_format": "https://memgator.cs.odu.edu/timemap/cdxj/http://dbader.org/python-tricks%0A"
+  },
+  "timegate_uri": "https://memgator.cs.odu.edu/timegate/http://dbader.org/python-tricks%0A"
+}

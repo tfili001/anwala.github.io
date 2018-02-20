@@ -1,0 +1,26 @@
+{
+  "original_uri": "http://bestlifeonline.com/30-monty-python-one-liners-that-are-relevant-today/%0A",
+  "self": "https://memgator.cs.odu.edu/timemap/json/http://bestlifeonline.com/30-monty-python-one-liners-that-are-relevant-today/%0A",
+  "mementos": {
+    "list": [
+      {
+        "datetime": "2018-02-13T04:24:49Z",
+        "uri": "http://web.archive.org/web/20180213042449/http://bestlifeonline.com/30-monty-python-one-liners-that-are-relevant-today/"
+      }
+    ],
+    "first": {
+      "datetime": "2018-02-13T04:24:49Z",
+      "uri": "http://web.archive.org/web/20180213042449/http://bestlifeonline.com/30-monty-python-one-liners-that-are-relevant-today/"
+    },
+    "last": {
+      "datetime": "2018-02-13T04:24:49Z",
+      "uri": "http://web.archive.org/web/20180213042449/http://bestlifeonline.com/30-monty-python-one-liners-that-are-relevant-today/"
+    }
+  },
+  "timemap_uri": {
+    "link_format": "https://memgator.cs.odu.edu/timemap/link/http://bestlifeonline.com/30-monty-python-one-liners-that-are-relevant-today/%0A",
+    "json_format": "https://memgator.cs.odu.edu/timemap/json/http://bestlifeonline.com/30-monty-python-one-liners-that-are-relevant-today/%0A",
+    "cdxj_format": "https://memgator.cs.odu.edu/timemap/cdxj/http://bestlifeonline.com/30-monty-python-one-liners-that-are-relevant-today/%0A"
+  },
+  "timegate_uri": "https://memgator.cs.odu.edu/timegate/http://bestlifeonline.com/30-monty-python-one-liners-that-are-relevant-today/%0A"
+}

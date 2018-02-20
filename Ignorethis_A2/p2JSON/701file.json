@@ -1,0 +1,142 @@
+{
+  "original_uri": "https://www.python.org/dev/peps/pep-0557/%0A",
+  "self": "https://memgator.cs.odu.edu/timemap/json/https://www.python.org/dev/peps/pep-0557/%0A",
+  "mementos": {
+    "list": [
+      {
+        "datetime": "2017-12-04T22:06:48Z",
+        "uri": "http://web.archive.org/web/20171204220648/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-05T15:16:41Z",
+        "uri": "http://web.archive.org/web/20171205151641/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-05T15:32:10Z",
+        "uri": "http://web.archive.org/web/20171205153210/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-06T17:31:28Z",
+        "uri": "http://web.archive.org/web/20171206173128/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-06T17:46:42Z",
+        "uri": "http://web.archive.org/web/20171206174642/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-07T02:31:07Z",
+        "uri": "http://web.archive.org/web/20171207023107/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-07T02:46:19Z",
+        "uri": "http://web.archive.org/web/20171207024619/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-07T03:01:31Z",
+        "uri": "http://web.archive.org/web/20171207030131/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-07T19:46:33Z",
+        "uri": "http://web.archive.org/web/20171207194633/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-08T17:48:55Z",
+        "uri": "http://web.archive.org/web/20171208174855/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-08T22:36:30Z",
+        "uri": "http://web.archive.org/web/20171208223630/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-15T05:01:37Z",
+        "uri": "http://web.archive.org/web/20171215050137/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-15T05:16:22Z",
+        "uri": "http://web.archive.org/web/20171215051622/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-15T05:31:39Z",
+        "uri": "http://web.archive.org/web/20171215053139/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-15T05:46:34Z",
+        "uri": "http://web.archive.org/web/20171215054634/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-15T06:01:49Z",
+        "uri": "http://web.archive.org/web/20171215060149/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-15T06:16:53Z",
+        "uri": "http://web.archive.org/web/20171215061653/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-15T06:33:11Z",
+        "uri": "http://web.archive.org/web/20171215063311/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-15T07:02:11Z",
+        "uri": "http://web.archive.org/web/20171215070211/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-24T02:58:42Z",
+        "uri": "http://web.archive.org/web/20171224025842/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-24T10:14:13Z",
+        "uri": "http://web.archive.org/web/20171224101413/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-24T10:26:46Z",
+        "uri": "http://web.archive.org/web/20171224102646/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-24T10:37:05Z",
+        "uri": "http://web.archive.org/web/20171224103705/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-24T10:58:06Z",
+        "uri": "http://web.archive.org/web/20171224105806/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-24T11:14:27Z",
+        "uri": "http://web.archive.org/web/20171224111427/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2017-12-28T21:09:37Z",
+        "uri": "http://web.archive.org/web/20171228210937/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2018-02-02T01:06:08Z",
+        "uri": "http://web.archive.org/web/20180202010608/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2018-02-02T11:35:59Z",
+        "uri": "http://web.archive.org/web/20180202113559/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2018-02-06T18:15:34Z",
+        "uri": "http://web.archive.org/web/20180206181534/https://www.python.org/dev/peps/pep-0557/"
+      },
+      {
+        "datetime": "2018-02-12T12:39:39Z",
+        "uri": "http://web.archive.org/web/20180212123939/https://www.python.org/dev/peps/pep-0557/"
+      }
+    ],
+    "first": {
+      "datetime": "2017-12-04T22:06:48Z",
+      "uri": "http://web.archive.org/web/20171204220648/https://www.python.org/dev/peps/pep-0557/"
+    },
+    "last": {
+      "datetime": "2018-02-12T12:39:39Z",
+      "uri": "http://web.archive.org/web/20180212123939/https://www.python.org/dev/peps/pep-0557/"
+    }
+  },
+  "timemap_uri": {
+    "link_format": "https://memgator.cs.odu.edu/timemap/link/https://www.python.org/dev/peps/pep-0557/%0A",
+    "json_format": "https://memgator.cs.odu.edu/timemap/json/https://www.python.org/dev/peps/pep-0557/%0A",
+    "cdxj_format": "https://memgator.cs.odu.edu/timemap/cdxj/https://www.python.org/dev/peps/pep-0557/%0A"
+  },
+  "timegate_uri": "https://memgator.cs.odu.edu/timegate/https://www.python.org/dev/peps/pep-0557/%0A"
+}

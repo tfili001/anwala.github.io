@@ -1,0 +1,26 @@
+{
+  "original_uri": "https://goo.gl/UnpHgs%0A",
+  "self": "https://memgator.cs.odu.edu/timemap/json/https://goo.gl/UnpHgs%0A",
+  "mementos": {
+    "list": [
+      {
+        "datetime": "2018-01-18T19:35:34Z",
+        "uri": "http://web.archive.org/web/20180118193534/https://goo.gl/UnpHgs"
+      }
+    ],
+    "first": {
+      "datetime": "2018-01-18T19:35:34Z",
+      "uri": "http://web.archive.org/web/20180118193534/https://goo.gl/UnpHgs"
+    },
+    "last": {
+      "datetime": "2018-01-18T19:35:34Z",
+      "uri": "http://web.archive.org/web/20180118193534/https://goo.gl/UnpHgs"
+    }
+  },
+  "timemap_uri": {
+    "link_format": "https://memgator.cs.odu.edu/timemap/link/https://goo.gl/UnpHgs%0A",
+    "json_format": "https://memgator.cs.odu.edu/timemap/json/https://goo.gl/UnpHgs%0A",
+    "cdxj_format": "https://memgator.cs.odu.edu/timemap/cdxj/https://goo.gl/UnpHgs%0A"
+  },
+  "timegate_uri": "https://memgator.cs.odu.edu/timegate/https://goo.gl/UnpHgs%0A"
+}
