@@ -1,0 +1,31 @@
+{
+  "self": "",
+  "uri": "http://%7BURI-R%7D",
+  "estimated-creation-date": "2013-01-16T08:43:26",
+  "earliest-sources": [
+    "twitter.com"
+  ],
+  "sources": {
+    "bitly.com": {
+      "earliest": ""
+    },
+    "pubdate": {
+      "earliest": ""
+    },
+    "backlinks": {
+      "earliest": ""
+    },
+    "bing.com": {
+      "earliest": ""
+    },
+    "twitter.com": {
+      "earliest": "2013-01-16T08:43:26"
+    },
+    "google.com": {
+      "earliest": ""
+    },
+    "last-modified": {
+      "earliest": ""
+    }
+  }
+}
