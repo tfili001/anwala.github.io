@@ -1,0 +1,5 @@
+#!/bin/bash
+
+
+
+curl --data "fname Posted:=Tim&lname Posted:=Filippone"  http://www.cs.odu.edu/~anwala/files/temp/namesEcho.php
