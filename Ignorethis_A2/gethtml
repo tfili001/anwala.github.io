@@ -1,7 +1,0 @@
-#!/bin/bash
-input="output.txt"
-while IFS= read -r var
-do
-  $fname = echo -n $ var | md5sum
-  lynx -source $var > /html/$fname
-done < "$input"
