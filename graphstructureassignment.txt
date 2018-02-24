@@ -1,6 +1,0 @@
-In:M I
-SCC:A B C G
-Out:D H
-Tendrils:E F K L
-Tubes:N J
-Disconnected:
