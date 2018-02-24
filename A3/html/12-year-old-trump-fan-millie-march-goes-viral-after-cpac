@@ -1,0 +1,1284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html lang="en" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="dc.source" content="Fox News Insider" />
+<meta name="dc.publisher" content="Fox News Insider" />
+<meta name="dc.format" scheme="dcterms.IMT" content="text/html" />
+<meta name="dc.title" content="&#039;If the Country Needs Me, I&#039;ll Run&#039;: &#039;F&amp;F&#039; Checks in With Young Trump Fan Who Went Viral" />
+<meta name="dc.date" content="2017-07-31T19:43:56Z" />
+<meta name="dc.description" content="&quot;Fox &amp;amp; Friends&quot; caught up this morning with 12-year-old Millie March, who went viral this year for her spirited support of President Trump at CPAC." />
+<meta name="dcterms.abstract" content="&quot;Fox &amp;amp; Friends&quot; caught up this morning with 12-year-old Millie March, who went viral this year for her spirited support of President Trump at CPAC." />
+<meta name="description" content="&quot;Fox &amp;amp; Friends&quot; caught up this morning with 12-year-old Millie March, who went viral this year for her spirited support of President Trump at CPAC." />
+<meta name="keywords" content="Donald Trump,CPAC,Fox News,Fox News Channel,Fox News Insider" />
+<meta name="dc.subject" content="Donald Trump,CPAC,Fox News,Fox News Channel,Fox News Insider" />
+
+<meta property="og:site_name" content="Fox News Insider" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://insider.foxnews.com/2017/07/31/12-year-old-trump-fan-millie-march-goes-viral-after-cpac" />
+<meta property="og:title" content="&#039;If the Country Needs Me, I&#039;ll Run&#039;: &#039;F&amp;F&#039; Checks in With Young Trump Fan Who Went Viral" />
+<meta property="og:description" content="&quot;Fox &amp;amp; Friends&quot; caught up this morning with 12-year-old Millie March, who went viral this year for her spirited support of President Trump at CPAC." />
+<meta property="og:image" content="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780/public/millie.jpg?itok=KHisby7h" />
+
+<meta property="article:published_time" content="2017-07-31T12:26:05Z" />
+<meta property="article:modified_time" content="2017-07-31T19:43:56Z" />
+<meta name="dcterms.created" scheme="dcterms.ISO8601" content="2017-07-31T12:26:05Z" /> 
+<meta name="dcterms.modified" scheme="dcterms.ISO8601" content="2017-07-31T19:43:56Z" />
+
+<meta name="prism.channel" content="fnc" />
+<meta name="prism.section" content="insider" />
+<meta name="prism.subsection1" content="" />
+<meta name="prism.subsection2" content="" />
+<meta name="prism.subsection3" content="" />
+<meta name="prism.subsection4" content="" />
+
+<script type="application/ld+json">
+{"@context":"http:\/\/schema.org","@type":"NewsArticle","headline":"&#039;If the Country Needs Me, I&#039;ll Run&#039;: &#039;F&amp;F&#039; Checks in With Young Trump Fan Who Went Viral","url":"http:\/\/insider.foxnews.com\/2017\/07\/31\/12-year-old-trump-fan-millie-march-goes-viral-after-cpac","image":{"@type":"ImageObject","url":"http:\/\/insider.foxnews.com\/sites\/insider.foxnews.com\/files\/styles\/780\/public\/millie.jpg?itok=KHisby7h","width":780,"height":439},"publisher":{"@type":"Organization","name":"Fox News Insider","logo":{"@type":"ImageObject","url":"http:\/\/insider.foxnews.com\/sites\/insider.foxnews.com\/themes\/insider_boot\/img\/Fox-News-Insider-Amp-Logo.png","width":600,"height":60}},"mainEntityOfPage":"http:\/\/insider.foxnews.com\/2017\/07\/31\/12-year-old-trump-fan-millie-march-goes-viral-after-cpac","thumbnailUrl":"http:\/\/insider.foxnews.com\/sites\/insider.foxnews.com\/files\/styles\/780\/public\/millie.jpg?itok=KHisby7h","dateCreated":"2017-07-31T12:26:05Z","datePublished":"2017-07-31T12:26:05Z","dateModified":"2017-07-31T19:43:56Z","articleSection":"articles","creator":"Fox News Insider","keywords":["Donald Trump","CPAC","Fox News","Fox News Channel","Fox News Insider"],"author":{"@type":"Organization","name":"Fox News Insider","url":"http:\/\/insider.foxnews.com\/mission"},"video":{"@type":"VideoObject","thumbnailUrl":"http:\/\/insider.foxnews.com\/sites\/insider.foxnews.com\/files\/styles\/780\/public\/millie.jpg?itok=KHisby7h","uploadDate":"2017-07-31T12:26:05Z","embedUrl":"http:\/\/video.insider.foxnews.com\/v\/video-embed.html?video_id=5526973578001&autoplay=true&share_url=http%3A%2F%2Finsider.foxnews.com%2F2017%2F07%2F31%2F12-year-old-trump-fan-millie-march-goes-viral-after-cpac&share_title=&#039;If the Country Needs Me, I&#039;ll Run&#039;: &#039;F&amp;F&#039; Checks in With Young Trump Fan Who Went Viral&share=true","name":"&#039;If the Country Needs Me, I&#039;ll Run&#039;: &#039;F&amp;F&#039; Checks in With Young Trump Fan Who Went Viral","description":"&quot;Fox &amp;amp; Friends&quot; caught up this morning with 12-year-old Millie March, who went viral this year for her spirited support of President Trump at CPAC."}}</script>
+
+<meta name="prism.aggregationType" content="blog" />
+<meta name="dc.type" scheme="dcterms.DCMIType" content="Text.Article" />
+<meta name="prism.genre" content="" />
+
+<meta property="fb:app_id" content="349898035111803"/>
+<meta property="fb:pages" content="149658925128808" />
+
+<!-- Google Authorship and Publisher Markup -->
+<link rel="author" href="https://plus.google.com/+FoxnewsinsiderPlus/posts"/>
+<link rel="publisher" href="https://plus.google.com/+FoxnewsinsiderPlus"/>
+<!-- Bing Verification -->
+<!-- <meta name="msvalidate.01" content="38385524B123983AC856A0704AFA749E" /> --><meta name="msvalidate.01" content="8BB0E8331D9B26C16C12B4BB1ED99302" />
+<!-- twitter card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@foxnewsinsider">
+<meta name="twitter:creator" content="@foxnewsinsider">
+<meta name="google-site-verification" content="EYeIKKciyrqySY-yLHUcPP38bOtbfLXIX3zkmCgBmb4" /><!-- new site -->
+<meta name="y_key" content="9ba66ba07c6abaa2" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="amphtml" href="http://insider.foxnews.com/amp/article/57167" />
+<link rel="shortcut icon" href="http://insider.foxnews.com/sites/insider.foxnews.com/themes/insider_boot/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="http://insider.foxnews.com/2017/07/31/12-year-old-trump-fan-millie-march-goes-viral-after-cpac" />
+
+  <title>&#039;If the Country Needs Me, I&#039;ll Run&#039;: &#039;F&amp;F&#039; Checks in With Young Trump Fan Who Went Viral | Fox News Insider</title>
+  <link type="text/css" rel="stylesheet" href="http://insider.foxnews.com/sites/insider.foxnews.com/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://insider.foxnews.com/sites/insider.foxnews.com/files/css/css_u9Cn6xFPfn6NvRqMGUV6k10stVTR4AGT7eontS75hX4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://insider.foxnews.com/sites/insider.foxnews.com/files/css/css_MnXiytJtb186Ydycnpwpw34cuUsHaKc80ey5LiQXhSY.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://insider.foxnews.com/sites/insider.foxnews.com/files/css/css_gT5v6zlN_oBy9VNTGUjEMEWXB3XGLlFANEMFt-dosz8.css" media="all" />
+
+  <link rel="apple-touch-icon" sizes="120x120" href="http://insider.foxnews.com/sites/insider.foxnews.com/themes/insider_boot/img/touch-icon-iphone-retina.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="http://insider.foxnews.com/sites/insider.foxnews.com/themes/insider_boot/img/touch-icon-ipad-retina.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://insider.foxnews.com/sites/insider.foxnews.com/themes/insider_boot/img/apple-touch-icon.png">
+
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://insider.foxnews.com/sites/insider.foxnews.com/themes/insider_boot/js/html5shiv.js"></script>
+    <script type="text/javascript" src="http://insider.foxnews.com/sites/insider.foxnews.com/themes/insider_boot/js/respond.min.js"></script>
+  <![endif]-->
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic,900|Roboto+Condensed:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+
+  <script src="http://insider.foxnews.com/sites/insider.foxnews.com/files/js/js_sIEhOevNKIUkIYpk8eSqKctpRyhxbZQ5sCnz_oCyBYQ.js"></script>
+<script src="http://insider.foxnews.com/sites/insider.foxnews.com/files/js/js_KK1BElqvvdshFsYca-cRkDWmribtGZTUpMc5GnvM-d8.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"insider_boot","theme_token":"6ZpRahcQmKLVRDvn9wMmkDNL53IdZnoEmiMmih9M7E0","js":{"sites\/all\/themes\/bootstrap\/js\/bootstrap.js":1,"sites\/insider.foxnews.com\/themes\/insider_boot\/js\/jquery-1.7.1.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/insider.foxnews.com\/themes\/insider_boot\/js\/bootstrap.min.js":1,"sites\/insider.foxnews.com\/themes\/insider_boot\/js\/plugins.js":1,"sites\/insider.foxnews.com\/themes\/insider_boot\/js\/scripts.js":1},"css":{"modules\/system\/system.base.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/insider.foxnews.com\/themes\/insider_boot\/css\/bootstrap.min.css":1,"sites\/insider.foxnews.com\/themes\/insider_boot\/css\/style.css":1}},"fbnode":{"link":"http:\/\/insider.foxnews.com\/2017\/07\/31\/12-year-old-trump-fan-millie-march-goes-viral-after-cpac","picture":"http:\/\/insider.foxnews.com\/sites\/insider.foxnews.com\/files\/millie.jpg","desc":"\u0026quot;Fox \u0026amp;amp; Friends\u0026quot; caught up this morning with 12-year-old Millie March, who went viral this year for her spirited support of President Trump at CPAC.\n","name":"\u0027If the Country Needs Me, I\u0027ll Run\u0027: \u0027F\u0026F\u0027 Checks in With Young Trump Fan Who Went Viral"},"bootstrap":{"anchorsFix":1,"anchorsSmoothScrolling":1,"popoverEnabled":0,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":0,"tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});</script>
+
+  
+            <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-16613902-1', 'auto');
+      ga('require', 'linkid', 'linkid.js');
+      ga('send', 'pageview');
+      var trackOutboundLink = function(url) {
+      ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+      function () {
+      document.location = url;
+      }
+      });
+      }
+      </script>
+      	
+			
+            <script type="text/javascript" src="//global.fncstatic.com/static/isa/core.js"></script>
+
+</head>
+
+<!--[if lt IE 9]>   <body class="ie8 html not-front not-logged-in no-sidebars page-node page-node- page-node-57167 node-type-article" "><![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!--><body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-57167 node-type-article" ><!--<![endif]-->
+
+    <script>dataLayer = [{'pageTitle': "&#039;if the country needs me, i&#039;ll run&#039;: &#039;f&amp;f&#039; checks in with young trump fan who went viral"}];</script>
+    
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PRKFKB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PRKFKB');</script>
+ 
+  <!--[if lte IE 9]>   
+  <div class="modal fade ie8" id="browserModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="gtm-signup-close" aria-hidden="true">&times;</span></button>
+          <h2 class="modal-title">Your Browser is Unsupported</h2>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12">
+                <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a class="alert-link" href="http://browsehappy.com/">click here</a> to update your browser.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <![endif]-->
+    
+  <div class="fox-network-header">
+    <nav id="network">
+      <div class="container">
+        <ul>
+          <li class="fn"><a href="//foxnews.com"><span><span>Fox News</span></span></a></li>
+          <li class="fb"><a href="//foxbusiness.com"><span><span>Fox Business</span></span></a></li>
+          <li class="fn-go"><a href="//watch.foxnews.com"><span><span>Fox News Go</span></span></a></li>
+          <li class="fnr"><a href="//radio.foxnews.com"><span><span>Fox News Radio</span></span></a></li>
+          <li class="nat"><a href="//nation.foxnews.com"><span><span>Fox Nation</span></span></a></li>
+          <li class="fni"><a href="//foxnewsinsider.com/"><span><span>Fox News Insider</span></span></a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div id="site-wrapper">
+
+    
+    <header id="navbar-main" role="navigation" class="navbar navbar-static">
+  <ul class="navlinks container">
+    <div id="search-bkgd"></div>
+    <div class="toggle-nav btn-group"><button type="button" class="icon-button menu-btn btn"><span class="icon-bar icon1"></span><span class="icon-bar icon2"></span><span class="icon-bar icon3"></span><span class="icon-bar icon4"></span></button></div>
+    <li class="logo"><a class="fnc-logo" href="http://insider.foxnews.com"><span class="logo"></span></a></li><li class="section has-stories"><a class="nav-block-title" href="/latest">Latest</a><span class="icon caret-icon"></span><div class="nav-dropdown"><ul class="navblocks-stories container">      <li class="nav-column">		<div class="photo">
+		<a href="/2018/02/19/fbi-made-tragic-mistake-florida-school-shooting-tip-former-agent-says"><img typeof="foaf:Image" class="img-responsive lazy-load" data-loaded="false" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780/public/021918_fbi.jpg?itok=QEv-o8ly" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" width="780" height="439" alt="A former FBI special agent said the bureau made a &quot;tragic mistake&quot; when it mishandled a tip about Nikolas Cruz, who killed 17 when he opened fire at a Florida high school on Valentine&#039;s Day." title="A former FBI special agent said the bureau made a &quot;tragic mistake&quot; when it mishandled a tip about Nikolas Cruz, who killed 17 when he opened fire at a Florida high school on Valentine&#039;s Day." /></a>			</div> 
+		<div class="headline">
+		<h2>
+							<a href="http://insider.foxnews.com/2018/02/19/fbi-made-tragic-mistake-florida-school-shooting-tip-former-agent-says">Former Special Agent: FBI's Failure to Act on Tip About Florida Shooter Is 'Tragic,' 'Unconscionable'</a>					</h2>
+	</div>
+
+
+</li>
+  <li class="nav-column">		<div class="photo">
+		<a href="/2018/02/19/mike-pence-responds-joy-behar-faith-mental-illness-comment-view"><img typeof="foaf:Image" class="img-responsive lazy-load" data-loaded="false" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780/public/021918_pence2.jpg?itok=PKwM89HY" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" width="780" height="439" alt="Pence: Behar&#039;s Comments About Faith Show How Out of Touch Some in the Mainstream Media Are" title="Pence: Behar&#039;s Comments About Faith Show How Out of Touch Some in the Mainstream Media Are" /></a>			</div> 
+		<div class="headline">
+		<h2>
+							<a href="http://insider.foxnews.com/2018/02/19/mike-pence-responds-joy-behar-faith-mental-illness-comment-view">Pence: Behar's Comments About Faith Show How Out of Touch Some in the Media Are</a>					</h2>
+	</div>
+
+
+</li>
+  <li class="nav-column">		<div class="photo">
+		<a href="/2018/02/19/business-owner-threatened-harassed-over-pro-police-flag-elders-antiques-st-louis"><img typeof="foaf:Image" class="img-responsive lazy-load" data-loaded="false" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780/public/021918_flag.jpg?itok=7Epcwcx3" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" width="780" height="439" alt="A Missouri business owner who faces threats and harassment for putting up a pro-law enforcement flag joined Steve Doocy on &quot;Fox &amp; Friends&quot; Monday morning to share her story." title="A Missouri business owner who faces threats and harassment for putting up a pro-law enforcement flag joined Steve Doocy on &quot;Fox &amp; Friends&quot; Monday morning to share her story." /></a>					<span>
+		
+	<a href="/outrageous" class="spiff-roll"><span data-title="Outrageous">Outrageous</span></a> </span>
+			</div> 
+		<div class="headline">
+		<h2>
+							<a href="http://insider.foxnews.com/2018/02/19/business-owner-threatened-harassed-over-pro-police-flag-elders-antiques-st-louis">'Pig Supporters Not Welcome': MO Business Faces Backlash Over Pro-Police Flag</a>					</h2>
+	</div>
+
+
+</li>
+  <li class="nav-column">		<div class="photo">
+		<a href="/2018/02/19/jonathan-turley-russia-indictment-trump-collusion-investigation-what-happens-next"><img typeof="foaf:Image" class="img-responsive lazy-load" data-loaded="false" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780/public/021918_mueller2.jpg?itok=Jd0wdRP1" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" width="780" height="439" alt="Law professor Jonathan Turley said Friday&#039;s indictment of 13 Russians and three Russian companies for alleged election meddling does not necessarily vindicate President Donald Trump, but it does support his claim that there was no collusion between his ca" title="Law professor Jonathan Turley said Friday&#039;s indictment of 13 Russians and three Russian companies for alleged election meddling does not necessarily vindicate President Donald Trump, but it does support his claim that there was no collusion between his ca" /></a>			</div> 
+		<div class="headline">
+		<h2>
+							<a href="http://insider.foxnews.com/2018/02/19/jonathan-turley-russia-indictment-trump-collusion-investigation-what-happens-next">Turley: People Engaging in 'Willful Blindness' to Ignore How Indictment Supports Trump's Collusion Denial</a>					</h2>
+	</div>
+
+
+</li>
+  <li class="nav-column">		<div class="photo">
+		<a href="/2018/02/19/john-podesta-pressed-how-russians-knew-focus-purple-states-clinton-campaign-didnt"><img typeof="foaf:Image" class="img-responsive lazy-load" data-loaded="false" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780/public/021817_podesta.jpg?itok=84ywoFuk" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" width="780" height="439" alt="How is it that Russian operatives meddling in the 2016 election knew to target purple states, but the Hillary Clinton campaign did not?" title="How is it that Russian operatives meddling in the 2016 election knew to target purple states, but the Hillary Clinton campaign did not?" /></a>			</div> 
+		<div class="headline">
+		<h2>
+							<a href="http://insider.foxnews.com/2018/02/19/john-podesta-pressed-how-russians-knew-focus-purple-states-clinton-campaign-didnt">Podesta Pressed on How Russians Knew to Focus on Purple States, But Clinton Campaign Didn't</a>					</h2>
+	</div>
+
+
+</li>
+</ul></div></li>
+<li class="section has-stories"><a class="nav-block-title" href="/trending">Trending</a><span class="icon caret-icon"></span><div class="nav-dropdown"><ul class="navblocks-stories container"><div class="fox-outbrain-nav-menu-block" data-fbk="foxInsiderTrending" data-src="http://insider.foxnews.com/" data-ob-template="FoxNewsInsider"></div></ul></div></li>
+<li class="section">
+		<a class="" href="http://insider.foxnews.com/tag/judge-jeanine-opening-statement">Judge Jeanine's Take </a>
+	</li><li class="section has-stories"><a class="nav-block-title" href="http://insider.foxnews.com/tomi-lahren-final-thoughts">Tomi Lahren's Final Thoughts</a><span class="icon caret-icon"></span><div class="nav-dropdown"><ul class="navblocks-stories container"><li class="nav-column">
+<div class="photo"><a class="link" href="http://insider.foxnews.com/2018/02/16/tomi-lahrens-final-thoughts-florida-school-shooting-calls-gun-control"><img class="img-responsive lazy-load" data-loaded="false" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780/public/tomiguns.jpg?itok=7Sz7gG_q"></a>
+</div>
+<div class="headline">
+	<h2><a href="http://insider.foxnews.com/2018/02/16/tomi-lahrens-final-thoughts-florida-school-shooting-calls-gun-control">Tomi Lahren's Final Thoughts on the Florida School Shooting</a></h2>
+</div>
+</li><li class="nav-column">
+<div class="photo"><a class="link" href="http://insider.foxnews.com/2018/02/14/tomi-lahrens-final-thoughts-fallen-police-officers-war-cops"><img class="img-responsive lazy-load" data-loaded="false" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780/public/officers.jpg?itok=VdBRrUgA"></a>
+</div>
+<div class="headline">
+	<h2><a href="http://insider.foxnews.com/2018/02/14/tomi-lahrens-final-thoughts-fallen-police-officers-war-cops">Tomi Lahren Pays Tribute to Fallen Police Officers: 'A Hero Remembered Never Dies'</a></h2>
+</div>
+</li><li class="nav-column">
+<div class="photo"><a class="link" href="http://insider.foxnews.com/2018/02/12/tomi-lahrens-final-thoughts-cnn-kim-jong-uns-sister-story-compared-ivanka-trump"><img class="img-responsive lazy-load" data-loaded="false" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780/public/TomiStillShot212.jpg?itok=uFmMNUhH"></a>
+</div>
+<div class="headline">
+	<h2><a href="http://insider.foxnews.com/2018/02/12/tomi-lahrens-final-thoughts-cnn-kim-jong-uns-sister-story-compared-ivanka-trump">Tomi Lahren Rips Media for 'Romanticizing' 'Little Miss Rocket-Woman' Kim Yo Jong</a></h2>
+</div>
+</li><li class="nav-column">
+<div class="photo"><a class="link" href="http://insider.foxnews.com/2018/01/31/tomi-lahrens-final-thoughts-state-union-american-people-saw-dems-sitting-sotu-and-will"><img class="img-responsive lazy-load" data-loaded="false" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780/public/Tomi131FTStill.jpg?itok=-CHLIDgD"></a>
+</div>
+<div class="headline">
+	<h2><a href="http://insider.foxnews.com/2018/01/31/tomi-lahrens-final-thoughts-state-union-american-people-saw-dems-sitting-sotu-and-will">Tomi Lahren: The American People 'Will Not Forget' Dems Sitting for SOTU</a></h2>
+</div>
+</li><li class="nav-column">
+<div class="photo"><a class="link" href="http://insider.foxnews.com/2018/01/29/tomi-lahren-final-thoughts-grammy-awards-elitist-anti-trump-celebrities"><img class="img-responsive lazy-load" data-loaded="false" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780/public/TomiStillShot013018.jpg?itok=uecDxLiU"></a>
+</div>
+<div class="headline">
+	<h2><a href="http://insider.foxnews.com/2018/01/29/tomi-lahren-final-thoughts-grammy-awards-elitist-anti-trump-celebrities">Tomi Lahren: Grammys Turned Into Celebration of Elites' Trump Derangement Syndrome</a></h2>
+</div>
+</li></ul></div></li>
+<li class="section has-stories"><a class="nav-block-title" href="http://insider.foxnews.com/5-things">5 Things You Didn't Know</a><span class="icon caret-icon"></span><div class="nav-dropdown"><ul class="navblocks-stories container"><li class="nav-column">
+<div class="photo"><a class="link" href="http://insider.foxnews.com/2017/12/27/5-things-you-didnt-know-about-tomi-lahren"><img class="img-responsive lazy-load" data-loaded="false" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780/public/Tomi-Lahren-Insider.png?itok=frtnf32Z"></a>
+</div>
+<div class="headline">
+	<h2><a href="http://insider.foxnews.com/2017/12/27/5-things-you-didnt-know-about-tomi-lahren">5 Things You Didn't Know About Tomi Lahren </a></h2>
+</div>
+</li><li class="nav-column">
+<div class="photo"><a class="link" href="http://insider.foxnews.com/2017/11/09/5-things-you-didnt-know-about-harris-faulkner"><img class="img-responsive lazy-load" data-loaded="false" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780/public/harris_closeup.jpg?itok=IMhqOCLZ"></a>
+</div>
+<div class="headline">
+	<h2><a href="http://insider.foxnews.com/2017/11/09/5-things-you-didnt-know-about-harris-faulkner">5 Things You Didn't Know About Harris Faulkner</a></h2>
+</div>
+</li><li class="nav-column">
+<div class="photo"><a class="link" href="http://insider.foxnews.com/2017/10/24/sandra-smith-what-you-didnt-know-fun-facts-photos"><img class="img-responsive lazy-load" data-loaded="false" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780/public/sandra-smith-insider-bug.jpg?itok=ovp7jCy-"></a>
+</div>
+<div class="headline">
+	<h2><a href="http://insider.foxnews.com/2017/10/24/sandra-smith-what-you-didnt-know-fun-facts-photos">5 Things You Didn't Know About Sandra Smith</a></h2>
+</div>
+</li><li class="nav-column">
+<div class="photo"><a class="link" href="http://insider.foxnews.com/2017/10/12/judge-jeanine-pirro-fun-facts-things-you-didnt-know"><img class="img-responsive lazy-load" data-loaded="false" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780/public/Judge-Pirro_08-2015_2571R.jpg?itok=dZ-zhAAx"></a>
+</div>
+<div class="headline">
+	<h2><a href="http://insider.foxnews.com/2017/10/12/judge-jeanine-pirro-fun-facts-things-you-didnt-know">5 Things You Didn't Know About Judge Jeanine Pirro</a></h2>
+</div>
+</li><li class="nav-column">
+<div class="photo"><a class="link" href="http://insider.foxnews.com/2017/09/06/lisa-boothe-things-you-didnt-know-fun-facts"><img class="img-responsive lazy-load" data-loaded="false" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780/public/Lisa-Boothe-FoxNews-Insider-3.jpg?itok=gOmjFgVJ"></a>
+</div>
+<div class="headline">
+	<h2><a href="http://insider.foxnews.com/2017/09/06/lisa-boothe-things-you-didnt-know-fun-facts">5 Things You Didn't Know About Lisa Boothe  </a></h2>
+</div>
+</li></ul></div></li>
+<li class="section">
+		<a class="" href="/shows">shows</a>
+	</li><li class="section">
+		<a class="" href="/people">People</a>
+	</li><li class="section">
+		<a class="" href="/mission">Mission</a>
+	</li><li class="more-sections has-stories"><a class="no-link">More</a><span class="icon caret-icon"></span><div class="more-dropdown more-sections"><ul class="container"></ul></div></li><li class="section follow-buttons"><div class="follow-mobile">Follow<span class="icon follow-mobile-icon"></span></div><div class="icon follow-icon"></div><div class="follow-dropdown"><div class="follow-buttons-content container"><span class="follow-text">Follow:</span><span class="fb-follow follow"><span class="follow-js"><div class="fb-like" data-href="https://www.facebook.com/FoxNewsInsider" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div></span></span>
+    <span class="tw-follow follow"><span class="follow-js"><div class="tw-button"><a class="twitter-follow-button" href="https://twitter.com/foxnewsinsider" data-show-screen-name="false" data-show-count="false">Follow</a></div></span></span>
+    <span class="yt-follow follow"><span class="follow-js"><div class="g-ytsubscribe" data-channel="FoxNewsInsider" data-count="hidden"></div></span></span></div></li><li id="search-box"><div class="icon expand-search-btn"></div><div class="gcse-searchbox-only" data-autoSearchOnLoad="false" data-queryParameterName="search" data-resultsUrl="/search" data-gaQueryParameter="search"></div></li>
+  </ul>
+</header>
+        
+    
+    
+            <div id="page-container" class="container">
+            <div class="row">
+                
+                <div class="main-right col-xs-12">
+                                                                                                                                            
+                    
+                                        
+
+<header id="navbar-share" role="navigation" class="navbar navbar-inverse navbar-fixed-top">  
+  <ul class="list-inline nav-groups container">
+        <!-- <li class="toggle-nav btn-group"> <button type="button" class="menu-btn btn"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button></li> -->
+    <li class="logo">
+      <a class="fnc-logo pull-left" href="http://insider.foxnews.com"><span class="logo"></span></a>
+    </li>
+    <li class="share-headline"><span>'If the Country Needs Me, I'll Run': 'F&F' Checks in With Young Trump Fan Who Went Viral</span>
+    </li>
+    <li class="social-share pull-right">
+      <div class="social-node-2">
+        <ul class="list-inline">
+          <a id="fb-shr-1" href="https://www.facebook.com/sharer/sharer.php?u=http://insider.foxnews.com/2017/07/31/12-year-old-trump-fan-millie-march-goes-viral-after-cpac" target="_blank" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+            <li class="fb"><span class="icon fb-icon"></span><span class="text">share this</span></li>
+          </a
+          ><a id="tw-shr-1" href="https://twitter.com/share?url=http://insider.foxnews.com/2017/07/31/12-year-old-trump-fan-millie-march-goes-viral-after-cpac&text=%27If%20the%20Country%20Needs%20Me%2C%20I%27ll%20Run%27%3A%20%27F%26F%27%20Checks%20in%20With%20Young%20Trump%20Fan%20Who%20Went%20Viral" target="_blank" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><li class="tw"><span class="icon tw-icon"></span></li></a
+          ><a href="#" id="open-cmnts-top"><li class="comments-open"><span class="icon comment-icon"></span></li></a
+          ><a id="modal-shr-1" class="share-arrow" data-toggle="modal" data-target="#shareModal" data-storyurl="http://insider.foxnews.com/2017/07/31/12-year-old-trump-fan-millie-march-goes-viral-after-cpac" data-sharesrc="popup" data-headline="'If the Country Needs Me, I'll Run': 'F&F' Checks in With Young Trump Fan Who Went Viral"><li class="shr"><span class="icon"></span></li></a>
+        </ul>
+      </div>
+    </li>
+  </ul>  
+  <progress value="0">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+  </progress> 
+</header>
+
+
+
+
+
+<article about="/2017/07/31/12-year-old-trump-fan-millie-march-goes-viral-after-cpac" typeof="sioc:Item foaf:Document" class="row">
+    
+    <h1 class="title" id="page-title">
+            'If the Country Needs Me, I'll Run': 'F&F' Checks in With Young Trump Fan Who Went Viral    </h1>
+
+  
+
+  
+  <div class="inner-container col-xs-12 col-md-8">
+  <div id="node-share-top" class="row" >
+    <div class="col-xs-6">
+      <a id="fb-shr-2" href="https://www.facebook.com/sharer/sharer.php?u=http://insider.foxnews.com/2017/07/31/12-year-old-trump-fan-millie-march-goes-viral-after-cpac" class="fbkg btn btn-primary" target="_blank" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"  >
+        <span class="icon fb-icon"></span>
+        <span class="text">share this</span>
+      </a>
+    </div>
+    <div class="col-xs-6">
+      <a id="eml-shr-2" href="mailto:?subject=%27If%20the%20Country%20Needs%20Me%2C%20I%27ll%20Run%27%3A%20%27F%26F%27%20Checks%20in%20With%20Young%20Trump%20Fan%20Who%20Went%20Viral&amp;body=Check out this article from Fox News Insider: %0A%0Ahttp://insider.foxnews.com/2017/07/31/12-year-old-trump-fan-millie-march-goes-viral-after-cpac?utm_source=share%26utm_campaign=share-buttons%26utm_medium=email" class="email btn btn-primary">
+        <span class="icon mail-icon"></span>
+        <span class="text">email</span>
+      </a>
+    </div>
+  </div>
+
+
+
+  
+
+        <div id="video-marker"></div>
+    <div class="video-holder featured fox-video-fni autoplay-video" data-video-id="5526973578001">             
+      <div id="floatingCirclesG">
+        <div class="f_circleG" id="frotateG_01"></div>
+        <div class="f_circleG" id="frotateG_02"></div>
+        <div class="f_circleG" id="frotateG_03"></div>
+        <div class="f_circleG" id="frotateG_04"></div>
+        <div class="f_circleG" id="frotateG_05"></div>
+        <div class="f_circleG" id="frotateG_06"></div>
+        <div class="f_circleG" id="frotateG_07"></div>
+        <div class="f_circleG" id="frotateG_08"></div>
+      </div>      
+      <div class="vid-overlay"></div>
+      <div class="brand-holder"><span class="icon"></span></div>
+    </div>
+    <div class="video-wrap"><div class="video-container"></div></div>
+
+    
+<div class="video-dropdown"><span class="arrow left at-end"><span class="icon"></span></span><span class="arrow right"><span class="icon"></span></span><div class="wrap"><ul><li>				
+		<div class="photo"><a href="http://insider.foxnews.com/2018/02/19/fbi-made-tragic-mistake-florida-school-shooting-tip-former-agent-says"><span class="icon"></span><img typeof="foaf:Image" src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/newsletter-small/public/021918_fbi.jpg?itok=GG8s6USM" width="180" height="77" alt="A former FBI special agent said the bureau made a &quot;tragic mistake&quot; when it mishandled a tip about Nikolas Cruz, who killed 17 when he opened fire at a Florida high school on Valentine&#039;s Day." title="A former FBI special agent said the bureau made a &quot;tragic mistake&quot; when it mishandled a tip about Nikolas Cruz, who killed 17 when he opened fire at a Florida high school on Valentine&#039;s Day." /></a></div> 
+		<div class="headline"><h2><a href="http://insider.foxnews.com/2018/02/19/fbi-made-tragic-mistake-florida-school-shooting-tip-former-agent-says">Former Special Agent: FBI's Failure to Act...</a></h2></div>
+
+</li><li>				
+		<div class="photo"><a href="http://insider.foxnews.com/2018/02/19/mike-pence-responds-joy-behar-faith-mental-illness-comment-view"><span class="icon"></span><img typeof="foaf:Image" src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/newsletter-small/public/021918_pence2.jpg?itok=3ePWRW79" width="180" height="77" alt="Pence: Behar&#039;s Comments About Faith Show How Out of Touch Some in the Mainstream Media Are" title="Pence: Behar&#039;s Comments About Faith Show How Out of Touch Some in the Mainstream Media Are" /></a></div> 
+		<div class="headline"><h2><a href="http://insider.foxnews.com/2018/02/19/mike-pence-responds-joy-behar-faith-mental-illness-comment-view">Pence: Behar's Comments About Faith Show How...</a></h2></div>
+
+</li><li>				
+		<div class="photo"><a href="http://insider.foxnews.com/2018/02/19/business-owner-threatened-harassed-over-pro-police-flag-elders-antiques-st-louis"><span class="icon"></span><img typeof="foaf:Image" src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/newsletter-small/public/021918_flag.jpg?itok=cBY0HSgb" width="180" height="77" alt="A Missouri business owner who faces threats and harassment for putting up a pro-law enforcement flag joined Steve Doocy on &quot;Fox &amp; Friends&quot; Monday morning to share her story." title="A Missouri business owner who faces threats and harassment for putting up a pro-law enforcement flag joined Steve Doocy on &quot;Fox &amp; Friends&quot; Monday morning to share her story." /></a></div> 
+		<div class="headline"><h2><a href="http://insider.foxnews.com/2018/02/19/business-owner-threatened-harassed-over-pro-police-flag-elders-antiques-st-louis">'Pig Supporters Not Welcome': MO Business...</a></h2></div>
+
+</li><li>				
+		<div class="photo"><a href="http://insider.foxnews.com/2018/02/19/jonathan-turley-russia-indictment-trump-collusion-investigation-what-happens-next"><span class="icon"></span><img typeof="foaf:Image" src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/newsletter-small/public/021918_mueller2.jpg?itok=CThVdiL9" width="180" height="77" alt="Law professor Jonathan Turley said Friday&#039;s indictment of 13 Russians and three Russian companies for alleged election meddling does not necessarily vindicate President Donald Trump, but it does support his claim that there was no collusion between his ca" title="Law professor Jonathan Turley said Friday&#039;s indictment of 13 Russians and three Russian companies for alleged election meddling does not necessarily vindicate President Donald Trump, but it does support his claim that there was no collusion between his ca" /></a></div> 
+		<div class="headline"><h2><a href="http://insider.foxnews.com/2018/02/19/jonathan-turley-russia-indictment-trump-collusion-investigation-what-happens-next">Turley: People Engaging in 'Willful...</a></h2></div>
+
+</li><li>				
+		<div class="photo"><a href="http://insider.foxnews.com/2018/02/19/john-podesta-pressed-how-russians-knew-focus-purple-states-clinton-campaign-didnt"><span class="icon"></span><img typeof="foaf:Image" src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/newsletter-small/public/021817_podesta.jpg?itok=i7nqthFr" width="180" height="77" alt="How is it that Russian operatives meddling in the 2016 election knew to target purple states, but the Hillary Clinton campaign did not?" title="How is it that Russian operatives meddling in the 2016 election knew to target purple states, but the Hillary Clinton campaign did not?" /></a></div> 
+		<div class="headline"><h2><a href="http://insider.foxnews.com/2018/02/19/john-podesta-pressed-how-russians-knew-focus-purple-states-clinton-campaign-didnt">Podesta Pressed on How Russians Knew to...</a></h2></div>
+
+</li><li>				
+		<div class="photo"><a href="http://insider.foxnews.com/2018/02/18/florida-school-shooting-democrat-gallego-calls-trump-psychopath-says-shouldnt-been-born"><span class="icon"></span><img typeof="foaf:Image" src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/newsletter-small/public/ruben%20gallego%20ap%20purchas.jpg?itok=6wDiB_hS" width="180" height="77" alt="Ruben Gallego J Scott Applewhite AP" title="Ruben Gallego J Scott Applewhite AP" /></a></div> 
+		<div class="headline"><h2><a href="http://insider.foxnews.com/2018/02/18/florida-school-shooting-democrat-gallego-calls-trump-psychopath-says-shouldnt-been-born">'You're Such a Psychopath': AZ Dem Says US...</a></h2></div>
+
+</li><li>				
+		<div class="photo"><a href="http://insider.foxnews.com/2018/02/18/behar-mike-pence-comment-christianity-trump-advisor-says-abc-should-apologize"><span class="icon"></span><img typeof="foaf:Image" src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/newsletter-small/public/Johnnie%20Moore%20on%20View%20Comments%20About%20Pence.jpg?itok=TEl5xJnX" width="180" height="77" alt="Johnnie Moore" title="Johnnie Moore" /></a></div> 
+		<div class="headline"><h2><a href="http://insider.foxnews.com/2018/02/18/behar-mike-pence-comment-christianity-trump-advisor-says-abc-should-apologize">Trump Adviser on Christian 'Double Standard...</a></h2></div>
+
+</li><li>				
+		<div class="photo"><a href="http://insider.foxnews.com/2018/02/18/sebastian-gorka-trump-russia-probe-being-bad-saturday-night-live-skit"><span class="icon"></span><img typeof="foaf:Image" src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/newsletter-small/public/field/image/gorka1.jpg?itok=tKMHT8nG" width="180" height="77" alt="Sebastian Gorka" title="Sebastian Gorka" /></a></div> 
+		<div class="headline"><h2><a href="http://insider.foxnews.com/2018/02/18/sebastian-gorka-trump-russia-probe-being-bad-saturday-night-live-skit">Gorka: Mueller's Russia Probe Is Like 'A Bad...</a></h2></div>
+
+</li><li>				
+		<div class="photo"><a href="http://insider.foxnews.com/2018/02/18/rush-limbaugh-fox-news-interview-russia-collusion-donald-trump-tweets-hillary-clinton"><span class="icon"></span><img typeof="foaf:Image" src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/newsletter-small/public/rush2.png?itok=VyU9GLfY" width="180" height="77" alt="Rush Limbaugh" title="Rush Limbaugh" /></a></div> 
+		<div class="headline"><h2><a href="http://insider.foxnews.com/2018/02/18/rush-limbaugh-fox-news-interview-russia-collusion-donald-trump-tweets-hillary-clinton">Rush to Trump: Don't Claim Victory Just Yet...</a></h2></div>
+
+</li><li>				
+		<div class="photo"><a href="http://insider.foxnews.com/2018/02/18/rush-limbaugh-fox-news-sunday-florida-school-shooting-stop-bashing-nra-concealed-carry"><span class="icon"></span><img typeof="foaf:Image" src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/newsletter-small/public/rush1.png?itok=1RSgicFo" width="180" height="77" alt="Rush Limbaugh" title="Rush Limbaugh" /></a></div> 
+		<div class="headline"><h2><a href="http://insider.foxnews.com/2018/02/18/rush-limbaugh-fox-news-sunday-florida-school-shooting-stop-bashing-nra-concealed-carry">Rush: We Need Concealed-Carry in Schools - '...</a></h2></div>
+
+</li><li>				
+		<div class="photo"><a href="http://insider.foxnews.com/2018/02/18/judge-jeanine-pirro-opening-fbi-inaction-florida-school-shooting"><span class="icon"></span><img typeof="foaf:Image" src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/newsletter-small/public/pirro1_2.jpg?itok=WDIQoAL_" width="180" height="77" alt="Judge Jeanine Opening Statement" title="Judge Jeanine Opening Statement" /></a></div> 
+		<div class="headline"><h2><a href="http://insider.foxnews.com/2018/02/18/judge-jeanine-pirro-opening-fbi-inaction-florida-school-shooting">'FBI Needs a Complete Overhaul': Pirro...</a></h2></div>
+
+</li><li>				
+		<div class="photo"><a href="http://insider.foxnews.com/2018/02/17/trump-russia-collusion-bongino-says-mueller-probe-indictment-ends-democrats-claims"><span class="icon"></span><img typeof="foaf:Image" src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/newsletter-small/public/Dan%20Bongino%20on%20Mueller%20Indictment.jpg?itok=JJc_L8L8" width="180" height="77" alt="Dan Bongino" title="Dan Bongino" /></a></div> 
+		<div class="headline"><h2><a href="http://insider.foxnews.com/2018/02/17/trump-russia-collusion-bongino-says-mueller-probe-indictment-ends-democrats-claims">'Wake Up and Smell the Coffee': Bongino Says...</a></h2></div>
+
+</li></ul></div></div>
+              
+  
+
+  <button type="button" class="pull-left btn btn-default meta-container" data-toggle="collapse" data-target="#meta">
+    <span id="date" datetime="2017-07-31T08:26">Jul 31, 2017 // 8:26am </span>
+    <span type="button" class="icon arrow-down-icon"></span>
+        <time datetime="2017-07-31T15:43:56.000000-04:00"></time>
+      </button>
+  
+              
+    <div class="meta-line-two">
+      <div id="as-seen-on">As seen on <a href="http://insider.foxnews.com/show/fox-and-friends" class="roll"><span data-title="Fox & Friends">Fox & Friends </span></a></div> 
+    </div>
+  
+  <div class="clearfix"></div>
+
+  <div id="meta" class="collapse">
+    <div class="meta">
+      <div class="meta-line-one">
+        
+            <span id="author">by <a href="http://insider.foxnews.com/mission" class="roll" rel="publisher"><span data-title="Fox News Insider">Fox News Insider</span></a> </span>
+          
+                </div>
+      
+      <div class="field field-name-field-tags field-type-taxonomy-term-reference field-label-above clearfix">
+
+    <div class="field-label">Posted in:&nbsp;</div>
+ <ul class="field-items tags list-inline" >
+  
+            <li>// <a href="/tag/donald-trump" class="roll"><span data-title="Donald Trump">Donald Trump</span></a></li>             <li>// <a href="/tag/cpac" class="roll"><span data-title="CPAC">CPAC</span></a></li>       
+  </ul>
+</div>    </div>
+  </div>
+
+  
+  <div class="articleBody">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><script src="//platform.twitter.com/widgets.js" async="true" defer></script><p><a href="/2017/07/30/judge-jeanine-barbara-lee-kind-crazy-puts-all-americans-risk"><strong>Judge Jeanine: Barbara Lee's Kind of Crazy Puts All Americans at Risk</strong></a></p>
+<hr><p>"Fox &amp; Friends" caught up this morning with 12-year-old Millie March, who went viral this year for her spirited support of President Trump at CPAC. </p>
+<p>In the viral clip, Millie told a reporter what drew her to Trump when he was running for office. </p>
+<p></p><div class="read-full"><a class="read-full-inner"><span class="icon plus-sign"></span><span class="read-full-text">Read Full Article</span></a></div>
+<p></p><div class="yt-video-container"><iframe width="640" height="480" src="http://www.youtube.com/embed/Wg0vruyvYMw" frameborder="0" allowfullscreen></iframe></div>
+<p>"He talked about all the issues we were facing, all the problems. [I thought] OK, that's normal. Every politician does that. Then something extraordinary happened. He said how to fix them," she explained, sounding wise beyond her years.</p>
+<p>"Without Trump, I wouldn't be here," said Millie, who later met President Trump and Vice President Mike Pence.</p>
+<blockquote class="twitter-tweet" data-lang="en"><p dir="ltr" lang="en">Me and Donald trump at the brand new trump hotel <a href="https://t.co/COpQc6PQIF">pic.twitter.com/COpQc6PQIF</a></p>
+<p>— Millie March (@MillieJMarch) <a href="https://twitter.com/MillieJMarch/status/777507210654060544">September 18, 2016</a></p></blockquote>
+<p>"He is doing the best job as president you could ever do," Millie said of the Oval Office resident.</p>
+<p>Millie's parents are involved in Virginia politics, but her father said it's Millie who reads the books and decides for herself what she believes.</p>
+<p>She said she believes President Trump has done more during his first six months in office than Barack Obama did in eight years.</p>
+<p>Millie, who ran for school president and won, was then asked if she has politics in her future.</p>
+<p>"If the country needs me, I will run. I don't care about being the first female president," she answered. </p>
+<p>Millie showed up to the interview decked out in a Trump t-shirt, leggings, a backpack and Trump-themed gold shoes. </p>
+<p><img alt="" class="media-image attr__typeof__foaf:Image img__fid__36829 img__view_mode__default attr__format__default attr__field_file_image_alt_text[und][0][value]__ attr__field_file_image_title_text[und][0][value]__" height="439" src="/sites/insider.foxnews.com/files/styles/780/public/trumpwear.jpg?itok=4EPttMCH" title="" typeof="foaf:Image" width="780"></p>
+<hr><p><a href="/2017/07/30/pelosi-midterm-elections-so-unimportant"><strong>Pelosi: Whether Dems Win Midterm Elections 'So Unimportant'</strong></a></p>
+<p><a href="/2017/07/30/trump-media-ex-doing-great-gutfeld"><strong>Gutfeld: Trump Is the Media's Ex, and He's Doing Great</strong></a></p>
+<p><a href="/2017/07/30/watters-russia-asks-new-yorkers-what-they-know-about"><strong>Watters Asks New Yorkers What They Know About Russia</strong></a></p>
+<hr><p> </p>
+</div></div></div>      </div>
+  <div class="clearfix"></div>
+
+  <div id="node-share" class="social-node-2">
+    <ul class="list-inline">
+      <a href="#" id="open-cmnts" class="collapsed" data-toggle="collapse" data-target="#comments"><li class="comments-open"><span class="icon comment-icon"></span><span class="text">Load Comments</span></li></a>
+    </ul>
+  </div>
+  
+  <div id="load-comments" class="fb-hide">
+    <div class="load-fb-comments" data-href="http://insider.foxnews.com/2017/07/31/12-year-old-trump-fan-millie-march-goes-viral-after-cpac" data-numposts="20" data-colorscheme="light"></div>
+  </div>
+  </div>
+  <div class="ad-container col-xs-12 col-md-4">
+    <div id="ad-content" class="sidebar-ad"><div class="ad gpt" id="desktop-300x250"></div></div>
+    <div class="sidebar-content">
+    <div id="outbrain"><div class="fox-outbrain-recommended" data-src="http://insider.foxnews.com/2017/07/31/12-year-old-trump-fan-millie-march-goes-viral-after-cpac" data-ob-template="FoxNewsInsider"></div></div>
+      <script type="text/javascript" src="http://widgets.outbrain.com/outbrain.js"></script>
+      <script>
+      (function($) {  //outbrain tracking;
+          $(document).ready(function() {
+              OBR.extern.researchWidget();
+          });
+      });
+      </script>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</article>
+
+
+  <div class="newsletter-form under-article newsletter-container">
+    <h2 class="connect block-title">Subscribe</h2>
+    <div class="col-xs-12">
+      <p>Stay connected with the most-watched, most-trusted name in news.</p>
+<p class="agree">Send me email updates from Fox News. I can opt out at any time. By signing up below, I agree to the Fox News <a href="/privacy-policy">Privacy Policy</a> and <a href="/terms-of-use">Terms of Use</a>. Questions? <a href="http://help.foxnews.com" target="_blank">Contact Fox News</a>.</p>
+<form id="newsletter-article" class="form-subscribe" class="form-inline" role="form">
+	<input class="form-control input-email" name="email" placeholder="Your Email Here" required type="email" />
+	<button class="btn btn-primary signUp">Submit</button>
+</form>    </div>
+    <div class="clearfix"></div>
+  </div>
+   
+  <span class="clearfix"></span>
+
+  <div class="outbrain-article-widget">  
+    <div id="outbrain">
+      <div class="fox-outbrain" data-src="http://insider.foxnews.com/2017/07/31/12-year-old-trump-fan-millie-march-goes-viral-after-cpac" data-ob-template="FoxNewsInsider" ></div>
+      <div class="fox-outbrain-flyout"  data-src="http://insider.foxnews.com/2017/07/31/12-year-old-trump-fan-millie-march-goes-viral-after-cpac" data-ob-template="FoxNewsInsider" ></div>
+    </div>
+    <script type="text/javascript" src="http://widgets.outbrain.com/outbrain.js"></script>
+    <script>
+      (function($) {  //outbrain tracking;
+        $(document).ready(function() {
+           OBR.extern.researchWidget();
+        })
+      });
+    </script>
+  </div>
+
+  
+    			<div id="popup" class=""><span class="close-btn">&times;</span><div class="container">
+			<div class="col-xs-12">
+			<h2 class="connect">Connect with Fox News!</h2>
+		    <p>Follow us to stay updated with the latest content from Fox News Channel!</p>
+		    <div class="social-node-2">
+		      <ul class="list-inline">
+		      <a href="http://facebook.com/foxnewsinsider" target="_blank"><li class="fb"><span class="icon fb-icon"></span></li></a>
+		      <a href="http://twitter.com/foxnewsinsider" target="_blank"><li class="tw"><span class="icon tw-icon"></span></li></a>
+		      <a href="https://www.youtube.com/user/FoxNewsInsider" target="_blank"><li class="yt"><span class="icon yt-icon"></span></li></a> 
+		      </ul>
+		    </div>
+		</div>
+		</div></div>
+
+	
+
+
+
+  <div class="modal fade share" id="shareModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="gtm-signup-close" aria-hidden="true">&times;</span></button>
+          <div class="share-box"><div class="social-node-2"><ul class="list-inline"></ul></div></div>
+        </div>              
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+                                               
+                </div>
+            </div>
+                                                                    <section id="block-views-latest-latest-block" class="block block-views clearfix">
+
+      
+  <div class="latest-block story-loop infinite-content">
+           
+      <h2 class="latest-news section-title">Latest <small>from</small> Fox News <span class="latest-channel">Channel</span></h2>
+    
+  
+  
+  
+      <div class="stories row">
+        <div class="story" class="views-row views-row-1 views-row-odd views-row-first">
+    	
+			
+		<div class="col-sm-4 col-xs-12 pull-right">
+			<div class="photo">
+				                                <a href="http://insider.foxnews.com/2018/02/19/fbi-made-tragic-mistake-florida-school-shooting-tip-former-agent-says">
+                                <img class="img-responsive lazy-load" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780_crop/public/021918_fbi.jpg?itok=Y3ZwNkM7" data-loaded="false" width="780" height="325"/></a>
+                <div class="mobile-share hover-buttons">
+					<button type="button" class="btn btn-primary share-arrow" data-toggle="modal" data-target="#shareModal" data-sharesrc="hover" data-storyurl="http://insider.foxnews.com/2018/02/19/fbi-made-tragic-mistake-florida-school-shooting-tip-former-agent-says" data-headline="Former Special Agent: FBI's Failure to Act on Tip About Florida Shooter Is 'Tragic,' 'Unconscionable'"><span class="text">Share</span><span class="icon"></span></button>
+				</div>
+			</div>
+		</div>		<div class="col-sm-8 col-xs-12 pull-left">
+			<div class="headline">
+				<h2>
+					<span class="title">
+																																<a href="http://insider.foxnews.com/2018/02/19/fbi-made-tragic-mistake-florida-school-shooting-tip-former-agent-says">Former Special Agent: FBI's Failure to Act on Tip About Florida Shooter Is 'Tragic,' 'Unconscionable'</a>												
+					</span>
+				</h2>
+			</div>
+			<div class="summary">
+				<h4 class="hidden-xs">
+										<p>A former FBI special agent said the bureau made a "tragic" and "unconscionable" mistake by mishandling a tip about Nikolas Cruz, who killed 17 when he opened fire at a Florida high school on Valentine's Day.</p>
+									</h4>
+			</div>
+		</div>	 
+		
+	
+	<div class="border-container col-xs-12">
+		<div class="desktop-share hover-buttons">
+			<button type="button" class="btn btn-primary share-arrow" data-toggle="modal" data-target="#shareModal" data-sharesrc="hover" data-storyurl="http://insider.foxnews.com/2018/02/19/fbi-made-tragic-mistake-florida-school-shooting-tip-former-agent-says" data-headline="Former Special Agent: FBI's Failure to Act on Tip About Florida Shooter Is 'Tragic,' 'Unconscionable'"><span class="text">Share</span><span class="icon"></span></button>
+		</div>
+		<span class="border"></span>
+	</div>
+	<div class="clearfix"></div>
+
+
+  </div>
+  <div class="story" class="views-row views-row-2 views-row-even">
+    	
+			
+		<div class="col-sm-4 col-xs-12 pull-right">
+			<div class="photo">
+				                                <a href="http://insider.foxnews.com/2018/02/19/mike-pence-responds-joy-behar-faith-mental-illness-comment-view">
+                                <img class="img-responsive lazy-load" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780_crop/public/021918_pence2.jpg?itok=I3MmROLp" data-loaded="false" width="780" height="325"/></a>
+                <div class="mobile-share hover-buttons">
+					<button type="button" class="btn btn-primary share-arrow" data-toggle="modal" data-target="#shareModal" data-sharesrc="hover" data-storyurl="http://insider.foxnews.com/2018/02/19/mike-pence-responds-joy-behar-faith-mental-illness-comment-view" data-headline="Pence: Behar's Comments About Faith Show How Out of Touch Some in the Media Are"><span class="text">Share</span><span class="icon"></span></button>
+				</div>
+			</div>
+		</div>		<div class="col-sm-8 col-xs-12 pull-left">
+			<div class="headline">
+				<h2>
+					<span class="title">
+																																<a href="http://insider.foxnews.com/2018/02/19/mike-pence-responds-joy-behar-faith-mental-illness-comment-view">Pence: Behar's Comments About Faith Show How Out of Touch Some in the Media Are</a>												
+					</span>
+				</h2>
+			</div>
+			<div class="summary">
+				<h4 class="hidden-xs">
+										<p>During an exclusive "Fox &amp; Friends" interview that aired Monday, Vice President Mike Pence addressed the fallout after “The View” co-hosts mocked his Christian faith.</p>
+									</h4>
+			</div>
+		</div>	 
+		
+	
+	<div class="border-container col-xs-12">
+		<div class="desktop-share hover-buttons">
+			<button type="button" class="btn btn-primary share-arrow" data-toggle="modal" data-target="#shareModal" data-sharesrc="hover" data-storyurl="http://insider.foxnews.com/2018/02/19/mike-pence-responds-joy-behar-faith-mental-illness-comment-view" data-headline="Pence: Behar's Comments About Faith Show How Out of Touch Some in the Media Are"><span class="text">Share</span><span class="icon"></span></button>
+		</div>
+		<span class="border"></span>
+	</div>
+	<div class="clearfix"></div>
+
+
+  </div>
+  <div class="story" class="views-row views-row-3 views-row-odd">
+    	
+			
+		<div class="col-sm-4 col-xs-12 pull-right">
+			<div class="photo">
+				                                <a href="http://insider.foxnews.com/2018/02/19/business-owner-threatened-harassed-over-pro-police-flag-elders-antiques-st-louis">
+                                <img class="img-responsive lazy-load" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780_crop/public/021918_flag.jpg?itok=lvFJa-9f" data-loaded="false" width="780" height="325"/></a>
+                <div class="mobile-share hover-buttons">
+					<button type="button" class="btn btn-primary share-arrow" data-toggle="modal" data-target="#shareModal" data-sharesrc="hover" data-storyurl="http://insider.foxnews.com/2018/02/19/business-owner-threatened-harassed-over-pro-police-flag-elders-antiques-st-louis" data-headline="'Pig Supporters Not Welcome': MO Business Faces Backlash Over Pro-Police Flag"><span class="text">Share</span><span class="icon"></span></button>
+				</div>
+			</div>
+		</div>		<div class="col-sm-8 col-xs-12 pull-left">
+			<div class="headline">
+				<h2>
+					<span class="title">
+																					<span class="spiff">
+		
+	<a href="/outrageous" class="spiff-roll"><span data-title="Outrageous">Outrageous</span></a> </span>
+																										<a href="http://insider.foxnews.com/2018/02/19/business-owner-threatened-harassed-over-pro-police-flag-elders-antiques-st-louis">'Pig Supporters Not Welcome': MO Business Faces Backlash Over Pro-Police Flag</a>												
+					</span>
+				</h2>
+			</div>
+			<div class="summary">
+				<h4 class="hidden-xs">
+										<p>A Missouri business owner who was threatened and harassed after putting up a pro-law enforcement flag joined Steve Doocy on "Fox &amp; Friends" Monday morning to share her story.</p>
+									</h4>
+			</div>
+		</div>	 
+		
+	
+	<div class="border-container col-xs-12">
+		<div class="desktop-share hover-buttons">
+			<button type="button" class="btn btn-primary share-arrow" data-toggle="modal" data-target="#shareModal" data-sharesrc="hover" data-storyurl="http://insider.foxnews.com/2018/02/19/business-owner-threatened-harassed-over-pro-police-flag-elders-antiques-st-louis" data-headline="'Pig Supporters Not Welcome': MO Business Faces Backlash Over Pro-Police Flag"><span class="text">Share</span><span class="icon"></span></button>
+		</div>
+		<span class="border"></span>
+	</div>
+	<div class="clearfix"></div>
+
+
+  </div>
+  <div class="story" class="views-row views-row-4 views-row-even views-row-last">
+    	
+			
+		<div class="col-sm-4 col-xs-12 pull-right">
+			<div class="photo">
+				                                <a href="http://insider.foxnews.com/2018/02/19/jonathan-turley-russia-indictment-trump-collusion-investigation-what-happens-next">
+                                <img class="img-responsive lazy-load" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780_crop/public/021918_mueller2.jpg?itok=GFbCCC1c" data-loaded="false" width="780" height="325"/></a>
+                <div class="mobile-share hover-buttons">
+					<button type="button" class="btn btn-primary share-arrow" data-toggle="modal" data-target="#shareModal" data-sharesrc="hover" data-storyurl="http://insider.foxnews.com/2018/02/19/jonathan-turley-russia-indictment-trump-collusion-investigation-what-happens-next" data-headline="Turley: People Engaging in 'Willful Blindness' to Ignore How Indictment Supports Trump's Collusion Denial"><span class="text">Share</span><span class="icon"></span></button>
+				</div>
+			</div>
+		</div>		<div class="col-sm-8 col-xs-12 pull-left">
+			<div class="headline">
+				<h2>
+					<span class="title">
+																																<a href="http://insider.foxnews.com/2018/02/19/jonathan-turley-russia-indictment-trump-collusion-investigation-what-happens-next">Turley: People Engaging in 'Willful Blindness' to Ignore How Indictment Supports Trump's Collusion Denial</a>												
+					</span>
+				</h2>
+			</div>
+			<div class="summary">
+				<h4 class="hidden-xs">
+										<p>Jonathan Turley said Friday's indictment of 13 Russians for alleged election interference does not necessarily vindicate President Trump, but it does support his claim that there was no collusion between his campaign and Russia.</p>
+									</h4>
+			</div>
+		</div>	 
+		
+	
+	<div class="border-container col-xs-12">
+		<div class="desktop-share hover-buttons">
+			<button type="button" class="btn btn-primary share-arrow" data-toggle="modal" data-target="#shareModal" data-sharesrc="hover" data-storyurl="http://insider.foxnews.com/2018/02/19/jonathan-turley-russia-indictment-trump-collusion-investigation-what-happens-next" data-headline="Turley: People Engaging in 'Willful Blindness' to Ignore How Indictment Supports Trump's Collusion Denial"><span class="text">Share</span><span class="icon"></span></button>
+		</div>
+		<span class="border"></span>
+	</div>
+	<div class="clearfix"></div>
+
+
+  </div>
+    </div>
+    <div class="modal fade share" id="shareModal">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="gtm-signup-close" aria-hidden="true">&times;</span></button>
+            <div class="share-box"><div class="social-node-2"><ul class="list-inline"></ul></div></div>
+          </div>              
+        </div>
+      </div>
+    </div>
+  
+      <div class="col-xs-12">
+      <div class="text-center"><ul class="pagination"><li class="active first"><a href="#">1</a></li>
+<li><a title="Go to page 2" href="/2017/07/31/12-year-old-trump-fan-millie-march-goes-viral-after-cpac?page=1">2</a></li>
+<li><a title="Go to page 3" href="/2017/07/31/12-year-old-trump-fan-millie-march-goes-viral-after-cpac?page=2">3</a></li>
+<li class="pager-ellipsis disabled"><span>…</span></li>
+<li class="next last"><a title="Go to next page" href="/2017/07/31/12-year-old-trump-fan-millie-march-goes-viral-after-cpac?page=1">next ›</a></li>
+</ul></div>      <a class="btn btn-primary more-btn load-more" href="#">Load More</a>
+    </div>
+  
+  
+
+  
+  
+  
+  
+</div>
+</section> <!-- /.block -->
+                    </div>
+
+                <div id="console-section">
+            <div class="container">
+            
+<section id="block-views-fnc-console-console-block" class="console-block clearfix">
+
+        <h2 id="whatson" class="block-title"><a href="/shows">What's on Fox News Channel</a></h2>
+    
+  	<div class="airings unseen swipe-outer">
+    <div class="scroll-arrow"><span class="icon arrow-right"></span></div>
+<ul class="swipe-inner unseen list-inline">
+    
+
+
+<li>
+     <div class="time">
+          <span class="hour">7</span> 
+                    <span class="am-pm">P</span>
+     </div>
+          <h3><a href="/show/story-martha-maccallum">The Story with Martha MacCallum</a></h3>
+          <p>Smart, fearless, tenacious and telling the story as it is.</p>
+</li>
+
+<li>
+     <div class="time">
+          <span class="hour">8</span> 
+                    <span class="am-pm">P</span>
+     </div>          
+          <h3><a href="/show/tucker-carlson-tonight">Tucker Carlson Tonight</a></h3>
+          <p>The Mueller indictments sent shockwaves through Washington. Tucker breaks down all the fallout.</p>
+</li>
+
+<li>
+     <div class="time">
+          <span class="hour">9</span> 
+                           
+          <span class="am-pm">P</span>
+     </div>          
+          <h3><a href="/show/hannity">Hannity</a></h3>
+          <p>Why aren&#039;t Democrats and the media telling you the truth about the indictments?</p>
+</li>
+
+
+
+ 
+</ul>	</div>
+
+</section> <!-- /.block -->
+            </div>
+        </div>
+                
+        
+                        <div id="outbrain" class="popular"><div class="fox-outbrain-sidebar" data-src="http://insider.foxnews.com/2017/07/31/12-year-old-trump-fan-millie-march-goes-viral-after-cpac" data-ob-template="FoxNewsInsider" ></div></div>
+        <script type="text/javascript" src="http://widgets.outbrain.com/outbrain.js"></script>
+        <script>
+        (function($) {  //outbrain tracking;
+            $(document).ready(function() {
+                OBR.extern.researchWidget();
+            });
+        });
+        </script>
+        
+        <div id="primetime-shows">            
+            <div class="container">
+                	  	<span class="line-border"><span class="icon border-icon"></span></span><h2 class="block-title"><a href="http://insider.foxnews.com/show/the-five">The Five</a></h2>
+  	<div class="article-blocks block_4">
+  
+  
+  
+  
+  
+      <div class="stories-wrap swipe-outer unseen">
+      <div class="scroll-arrow"><span class="icon arrow-right"></span></div>
+      <div class="stories swipe-inner unseen">
+          <div class="story story-1">
+    	
+		
+	 
+		<div class="pic">
+			<a href="/2018/02/16/jesse-watters-democrats-are-helping-russians-sow-discord"><img typeof="foaf:Image" class="img-responsive lazy-load" data-loaded="false" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780_crop/public/021618_watters.jpg?itok=dMbH3B4G" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" width="780" height="325" alt="Jesse Watters reacted to a federal grand jury on Friday indicting 13 Russians and three Russian companies for allegedly interfering in the 2016 presidential election." title="Jesse Watters reacted to a federal grand jury on Friday indicting 13 Russians and three Russian companies for allegedly interfering in the 2016 presidential election." /></a>		</div>
+		<div class="dek">
+			<h2>
+								<span class="title">
+											<a href="/2018/02/16/jesse-watters-democrats-are-helping-russians-sow-discord">Watters: &#039;The Democrats Are Helping the Russians Sow Discord&#039;</a>									</span>
+			</h2>
+		</div>
+	
+
+
+  </div>
+  <div class="story story-2">
+    	
+		
+	 
+		<div class="pic">
+			<a href="/2018/02/13/russian-election-meddling-2018-intelligence-community-juan-williams-warn-cyber-attacks"><img typeof="foaf:Image" class="img-responsive lazy-load" data-loaded="false" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780_crop/public/Juan%20Williams%20on%20Russia%20Cyber%20Threat.jpg?itok=k8YU5fD0" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" width="780" height="325" alt="Juan Williams" title="Juan Williams" /></a>		</div>
+		<div class="dek">
+			<h2>
+								<span class="title">
+											<a href="/2018/02/13/russian-election-meddling-2018-intelligence-community-juan-williams-warn-cyber-attacks">Juan Williams on DNI Coats&#039; Warnings: US Should &#039;Get Serious&#039; on Preventing Cyberattacks from Russia</a>									</span>
+			</h2>
+		</div>
+	
+
+
+  </div>
+  <div class="story story-3">
+    	
+		
+	 
+		<div class="pic">
+			<a href="/2018/02/12/peter-rabbit-allergy-scene-jesse-watters-rejects-outcry-says-us-toast"><img typeof="foaf:Image" class="img-responsive lazy-load" data-loaded="false" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780_crop/public/field/image/rabbits.jpg?itok=x7DMQMkT" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" width="780" height="325" /></a>		</div>
+		<div class="dek">
+			<h2>
+								<span class="title">
+											<a href="/2018/02/12/peter-rabbit-allergy-scene-jesse-watters-rejects-outcry-says-us-toast">&#039;This Country Is Toast&#039;: Watters Takes on &#039;Peter Rabbit&#039; Food Allergy Backlash</a>									</span>
+			</h2>
+		</div>
+	
+
+
+  </div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>                <div class="clearfix"></div>                
+            </div>
+            <div class="container">
+                	  	<span class="line-border"><span class="icon border-icon"></span></span><h2 class="block-title"><a href="http://insider.foxnews.com/show/story-martha-maccallum">The Story <small>with</small> Martha MacCallum</a></h2>
+  	<div class="article-blocks block_5">
+  
+  
+  
+  
+  
+      <div class="stories-wrap swipe-outer unseen">
+      <div class="stories swipe-inner unseen">
+          <div class="story story-1">
+    	
+		
+	 
+		<div class="pic">
+			<a href="/2018/02/15/student-describes-classmate-yelling-please-help-me-during-shooting"><img typeof="foaf:Image" class="img-responsive lazy-load" data-loaded="false" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780_crop/public/021518_student.jpg?itok=ymTnYAuN" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" width="780" height="325" alt="A student who survived the deadly shooting at a Florida high school shared her harrowing story on &quot;The Story&quot; on Thursday." title="A student who survived the deadly shooting at a Florida high school shared her harrowing story on &quot;The Story&quot; on Thursday." /></a>		</div>
+		<div class="dek">
+			<h2>
+								<span class="title">
+											<a href="/2018/02/15/student-describes-classmate-yelling-please-help-me-during-shooting">Student Describes Classmate Yelling &#039;Please Help Me&#039; During Shooting</a>									</span>
+			</h2>
+		</div>
+	
+
+
+  </div>
+  <div class="story story-2">
+    	
+		
+	 
+		<div class="pic">
+			<a href="/2018/02/15/ben-bennight-warned-fbi-about-disturbing-youtube-comment-nikolas-cruz-months-ago"><img typeof="foaf:Image" class="img-responsive lazy-load" data-loaded="false" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780_crop/public/021518_blogger.jpg?itok=7qFvFiaJ" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" width="780" height="325" alt="An FBI official on Thursday confirmed the bureau received a tip months before the Florida high school massacre about a disturbing YouTube comment by a user named &quot;Nikolas Cruz&quot;: &quot;I&#039;m going to be a professional school shooter.&quot;" title="An FBI official on Thursday confirmed the bureau received a tip months before the Florida high school massacre about a disturbing YouTube comment by a user named &quot;Nikolas Cruz&quot;: &quot;I&#039;m going to be a professional school shooter.&quot;" /></a>		</div>
+		<div class="dek">
+			<h2>
+								<span class="title">
+											<a href="/2018/02/15/ben-bennight-warned-fbi-about-disturbing-youtube-comment-nikolas-cruz-months-ago">YouTube User Who Reported Disturbing Comment by &#039;Nikolas Cruz&#039; to FBI Speaks Out</a>									</span>
+			</h2>
+		</div>
+	
+
+
+  </div>
+  <div class="story story-3">
+    	
+		
+	 
+		<div class="pic">
+			<a href="/2018/02/14/florida-shooting-student-texts-family-member-maccallum-producer"><img typeof="foaf:Image" class="img-responsive lazy-load" data-loaded="false" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780_crop/public/texts%20stoneman.jpg?itok=6m3PKP6X" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" width="780" height="325" alt="Student Texts MacCallum Producer&#039;s Family Member" title="Student Texts MacCallum Producer&#039;s Family Member" /></a>		</div>
+		<div class="dek">
+			<h2>
+								<span class="title">
+											<a href="/2018/02/14/florida-shooting-student-texts-family-member-maccallum-producer">&#039;Joe, There&#039;s Gunshots&#039;: Student Texts Family of Fox Producer During Shooting</a>									</span>
+			</h2>
+		</div>
+	
+
+
+  </div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>                <div class="clearfix"></div>
+            </div>        
+            <div class="container"> 
+                	  	<span class="line-border"><span class="icon border-icon"></span></span><h2 class="block-title"><a href="http://insider.foxnews.com/show/tucker-carlson-tonight">Tucker Carlson Tonight</a></h2>
+  	<div class="article-blocks block_3">
+  
+  
+  
+  
+  
+      <div class="stories-wrap swipe-outer unseen">
+      <div class="stories swipe-inner unseen">
+          <div class="story story-1">
+    	
+		
+	 
+		<div class="pic">
+			<a href="/2018/02/17/tucker-and-rob-reiner-debate-trump-russia-probe-rosenstein-announcement-indictment"><img typeof="foaf:Image" class="img-responsive lazy-load" data-loaded="false" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780_crop/public/Tucker%20Debates%20Rob%20Reiner%20on%20Russia%2C%20Trump.jpg?itok=PAOIw1kD" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" width="780" height="325" alt="Rob Reiner" title="Rob Reiner" /></a>		</div>
+		<div class="dek">
+			<h2>
+								<span class="title">
+											<a href="/2018/02/17/tucker-and-rob-reiner-debate-trump-russia-probe-rosenstein-announcement-indictment">&#039;You Probably Shouldn&#039;t Call People Treasonous&#039;: Tucker Battles Rob Reiner on Russia Probe, Trump</a>									</span>
+			</h2>
+		</div>
+	
+
+
+  </div>
+  <div class="story story-2">
+    	
+		
+	 
+		<div class="pic">
+			<a href="/2018/02/15/tucker-carlson-calls-gun-control-after-florida-school-shooting-are-kind-class-war"><img typeof="foaf:Image" class="img-responsive lazy-load" data-loaded="false" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780_crop/public/021518_tucker.jpg?itok=svSmwpw1" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" width="780" height="325" alt="In the wake of the Florida school shooting, many on the left have renewed their calls for stricter gun control legislation." title="In the wake of the Florida school shooting, many on the left have renewed their calls for stricter gun control legislation." /></a>		</div>
+		<div class="dek">
+			<h2>
+								<span class="title">
+											<a href="/2018/02/15/tucker-carlson-calls-gun-control-after-florida-school-shooting-are-kind-class-war">&#039;A Kind of Class War&#039;: Tucker Slams Left&#039;s Calls for Gun Control</a>									</span>
+			</h2>
+		</div>
+	
+
+
+  </div>
+  <div class="story story-3">
+    	
+		
+	 
+		<div class="pic">
+			<a href="/2018/02/14/florida-shooting-suspects-teacher-reacts-parkland-stoneman-massacre"><img typeof="foaf:Image" class="img-responsive lazy-load" data-loaded="false" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780_crop/public/suspect_16.jpg?itok=Bn4J-KRh" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" width="780" height="325" alt="Suspect Teacher Speaks Out" title="Suspect Teacher Speaks Out" /></a>		</div>
+		<div class="dek">
+			<h2>
+								<span class="title">
+											<a href="/2018/02/14/florida-shooting-suspects-teacher-reacts-parkland-stoneman-massacre">&#039;Nothing Is Shocking Anymore, It&#039;s Horrible&#039;: Teacher Recalls Having Shooter in Class Last Year</a>									</span>
+			</h2>
+		</div>
+	
+
+
+  </div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>                <div class="clearfix"></div>
+            </div>
+            <div class="container">
+                	  	<span class="line-border"><span class="icon border-icon"></span></span><h2 class="block-title"><a href="http://insider.foxnews.com/show/hannity">Hannity</a></h2>
+  	<div class="article-blocks block_6">
+  
+  
+  
+  
+  
+      <div class="stories-wrap swipe-outer unseen">
+      <div class="stories swipe-inner unseen">
+          <div class="story story-1">
+    	
+		
+	 
+		<div class="pic">
+			<a href="/2018/02/17/hannity-monologue-trump-russia-collusion-rosenstein-announcement-2016-election"><img typeof="foaf:Image" class="img-responsive lazy-load" data-loaded="false" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780_crop/public/Hannity%20Monologue%20on%20Trump%20Russia%20News.jpg?itok=4emfD2P5" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" width="780" height="325" alt="Hannity Monologue" title="Hannity Monologue" /></a>		</div>
+		<div class="dek">
+			<h2>
+								<span class="title">
+											<a href="/2018/02/17/hannity-monologue-trump-russia-collusion-rosenstein-announcement-2016-election">Hannity: Feds&#039; Trump-Russia Announcement Cause &#039;Collective Gasp from Liberals&#039;</a>									</span>
+			</h2>
+		</div>
+	
+
+
+  </div>
+  <div class="story story-2">
+    	
+		
+	 
+		<div class="pic">
+			<a href="/2018/02/14/florida-shooting-geraldo-rivera-reacts-debates-gun-control-larry-elder"><img typeof="foaf:Image" class="img-responsive lazy-load" data-loaded="false" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780_crop/public/geraldo%20gun%20control.jpg?itok=aZOALZZ5" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" width="780" height="325" alt="Geraldo Rivera Debates Larry Elder" title="Geraldo Rivera Debates Larry Elder" /></a>		</div>
+		<div class="dek">
+			<h2>
+								<span class="title">
+											<a href="/2018/02/14/florida-shooting-geraldo-rivera-reacts-debates-gun-control-larry-elder">Geraldo, Elder Battle Over Gun Control: &#039;What Do You Do With an AR-15, Hunt Ducks?&#039;</a>									</span>
+			</h2>
+		</div>
+	
+
+
+  </div>
+  <div class="story story-3">
+    	
+		
+	 
+		<div class="pic">
+			<a href="/2018/02/14/florida-school-shooting-pam-bondi-says-attorney-generals-office-will-pay-funerals"><img typeof="foaf:Image" class="img-responsive lazy-load" data-loaded="false" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780_crop/public/Bondi%20Says%20FL%20Will%20Pay%20for%20Victims%20Funerals.jpg?itok=EUcj7JKM" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" width="780" height="325" alt="Pam Bondi" title="Pam Bondi" /></a>		</div>
+		<div class="dek">
+			<h2>
+								<span class="title">
+											<a href="/2018/02/14/florida-school-shooting-pam-bondi-says-attorney-generals-office-will-pay-funerals">Florida AG Bondi: My Office Will Pay for Funerals of Murdered Students</a>									</span>
+			</h2>
+		</div>
+	
+
+
+  </div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>                <div class="clearfix"></div>
+            </div>
+            <div class="container">
+                	  	<span class="line-border"><span class="icon border-icon"></span></span><h2 class="block-title"><a href="http://insider.foxnews.com/show/ingraham-angle">The Ingraham Angle</a></h2>
+  	<div class="article-blocks block_7">
+  
+  
+  
+  
+  
+      <div class="stories-wrap swipe-outer unseen">
+      <div class="stories swipe-inner unseen">
+          <div class="story story-1">
+    	
+		
+	 
+		<div class="pic">
+			<a href="/2018/02/14/laura-ingraham-blasts-dick-durbin-tired-trope-about-jobs-americans-wont-do"><img typeof="foaf:Image" class="img-responsive lazy-load" data-loaded="false" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780_crop/public/021418_ingraham.jpg?itok=gRNFlaS6" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" width="780" height="325" alt="Ingraham: Illegal immigration and the jobs we can&#039;t do" title="Ingraham: Illegal immigration and the jobs we can&#039;t do" /></a>		</div>
+		<div class="dek">
+			<h2>
+								<span class="title">
+											<a href="/2018/02/14/laura-ingraham-blasts-dick-durbin-tired-trope-about-jobs-americans-wont-do">&#039;Stop Lying to Us&#039;: Ingraham Blasts Durbin for &#039;Tired Trope&#039; About Jobs Americans Won&#039;t Do</a>									</span>
+			</h2>
+		</div>
+	
+
+
+  </div>
+  <div class="story story-2">
+    	
+		
+	 
+		<div class="pic">
+			<a href="/2018/02/12/ingraham-kirsten-gillibrand-rips-trump-weaponizing-metoo-movement-2018-2020-elections"><img typeof="foaf:Image" class="img-responsive lazy-load" data-loaded="false" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780_crop/public/Ingraham%20Rips%20Gillibrand%20for%20Weaponizing%20MeToo%20Movement.jpg?itok=wN3NSthM" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" width="780" height="325" alt="kirsten gillibrand" title="kirsten gillibrand" /></a>		</div>
+		<div class="dek">
+			<h2>
+								<span class="title">
+											<a href="/2018/02/12/ingraham-kirsten-gillibrand-rips-trump-weaponizing-metoo-movement-2018-2020-elections">Ingraham: Sen. Kirsten Gillibrand &#039;Fully Weaponized #MeToo&#039; to Drive Anti-Trump Vote</a>									</span>
+			</h2>
+		</div>
+	
+
+
+  </div>
+  <div class="story story-3">
+    	
+		
+	 
+		<div class="pic">
+			<a href="/2018/02/09/new-orleans-activist-get-rid-confederate-monuments-rename-washington-dc"><img typeof="foaf:Image" class="img-responsive lazy-load" data-loaded="false" data-src="http://insider.foxnews.com/sites/insider.foxnews.com/files/styles/780_crop/public/020918_activist.jpg?itok=LIQzUOIH" src="/sites/insider.foxnews.com/themes/insider_boot/img/0.gif" width="780" height="325" alt="On &quot;The Ingraham Angle&quot; on Thursday, Laura Ingraham debated an activist who&#039;s calling for the removal of Confederate monuments in New Orleans." title="On &quot;The Ingraham Angle&quot; on Thursday, Laura Ingraham debated an activist who&#039;s calling for the removal of Confederate monuments in New Orleans." /></a>		</div>
+		<div class="dek">
+			<h2>
+								<span class="title">
+											<a href="/2018/02/09/new-orleans-activist-get-rid-confederate-monuments-rename-washington-dc">New Orleans Activist: Get Rid of Confederate Monuments, Rename Washington, D.C.</a>									</span>
+			</h2>
+		</div>
+	
+
+
+  </div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>                <div class="clearfix"></div>
+            </div>
+            <div class="container shows-btn">
+                <a class="more-shows btn btn-primary more-btn" href="/shows"><span class="more-text">More Shows</span><span class="icon"></span></a>
+            </div>            
+        </div>
+                
+
+        <footer class="footer">
+            <div class="container">
+                <div id="follow-us-footer" class="row">
+                    <div class="col-xs-12 col-sm-6 follow-left">
+                        <h2 class="connect block-title">Connect <span>with Fox News</span></h2>
+                        <h4 class="follow-copy">Don't want to keep checking back here for the latest from Fox News? That's cool. We'll come to you ...</h4>
+                        <div class="social-node-2">
+                            <ul class="list-inline">
+                            <a href="http://facebook.com/foxnewsinsider" target="_blank"><li class="fb"><span class="icon fb-icon"></span></li></a>
+                            <a href="http://twitter.com/foxnewsinsider" target="_blank"><li class="tw"><span class="icon tw-icon"></span></li></a>
+                                                        <a href="https://www.youtube.com/user/FoxNewsInsider" target="_blank"><li class="yt"><span class="icon yt-icon"></span></li></a> 
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 follow-right">
+                        <div class="clearfix newsletter-form newsletter-container">
+                            <h2 class="connect block-title">Subscribe</h2>
+                            <p>Stay connected with the most-watched, most-trusted name in news.</p>
+<p class="agree">Send me email updates from Fox News. I can opt out at any time. By signing up below, I agree to the Fox News <a href="/privacy-policy">Privacy Policy</a> and <a href="/terms-of-use">Terms of Use</a>. Questions? <a href="http://help.foxnews.com" target="_blank">Contact Fox News</a>.</p>
+<form id="newsletter-follow-sidebar" class="form-subscribe" class="form-inline" role="form">
+	<input class="form-control input-email" name="email" placeholder="Your Email Here" required type="email" />
+	<button class="btn btn-primary signUp">Submit</button>
+</form>                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="footer-menus">
+                    <div id="menu-footer" class="col-xs-4 col-sm-2 col-md-offset-1 col-md-2">
+                        <ul>
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            <li>
+                                <a href="/latest">Latest</a>
+                            </li>
+                            <li>
+                                <a href="/trending">Trending</a>
+                            </li>
+                            <li>
+                                <a href="/people">People</a>
+                            </li>
+                            <li>
+                                <a href="/shows">Shows</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.foxnews.com/schedule">Schedule</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="misc-footer col-xs-8 col-sm-4">
+                    <nav class="navbar navbar-default" role="navigation"><ul class="nav nav-justified"><li class="first leaf"><a href="/mission" title="">Mission</a></li>
+<li class="leaf"><a href="/contact-us" title="">Contact Us</a></li>
+<li class="leaf"><a href="/privacy-policy" title="">NEW Privacy Policy</a></li>
+<li class="leaf"><a href="/terms-of-use" title="">NEW TERMS OF USE</a></li>
+<li class="leaf"><a href="/terms-new" title="">What&#039;s New With Terms of Use</a></li>
+<li class="leaf"><a href="http://insider.foxnews.com/privacy-policy/#ad-choice" title="Ad Choices">Ad Choices</a></li>
+<li class="last leaf"><a href="/feed" title="">RSS</a></li>
+</ul></nav>                    </div>
+                    <div class="footer-logo col-xs-12 col-sm-6 col-md-5">
+                    <a href="/" alt="Fox News Insider"><span class="icon"></span></a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>            
+                <p class="text-center copyright">
+                <small>
+                This material may not be published, broadcast, rewritten, or redistributed. ©2018 FOX News Network, LLC. All rights reserved.
+                </small>
+                </p>
+            </div>
+        </footer>
+  <script src="http://insider.foxnews.com/sites/insider.foxnews.com/files/js/js_B2uv6dkjoYobfQVyuXdchgrpnnx4oM0TkP_bDVf8Qrg.js"></script>
+  <script type="text/javascript">
+(function($, ISA){ if (!ISA) { return false; } ISA.pre(); $(document).ready(function(){ ISA.init(); });}(jQuery, (window.FNC && window.FNC.ISA) ? window.FNC.ISA : null));
+</script>  </div>
+  <div id="parsely-root" style="display: none">
+  <span id="parsely-cfg" data-parsely-site="insider.foxnews.com"></span>
+  </div>
+  <script>
+  (function(s, p, d) {
+  var h=d.location.protocol, i=p+"-"+s,
+  e=d.getElementById(i), r=d.getElementById(p+"-root"),
+  u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+  :"static."+p+".com";
+  if (e) return;
+  e = d.createElement(s); e.id = i; e.async = true;
+  e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+  })("script", "parsely", document);
+  </script>
+</body>
+</html>

@@ -1,0 +1,624 @@
+<!doctype html>
+
+<html lang="en-US" prefix="og: http://ogp.me/ns#" class="is-header-fixed">
+
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+			
+	<title>How to scrape websites in 5 minutes with Scrapy? - Theodo</title>
+
+	
+<!-- This site is optimized with the Yoast SEO plugin v4.9 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="http://blog.theodo.fr/2018/02/scrape-websites-5-minutes-scrapy/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to scrape websites in 5 minutes with Scrapy? - Theodo" />
+<meta property="og:description" content="Scraping a website means extracting data from a website in a usable way. The ultimate goal when scraping a website is to use the extracted data to build something else. In this article, I will show you how to extract the content of all existing articles of Theodo&#8217;s blog with Scrapy, an easy-to-learn, open source... Continue reading &#8594;" />
+<meta property="og:url" content="http://blog.theodo.fr/2018/02/scrape-websites-5-minutes-scrapy/" />
+<meta property="og:site_name" content="Theodo" />
+<meta property="article:tag" content="crawl" />
+<meta property="article:tag" content="python" />
+<meta property="article:tag" content="scraping" />
+<meta property="article:tag" content="scrapy" />
+<meta property="article:tag" content="spider" />
+<meta property="article:tag" content="website" />
+<meta property="article:section" content="Tech" />
+<meta property="article:published_time" content="2018-02-12T10:01:21+00:00" />
+<meta property="article:modified_time" content="2018-02-16T16:22:52+00:00" />
+<meta property="og:updated_time" content="2018-02-16T16:22:52+00:00" />
+<meta property="og:image" content="http://blog.theodo.fr/wp-content/uploads/2018/01/Scrapy-Logo-big.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="482" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Scraping a website means extracting data from a website in a usable way. The ultimate goal when scraping a website is to use the extracted data to build something else. In this article, I will show you how to extract the content of all existing articles of Theodo&#8217;s blog with Scrapy, an easy-to-learn, open source... Continue reading &#8594;" />
+<meta name="twitter:title" content="How to scrape websites in 5 minutes with Scrapy? - Theodo" />
+<meta name="twitter:image" content="http://blog.theodo.fr/wp-content/uploads/2018/01/Scrapy-Logo-big.png" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Theodo &raquo; Feed" href="http://blog.theodo.fr/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Theodo &raquo; Comments Feed" href="http://blog.theodo.fr/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Theodo &raquo; How to scrape websites in 5 minutes with Scrapy? Comments Feed" href="http://blog.theodo.fr/2018/02/scrape-websites-5-minutes-scrapy/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/blog.theodo.fr\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3.1"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='mr-frontend-style-css'  href='http://blog.theodo.fr/wp-content/plugins/multi-rating/assets/css/frontend-min.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='share-button-css-css'  href='http://blog.theodo.fr/wp-content/themes/theodo-blog-theme/css/share-button.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='noticia-text-css'  href='//fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='http://blog.theodo.fr/wp-content/themes/readme/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-css'  href='http://blog.theodo.fr/wp-content/themes/readme/css/fonts/fontello/css/fontello.css' type='text/css' media='all' />
+<link rel='stylesheet' id='prettify-css'  href='http://blog.theodo.fr/wp-content/themes/readme/js/google-code-prettify/prettify.css' type='text/css' media='all' />
+<link rel='stylesheet' id='uniform-css'  href='http://blog.theodo.fr/wp-content/themes/readme/js/jquery.uniform/uniform.default.css' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-css'  href='http://blog.theodo.fr/wp-content/themes/readme/js/jquery.magnific-popup/magnific-popup.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fluidbox-css'  href='http://blog.theodo.fr/wp-content/themes/readme/js/jquery.fluidbox/fluidbox.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mediaelement-css'  href='http://blog.theodo.fr/wp-content/themes/readme/js/mediaelement/mediaelementplayer.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='flexslider-css'  href='http://blog.theodo.fr/wp-content/themes/readme/js/jquery.flexslider/flexslider.css' type='text/css' media='all' />
+<link rel='stylesheet' id='selection-sharer-css'  href='http://blog.theodo.fr/wp-content/themes/readme/js/selection-sharer/selection-sharer.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elastislide-css'  href='http://blog.theodo.fr/wp-content/themes/readme/js/responsive-image-gallery/elastislide.css' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='http://blog.theodo.fr/wp-content/themes/readme/css/main.css' type='text/css' media='all' />
+<link rel='stylesheet' id='768-css'  href='http://blog.theodo.fr/wp-content/themes/readme/css/768.css' type='text/css' media='all' />
+<link rel='stylesheet' id='992-css'  href='http://blog.theodo.fr/wp-content/themes/readme/css/992.css' type='text/css' media='all' />
+<link rel='stylesheet' id='1200-css'  href='http://blog.theodo.fr/wp-content/themes/readme/css/1200.css' type='text/css' media='all' />
+<link rel='stylesheet' id='1400-css'  href='http://blog.theodo.fr/wp-content/themes/readme/css/1400.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-fix-css'  href='http://blog.theodo.fr/wp-content/themes/readme/css/wp-fix.css' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-style-css'  href='http://blog.theodo.fr/wp-content/themes/theodo-blog-theme/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='author-avatars-widget-css'  href='http://blog.theodo.fr/wp-content/plugins/author-avatars/css/widget.css?ver=1.10' type='text/css' media='all' />
+<link rel='stylesheet' id='author-avatars-shortcode-css'  href='http://blog.theodo.fr/wp-content/plugins/author-avatars/css/shortcode.css?ver=1.10' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.6 - Universal enabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-365958-4', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type='text/javascript' src='http://blog.theodo.fr/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/themes/theodo-blog-theme/js/share-button.min.js'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/themes/readme/js/modernizr.min.js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blog.theodo.fr/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blog.theodo.fr/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.3.1" />
+<link rel='shortlink' href='http://blog.theodo.fr/?p=11113' />
+			<style type="text/css">
+								.mr-custom-full-star {
+					background: url() no-repeat;
+					width: 32px;
+					height: 32px;
+					background-size: 32px 32px;
+					image-rendering: -moz-crisp-edges;
+					display: inline-block;
+				}
+				.mr-custom-half-star {
+					background: url() no-repeat;
+					width: 32px;
+					height: 32px;
+					background-size: 32px 32px;
+					image-rendering: -moz-crisp-edges;
+					display: inline-block;
+				}
+				.mr-custom-empty-star {
+					background: url() no-repeat;
+					width: 32px;
+					height: 32px;
+					background-size: 32px 32px;
+					image-rendering: -moz-crisp-edges;
+					display: inline-block;
+				}
+				.mr-custom-hover-star {
+					background: url() no-repeat;
+					width: 32px;
+					height: 32px;
+					background-size: 32px 32px;
+					image-rendering: -moz-crisp-edges;		
+					display: inline-block;		
+				}
+				.mr-star-hover {
+					color: #ffba00 !important;
+				}
+				.mr-star-full, .mr-star-half, .mr-star-empty {
+					color: #ffd700;
+				}
+				.mr-error {
+					color: #EC6464;
+				}
+			</style>
+			
+<meta property="og:image" content="http://blog.theodo.fr/wp-content/uploads/2018/01/Scrapy-Logo-big-150x150.png">
+<meta property="og:title" content="How to scrape websites in 5 minutes with Scrapy?">
+<meta property="og:description" content="Scraping a website means extracting data from a website in a usable way.
+The ultimate goal when scraping a website is to use the ">
+
+
+<!--[if lt IE 9]>
+	<script src="http://blog.theodo.fr/wp-content/themes/readme/js/ie.js"></script>
+<![endif]-->
+
+		<style type="text/css">
+.site-header img {
+    max-height: 30px;
+    margin-top: -8px;
+}
+.read-next {
+    display: none;
+}
+pre code {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+pre {
+    width: 100% !important;
+    margin-left: 0 !important;
+}
+@media screen and (min-width: 768px) {
+    .post .entry-content ul {
+        font-size: 19px;
+        line-height: 30px;
+    }
+    .post .entry-content ol {
+        font-size: 19px;
+        line-height: 30px;
+    }
+}
+
+.entry-content a:not(.button) {
+    margin: 0 4px;
+    color: #333;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+}
+.entry-content a:not(.button):hover {
+    border-bottom: 2px solid #333;
+}
+
+
+</style>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body class="single single-post postid-11113 single-format-standard">
+
+    <div id="page" class="hfeed site">
+        <header id="masthead" class="site-header" role="banner">
+			<h2 class="site-title">
+											<a href="http://www.theodo.fr?utm_source=blog_logo&utm_medium=blog&utm_campaign=blog" rel="home">
+								<img alt="Theodo" src="http://blog.theodo.fr/wp-content/uploads/2017/11/logo-theodo.png">
+							</a>
+									</h2>
+
+
+			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+				<a class="menu-toggle toggle-link"></a>
+
+				<div class="nav-menu">
+					<ul id="nav" class="menu-custom vs-nav"><li id="menu-item-2665" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-2665"><a href="http://blog.theodo.fr/category/programming/">Tech</a></li>
+<li id="menu-item-2667" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2667"><a href="http://blog.theodo.fr/category/methods/">Methods</a></li>
+<li id="menu-item-2666" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2666"><a href="http://blog.theodo.fr/category/corporate/">Lifestyle</a></li>
+<li id="menu-item-7352" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7352"><a href="http://blog.theodo.fr/category/events/">Events</a></li>
+<li id="menu-item-4154" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4154"><a href="http://www.theodo.fr/fr/joinus/developer">Jobs</a></li>
+<li id="menu-item-10284" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-10284"><a href="http://m33.network" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://m33.network', 'Internal');">Internal</a>
+<ul class="sub-menu">
+	<li id="menu-item-10277" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10277"><a href="http://blog.m33.network/internal-index/" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://blog.m33.network/internal-index/', 'Internal index');">Internal index</a></li>
+	<li id="menu-item-10278" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10278"><a href="http://blog.m33.network/category/internal/admin/" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://blog.m33.network/category/internal/admin/', 'Admin');">Admin</a></li>
+	<li id="menu-item-10279" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10279"><a href="http://blog.m33.network/category/internal/business-cases/" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://blog.m33.network/category/internal/business-cases/', 'Business cases');">Business cases</a></li>
+	<li id="menu-item-10280" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10280"><a href="http://blog.m33.network/category/internal/hiring/" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://blog.m33.network/category/internal/hiring/', 'Hiring');">Hiring</a></li>
+	<li id="menu-item-10281" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10281"><a href="http://blog.m33.network/category/internal/progression/" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://blog.m33.network/category/internal/progression/', 'Progression');">Progression</a></li>
+	<li id="menu-item-10282" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10282"><a href="http://blog.m33.network/category/internal/standards/" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://blog.m33.network/category/internal/standards/', 'Projects standards');">Projects standards</a></li>
+	<li id="menu-item-10283" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10283"><a href="http://blog.m33.network/category/internal/sales/" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://blog.m33.network/category/internal/sales/', 'Sales');">Sales</a></li>
+	<li id="menu-item-10285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10285"><a href="http://blog.m33.network/category/internal/technical-gesture/" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://blog.m33.network/category/internal/technical-gesture/', 'Technical gesture');">Technical gesture</a></li>
+</ul>
+</li>
+<li id="menu-item-3050" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3050"><a href="http://theodo.fr/blog/login">Login</a></li>
+</ul>				</div>
+			</nav>
+
+
+									<div class="search-container easing">
+							<a class="search-toggle toggle-link"></a>
+
+							<div class="search-box">
+								<form class="search-form" role="search" method="get" action="http://blog.theodo.fr/">
+									<label>
+										<span class="screen-reader-text">Search for:</span>
+
+										<input type="search" name="s" id="search-field" placeholder="type and hit enter &#8230;">
+									</label>
+
+									<input type="submit" class="search-submit" value="Search">
+								</form>
+							</div>
+						</div>
+					
+
+			<div class="social-container">
+				<a class="social-toggle toggle-link"></a>
+
+							<div class="textwidget"><ul class="social">
+<li><a href="https://www.facebook.com/theodo.fr" onclick="__gaTracker('send', 'event', 'outbound-widget', 'https://www.facebook.com/theodo.fr', '');" target="_blank" class="facebook"></a></li>
+<li><a href="https://twitter.com/theodo" onclick="__gaTracker('send', 'event', 'outbound-widget', 'https://twitter.com/theodo', '');" target="_blank" class="twitter"></a></li>
+<li><a href="https://www.linkedin.com/company/theodo" onclick="__gaTracker('send', 'event', 'outbound-widget', 'https://www.linkedin.com/company/theodo', '');" target="_blank" class="linkedin"></a></li>
+<li><a target="_blank" class="github" href="https:/github.com/theodo"></a></li>
+<li><a href="http://feeds.feedburner.com/theodo-symfony-development" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://feeds.feedburner.com/theodo-symfony-development', '');" target="_blank" class="rss"></a></li>
+</ul></div>
+					</div>
+        </header>
+
+<div id="main" class="site-main">
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+										<article id="post-11113" class="post-11113 post type-post status-publish format-standard has-post-thumbnail hentry category-programming tag-crawl tag-python tag-scraping tag-scrapy tag-spider tag-website">
+								
+
+								<div class="layout-fixed">
+									<share-button></share-button>
+																					<header class="entry-header">
+													<div class="entry-meta">
+														<span class="cat-links">
+															<a href="http://blog.theodo.fr/category/programming/" rel="category tag">Tech</a>														</span>
+													</div>
+
+
+																										<h1 class="entry-title" >How to scrape websites in 5 minutes with Scrapy?</h1>
+
+
+													<div class="entry-meta">
+														<span class="entry-date">
+															<i class="pw-icon-clock"></i>
+
+															<a href="http://blog.theodo.fr/2018/02/scrape-websites-5-minutes-scrapy/" rel="bookmark">
+																<time class="entry-date" datetime="2012-02-13T04:34:10+00:00">12 February 2018</time>
+															</a>
+														</span>
+
+														<span class="comment-link">
+															<i class="pw-icon-comment"></i>
+
+															<a href="http://blog.theodo.fr/2018/02/scrape-websites-5-minutes-scrapy/#comments"><span class="dsq-postid" data-dsqidentifier="11113 http://blog.theodo.fr/?p=11113">1 Comment</span></a>														</span>
+
+														<span class="byline">
+	<span class="author vcard">
+		<i class="pw-icon-user-outline"></i>
+    <a href="http://blog.theodo.fr/author/thomasmtheodo-fr/" title="Posts by Thomas Mollard" class="author url fn" rel="author">Thomas Mollard</a>	</span>
+</span>
+
+														<span class="read-time"><i class="pw-icon-bookmark-empty-1"></i><span class="eta"></span> read</span>
+													</div>
+
+												</header>
+
+
+												<div class="featured-image">
+													<img width="1200" height="482" src="http://blog.theodo.fr/wp-content/uploads/2018/01/Scrapy-Logo-big.png" class="attachment-pixelwars_theme_image_size_1920 wp-post-image" alt="How to scrape websites in 5 minutes with Scrapy?" title="" />												</div>
+											
+
+									<div class="entry-content">
+										<p>Scraping a website means extracting data from a website in a usable way.<br />
+The ultimate goal when scraping a website is to use the extracted data to build something else.</p>
+<p>In this article, I will show you how to extract the content of all existing articles of Theodo&#8217;s blog with Scrapy, an easy-to-learn, open source Python library used to do data scraping.<br />
+I personally used this data to train a machine learning model that generates new blog articles based on all previous articles (with relative success)!</p>
+<p><strong>Important:</strong><br />
+Before we start, you must remember to always read the terms and conditions of a website before you scrape it as the website may have some requirements on how you can legally use its data (usually not for commercial use).<br />
+You should also make sure that you are not scraping the website too aggressively (sending too many requests in a short period of time) as it may have an impact on the scraped website.</p>
+<h2 id="scrapy">Scrapy</h2>
+<p><a href="https://scrapy.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://scrapy.org/', 'Scrapy');">Scrapy</a> is an open source and collaborative framework for extracting data from websites.<br />
+Scrapy creates new classes called <code>Spider</code> that define how a website will be scraped by providing the starting URLs and what to do on each crawled page.<br />
+I invite you to read the <a href="https://docs.scrapy.org/en/latest/topics/spiders.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://docs.scrapy.org/en/latest/topics/spiders.html', 'documentation on Spiders');">documentation on Spiders</a> if you want to better understand how scraping is done when using Scrapy&#8217;s Spiders.</p>
+<p>Scrapy is a Python library that is available with <a href="https://pypi.python.org/pypi/Scrapy" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://pypi.python.org/pypi/Scrapy', 'pip');">pip</a>.<br />
+To install it, simply run <code>pip install scrapy</code>.</p>
+<p>You are now ready to start the tutorial, let&#8217;s get to it!</p>
+<h2 id="extractingallthecontentofourblog">Extracting all the content of our blog</h2>
+<p>You can find all the code used in this article in the <a href="https://github.com/mollardthomas/python-website-scraping" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://github.com/mollardthomas/python-website-scraping', 'accompanying repository');">accompanying repository</a>.</p>
+<h3 id="getthecontentofasinglearticle">Get the content of a single article</h3>
+<p>First, what we want to do is retrieve all the content of a single article.</p>
+<p>Let&#8217;s create our first <code>Spider</code>. To do that, you can create an <code>article_spider.py</code> file with the following code:</p>
+<pre><code class="python language-python">import scrapy
+
+
+class ArticleSpider(scrapy.Spider):
+    name = "article"
+    start_urls = ['http://blog.theodo.fr/2018/02/scrape-websites-5-minutes-scrapy']
+
+    def parse(self, response):
+        content = response.xpath(".//div[@class='entry-content']/descendant::text()").extract()
+        yield {'article': ''.join(content)}
+</code></pre>
+<p>Let&#8217;s break everything down!<br />
+First we import the <code>scrapy</code> library and we define a new class <code>ArticleSpider</code> derived from the <code>Spider</code> class from scrapy.<br />
+We define the <code>name</code> of our Spider and the <code>start_urls</code>, the URLs that our Spider will visit (in our case, only the URL of this blog post).<br />
+Finally, we define a <code>parse</code> method that will be executed on each page crawled by our spider.</p>
+<p>If you inspect the HTML of this page, you will see that all the content of the article is contained in a div of class <code>entry-content</code>.<br />
+Scrapy provides an <code>xpath</code> method on the <code>response</code> object (the content of the crawled page) that creates a <code>Selector</code> object useful to select parts of the page.<br />
+In the <code>xpath</code> method, it will create a <code>Selector</code> based on the <a href="https://www.w3.org/TR/xpath/" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://www.w3.org/TR/xpath/', 'xpath language');">xpath language</a>.<br />
+Using this method, we find the list of the text of all the descendants (divs, spans…) contained in the <code>entry-content</code> block.<br />
+We then return a dictionary with the content of the article by concatenating this list of text.</p>
+<p>Now, if you want to see the result of this Spider, you can run the command <code>scrapy runspider article_spider.py -o article.json</code>.<br />
+When you run this command, Scrapy looks for a Spider definition inside the file and runs it through its crawling engine.<br />
+The <code>-o</code> flag (or <code>--output</code>) will put the content of our Spider in the <code>article.json</code> file, you can open it and see that we indeed retrieved all the content of the article!</p>
+<h3 id="navigatethroughallthearticlesofapage">Navigate through all the articles of a page</h3>
+<p>We now know how to extract the content of an article.<br />
+But how can we extract the content of all articles contained on a page ?</p>
+<p>To do this, we need to identify the URLs of each article and use what we learned in the previous section to extract the content of each article.</p>
+<p>We could use the same Spider as the last section and give all the URLs to the <code>start_urls</code> attribute but that would take a lot of manual time to retrieve all the URLs.</p>
+<p>In a blog page like <a href="http://blog.theodo.fr/">this one</a>, you can go to an article by clicking on the title of the article.<br />
+We must thus find a way to visit all of the articles by clicking on each titles.</p>
+<p>Scrapy provides another method on the <code>response</code> object, the <code>css</code> method that also creates a <code>Selector</code> object, but this time based on the CSS language (which is easier to use than xpath).<br />
+If you inspect the title of an article, you can see that it is a link with a <code>a</code> tag contained in a div of class <code>entry-title</code>.<br />
+So, to extract all the links of a page, we can use the selector with <code>response.css('.entry-title a ::attr("href")').extract()</code>.</p>
+<p>Now let&#8217;s put two and two together and create a <code>page_spider.py</code> file with this code:</p>
+<pre><code class="python language-python">import scrapy
+
+
+class PageSpider(scrapy.Spider):
+    name = "page"
+    start_urls = ['http://blog.theodo.fr/']
+
+    def parse(self, response):
+        for article_url in response.css('.entry-title a ::attr("href")').extract():
+            yield response.follow(article_url, callback=self.parse_article)
+
+    def parse_article(self, response):
+        content = response.xpath(".//div[@class='entry-content']/descendant::text()").extract()
+        yield {'article': ''.join(content)}
+</code></pre>
+<p>What our <code>PageSpider</code> is doing here is start on the homepage of our blog and identify the URLs of each article in the page using the <code>css</code> method.<br />
+Then, we use the <code>follow</code> method on each URL to extract the content of each article using the <code>parse_article</code> callback (directly inspired from the first part).<br />
+The <code>follow</code> method allow us to do a new request and apply a callback on it, this is really useful to do a Spider that navigates through multiple pages.</p>
+<p>If you run the command <code>scrapy runspider page_spider.py -o page.json</code>, you will see in the page.json output that we retrieved the content of each article of the homepage.<br />
+You may notice one of the main advantages about Scrapy: requests are scheduled and processed asynchronously.<br />
+This means that Scrapy doesn’t need to wait for a request to be finished and processed, it can send another request or do other things in the meantime.</p>
+<h3 id="navigatethroughallthepagesoftheblog">Navigate through all the pages of the blog</h3>
+<p>Now that we know how to extract the content of all articles in a page, let&#8217;s extract <strong>all</strong> the content of the blog by going through all the pages of the blog.</p>
+<p>On each page of the blog, at the <a href="http://blog.theodo.fr/">bottom of the page</a>, you can see an &#8220;Older posts&#8221; button that links to the previous page of the blog.<br />
+Therefore, if we want to visit all pages of the blog, we can start from the first page and click on &#8220;Older posts&#8221; until we reach the last page (obviously, the last page of the blog does not contain the button).</p>
+<p>The &#8220;Older posts&#8221; button can be easily identified using the same <code>css</code> method as the previous section with <code>response.css('.nav-previous a ::attr("href")').extract_first()</code>.</p>
+<p>Now let&#8217;s retrieve all the content of our blog with a <code>blog_spider.py</code>:</p>
+<pre><code class="python language-python">import scrapy
+
+
+class BlogSpider(scrapy.Spider):
+    name = "blog"
+    start_urls = ['http://blog.theodo.fr/']
+
+    def parse(self, response):
+        for article_url in response.css('.entry-title a ::attr("href")').extract():
+            yield response.follow(article_url, callback=self.parse_article)
+        older_posts = response.css('.nav-previous a ::attr("href")').extract_first()
+        if older_posts is not None:
+            yield response.follow(older_posts, callback=self.parse)
+
+    def parse_article(self, response):
+        content = response.xpath(".//div[@class='entry-content']/descendant::text()").extract()
+        yield {'article': ''.join(content)}
+</code></pre>
+<p>Now, our <code>BlogSpider</code> extracts all URLs of articles and calls the <code>parse_article</code> callback and then extracts the URL of the &#8220;Older posts&#8221; button.<br />
+It then follows the URL and applies the <code>parse</code> callback on the previous page of our blog.</p>
+<p>If you run the command <code>scrapy runspider blog_spider.py -o blog.json</code>, you will see that our Spider will visit every article page and retrieve the content of each article since the beginning of our blog!</p>
+<h3 id="goingfurther">Going further</h3>
+<ul>
+<li>We could have also used a <code>CrawlSpider</code>, another Scrapy class that provides a dedicated mechanism for following links by defining a set of rules directly in the class.<br />
+You can look at the documentation <a href="https://docs.scrapy.org/en/latest/topics/spiders.html#crawlspider-example" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://docs.scrapy.org/en/latest/topics/spiders.html#crawlspider-example', 'here');">here</a>.</li>
+<li>In the <code>parse_article</code> function, we retrieved all the text content but that also includes the aside where we have the author of each article.<br />
+To remove it from the output, you can change the <code>xpath</code> by <code>response.xpath(".//div[@class='entry-content']/descendant::text()[not(ancestor::aside)]")</code>.</li>
+<li>You can see that the output of the scraper is not perfect as we see some unorthodox characters like <code>\r</code>, <code>\n</code> or <code>\t</code>.<br />
+To exploit the data, we would first need to clean what we retrieved by removing unwanted characters.<br />
+For example, we could replace <code>\t</code> characters to a space with a simple <code>content.replace('\r', ' ')</code>.</li>
+</ul>
+
+										<hr /><p>You liked this article? You'd probably be a good match for our ever-growing tech team at Theodo. </p><p style="text-align: center;"><a target="_blank" href="//www.theodo.com?utm_source=blog_article_joinus_button&utm_medium=blog&utm_campaign=blog" class="button"><i class="pw-icon-heart"></i>Join Us</a></p>
+
+										<aside class="about-author">
+	<h3>WRITTEN BY</h3>
+
+	<div class="author-bio">
+		    <div style="min-height: 110px;">
+  		<div class="author-img">
+  			<a href="http://blog.theodo.fr/author/thomasmtheodo-fr/">
+  				<img alt='thomasmtheodo-fr' src='https://lh4.googleusercontent.com/-65TcBarmXDY/AAAAAAAAAAI/AAAAAAAAAAo/pBjvF20olhU/photo.jpg' class='avatar avatar-192 photo avatar-default' height='192' width='192' />  			</a>
+  		</div>
+
+  		<div class="author-info">
+				<h4 class="author-name">Thomas Mollard</h4>
+  			<p>
+  				Web Developer at Theodo  			</p>
+  		</div>
+    </div>
+			</div>
+</aside>
+									</div>
+
+
+																					<footer class="entry-meta post-tags">
+													<h3>TAGS</h3>
+
+													<a href="http://blog.theodo.fr/tag/crawl/" rel="tag">crawl</a> <a href="http://blog.theodo.fr/tag/python/" rel="tag">python</a> <a href="http://blog.theodo.fr/tag/scraping/" rel="tag">scraping</a> <a href="http://blog.theodo.fr/tag/scrapy/" rel="tag">scrapy</a> <a href="http://blog.theodo.fr/tag/spider/" rel="tag">spider</a> <a href="http://blog.theodo.fr/tag/website/" rel="tag">website</a>												</footer>
+																			</div>
+							</article>
+
+
+										<aside class="read-next">
+				<div class="post-thumbnail " style="background-image: url( http://blog.theodo.fr/wp-content/uploads/2018/02/Screen-Shot-2018-02-11-at-22.06.03-1920x1268.png );">
+					<header class="entry-header">
+						<div class="layout-fixed">
+							<h3>NEXT READING</h3>
+
+							<div class="entry-meta">
+								<span class="cat-links">
+									<a href="http://blog.theodo.fr/category/docker/" rel="category tag">Docker</a> <a href="http://blog.theodo.fr/category/programming/" rel="category tag">Tech</a>								</span>
+							</div>
+
+
+							<h2 class="entry-title">
+								<a href="http://blog.theodo.fr/2018/02/making-amazon-dash-buttons-useful-building-doorbell/">Making Amazon Dash Buttons Useful: By building a doorbell!</a>
+							</h2>
+
+
+							<div class="entry-meta">
+								<span class="entry-date">
+									<i class="pw-icon-clock"></i>
+
+									<a href="http://blog.theodo.fr/2018/02/making-amazon-dash-buttons-useful-building-doorbell/" rel="bookmark">
+										<time class="entry-date" datetime="2012-02-13T04:34:10+00:00">11 February 2018</time>
+									</a>
+								</span>
+
+
+								<span class="comment-link">
+									<i class="pw-icon-comment"></i>
+
+																		<a href="http://blog.theodo.fr/2018/02/making-amazon-dash-buttons-useful-building-doorbell/">0 Comment</a>
+								</span>
+
+
+								<span class="byline">
+	<span class="author vcard">
+		<i class="pw-icon-user-outline"></i>
+    <a href="http://blog.theodo.fr/author/thomasmtheodo-fr/" title="Posts by Thomas Mollard" class="author url fn" rel="author">Thomas Mollard</a>	</span>
+</span>
+
+								<span class="read-time"><i class="pw-icon-bookmark-empty-1"></i><span class="eta"></span> read</span>
+							</div>
+						</div>
+					</header>
+				</div>
+			</aside>
+		
+
+							<div class="layout-fixed">
+								<nav class="nav-single row">
+									<div class="nav-previous col-sm-6">
+										<h4>PREVIOUS POST</h4><a href="http://blog.theodo.fr/2018/02/making-amazon-dash-buttons-useful-building-doorbell/" rel="prev"><span class="meta-nav">&#8592;</span> Making Amazon Dash Buttons Useful: By building a doorbell!</a>									</div>
+
+									<div class="nav-next col-sm-6">
+																			</div>
+								</nav>
+
+								
+<div id="disqus_thread">
+            <div id="dsq-content">
+
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-27368">
+        <div id="dsq-comment-header-27368" class="dsq-comment-header">
+            <cite id="dsq-cite-27368">
+                <span id="dsq-author-user-27368">Eti Uthakima.</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-27368" class="dsq-comment-body">
+            <div id="dsq-comment-message-27368" class="dsq-comment-message"><p>I am moving from BS4 to Scrapy and this post just simplified a lot of the concepts i was not getting about Scrapy. Thanks.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+            </ul>
+
+
+        </div>
+
+    </div>
+
+							</div>
+								</div>
+	</div>
+</div>
+
+
+        <footer id="colophon" class="site-footer" role="contentinfo">
+									<div id="footer-sidebar" class="footer-sidebar widget-area layout-full" role="complementary">
+							<aside id="text-4" class="widget widget_text"><h3 class="widget-title">Connection</h3>			<div class="textwidget"><a href="/blog/wp-admin">Log in</a> / <a href="/blog/wp-login.php?action=logout">Log out</a></div>
+		</aside>							
+							
+														
+							
+														
+							
+													</div>
+								
+			<div class="site-info">
+				<p>
+									</p>
+			</div>
+		</footer>
+	</div>
+    
+	
+	
+<!-- Start of Async HubSpot Analytics Code for WordPress v1.1.2 -->
+<script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "blog-post"]);
+(function(d,s,i,r) {
+  if (d.getElementById(i)){return;}
+  var n = d.createElement(s),e = document.getElementsByTagName(s)[0];
+  n.id=i;n.src = '//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/2383587.js';
+  e.parentNode.insertBefore(n, e);
+})(document, "script", "hs-analytics", 300000);
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/yaml.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/makefile.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/dockerfile.min.js"></script>
+<script>
+hljs.initHighlightingOnLoad();
+</script><script type='text/javascript'>
+/* <![CDATA[ */
+var mr_frontend_data = {"ajax_url":"http:\/\/blog.theodo.fr\/wp-admin\/admin-ajax.php","ajax_nonce":"343994e043","icon_classes":"{\"star_full\":\"fa fa-star mr-star-full\",\"star_hover\":\"fa fa-star mr-star-hover\",\"star_half\":\"fa fa-star-half-o mr-star-half\",\"star_empty\":\"fa fa-star-o mr-star-empty\",\"minus\":\"fa fa-minus-circle mr-minus\",\"spinner\":\"fa fa-spinner fa-spin mr-spinner\"}","use_custom_star_images":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/plugins/multi-rating/assets/js/frontend-min.js?ver=4.2.6'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/themes/theodo-blog-theme/js/main.js'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/themes/readme/js/fastclick.js'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/themes/readme/js/jquery.fitvids.js'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/themes/readme/js/google-code-prettify/prettify.js'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/themes/readme/js/jquery.validate.min.js'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/themes/readme/js/jquery.uniform/jquery.uniform.min.js'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/themes/readme/js/imagesloaded.pkgd.min.js'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/themes/readme/js/jquery.isotope.min.js'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/themes/readme/js/jquery.magnific-popup/jquery.magnific-popup.min.js'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/themes/readme/js/jquery.fluidbox/jquery.fluidbox.min.js'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/themes/readme/js/mediaelement/mediaelement-and-player.min.js'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/themes/readme/js/jquery.flexslider/jquery.flexslider-min.js'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/themes/readme/js/readingTime.js'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/themes/readme/js/selection-sharer/selection-sharer.js'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/themes/readme/js/responsive-image-gallery/r-gallery.js'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/themes/readme/js/socialstream.jquery.js'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/themes/readme/js/main.js'></script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/themes/readme/js/wp-fix.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var embedVars = {"disqusConfig":{"platform":"wordpress@4.3.1","language":""},"disqusIdentifier":"11113 http:\/\/blog.theodo.fr\/?p=11113","disqusShortname":"theodo-blog","disqusTitle":"How to scrape websites in 5 minutes with Scrapy?","disqusUrl":"http:\/\/blog.theodo.fr\/2018\/02\/scrape-websites-5-minutes-scrapy\/","options":{"manualSync":false},"postId":"11113"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/plugins/disqus-comment-system/media/js/disqus.js?ver=4.3.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"theodo-blog"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://blog.theodo.fr/wp-content/plugins/disqus-comment-system/media/js/count.js?ver=4.3.1'></script>
+</body>
+</html><div style="display: none;">test test</div>

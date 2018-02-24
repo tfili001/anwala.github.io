@@ -1,0 +1,43 @@
+<html op="item"><head><meta name="referrer" content="origin"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" type="text/css" href="news.css?MS1iG83YxpHJGzc1DepY">
+        <link rel="shortcut icon" href="favicon.ico">
+        <title>Hacker News</title></head><body><center><table id="hnmain" border="0" cellpadding="0" cellspacing="0" width="85%" bgcolor="#f6f6ef">
+        <tr><td bgcolor="#ff6600"><table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding:2px"><tr><td style="width:18px;padding-right:4px"><a href="https://news.ycombinator.com"><img src="y18.gif" width="18" height="18" style="border:1px white solid;"></a></td>
+                  <td style="line-height:12pt; height:10px;"><span class="pagetop"><b class="hnname"><a href="news">Hacker News</a></b>
+              <a href="newest">new</a> | <a href="newcomments">comments</a> | <a href="show">show</a> | <a href="ask">ask</a> | <a href="jobs">jobs</a> | <a href="submit">submit</a>            </span></td><td style="text-align:right;padding-right:4px;"><span class="pagetop">
+                              <a href="login?goto=item%3Fid%3D16410850">login</a>
+                          </span></td>
+              </tr></table></td></tr>
+<tr style="height:10px"></tr><tr><td><table class="fatitem" border="0">
+        <tr class='athing' id='16410850'>
+      <td align="right" valign="top" class="title"><span class="rank"></span></td>      <td valign="top" class="votelinks"><center><img src="s.gif" height="1" width="14"></center></td><td class="title">[flagged]</td></tr><tr><td colspan="2"></td><td class="subtext">
+        <a href="user?id=doener" class="hnuser">doener</a> <span class="age"><a href="item?id=16410850">15 hours ago</a></span> <span id="unv_16410850"></span> | <a href="hide?id=16410850&amp;goto=item%3Fid%3D16410850">hide</a> | <a href="https://hn.algolia.com/?query=How%20Putin%E2%80%98s%20trolls%20worked%20for%20Trump&sort=byDate&dateRange=all&type=story&storyText=false&prefix&page=0" class="hnpast">past</a> | <a href="https://www.google.com/search?q=How%20Putin%E2%80%98s%20trolls%20worked%20for%20Trump">web</a> | <a href="fave?id=16410850&amp;auth=46943aad8714bfb95866eec432151b6e3d4925e4">favorite</a>              </td></tr>
+        </table><br><br>
+  <table border="0" class='comment-tree'>
+            <tr class='athing comtr ' id='16411047'><td>
+            <table border='0'>  <tr>    <td class='ind'><img src="s.gif" height="1" width="0"></td><td valign="top" class="votelinks"><center><a id='up_16411047' href='vote?id=16411047&amp;how=up&amp;goto=item%3Fid%3D16410850'><div class='votearrow' title='upvote'></div></a></center></td><td class="default"><div style="margin-top:2px; margin-bottom:-10px;"><span class="comhead">
+          <a href="user?id=Natsu" class="hnuser">Natsu</a> <span class="age"><a href="item?id=16411047">14 hours ago</a></span> <span id="unv_16411047"></span><span class="par"></span> <a class="togg" n="1" href="javascript:void(0)" onclick="return toggle(event, 16411047)"></a>          <span class='storyon'></span>
+                  </span></div><br><div class="comment">
+                  <span class="c00">I&#x27;m not quite sure how this should have been titled, but there appears to be as yet no mention of Putin in Mueller&#x27;s indictment of various Russian nationals on charges of identity theft, wire fraud and trolling Twitter.<span>
+              </span><div class='reply'>        <p><font size="1">
+                  </font>
+      </div></td></tr>
+      </table></td></tr>
+            </table>
+      <br><br>
+  </td></tr>
+<tr><td><img src="s.gif" height="10" width="0"><table width="100%" cellspacing="0" cellpadding="1"><tr><td bgcolor="#ff6600"></td></tr></table><br><center><a href="https://www.ycombinator.com/apply/">
+        Applications are open for YC Summer 2018
+      </a></center><br><center><span class="yclinks"><a href="newsguidelines.html">Guidelines</a>
+        | <a href="newsfaq.html">FAQ</a>
+        | <a href="mailto:hn@ycombinator.com">Support</a>
+        | <a href="https://github.com/HackerNews/API">API</a>
+        | <a href="security.html">Security</a>
+        | <a href="lists">Lists</a>
+        | <a href="bookmarklet.html" rel="nofollow">Bookmarklet</a>
+        | <a href="http://www.ycombinator.com/legal/">Legal</a>
+        | <a href="http://www.ycombinator.com/apply/">Apply to YC</a>
+        | <a href="mailto:hn@ycombinator.com">Contact</a></span><br><br><form method="get" action="//hn.algolia.com/">Search:
+          <input type="text" name="q" value="" size="17" autocorrect="off" spellcheck="false" autocapitalize="off" autocomplete="false"></form>
+            </center></td></tr>
+      </table></center></body><script type='text/javascript' src='hn.js?MS1iG83YxpHJGzc1DepY'></script>
+  </html>

@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <title>Python ile Web Programlama Uzmanlığı Eğitimi | arı24</title>
+  <link rel="alternate" type="application/rss+xml" title="Haberler" href="http://feeds.feedburner.com/itu24/haberler" />
+  <link rel="alternate" type="application/rss+xml" title="Köşe Yazıları" href="http://feeds.feedburner.com/itu24/koseyazilari" />
+  <link rel="alternate" type="application/rss+xml" title="Etkinlikler" href="http://feeds.feedburner.com/itu24/etkinlikler" />
+
+  <meta name="theme-color" content="#2255aa">
+  <link rel="shortcut icon" href="/assets/img/icons/handcrafted/subpixel/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/icons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/icons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/icons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/icons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/icons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/icons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/icons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/icons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/apple-touch-icon-180x180.png">
+  <meta name="apple-mobile-web-app-title" content="arı24">
+  <link rel="icon" type="image/png" href="/assets/img/icons/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/assets/img/icons/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/assets/img/icons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/assets/img/icons/handcrafted/subpixel/favicon16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/assets/img/icons/handcrafted/subpixel/favicon32x32.png" sizes="32x32">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="msapplication-TileColor" content="#2255aa">
+  <meta name="msapplication-TileImage" content="/assets/img/icons/mstile-144x144.png">
+  <meta name="msapplication-config" content="/assets/img/icons/browserconfig.xml">
+  <meta name="application-name" content="arı24">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/assets/js/functions.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.css?v=1">
+    <meta property="og:type" content="event" />
+      <meta property="og:title" content="Python ile Web Programlama Uzmanlığı Eğitimi" />
+      <meta property="fb:app_id" content="202493262526" />
+  <meta property="fb:admins" content="662242137" />
+</head>
+<body>
+<div class="modalbig">
+    <div class="modalsmall">
+      <div class="close"></div>
+        <iframe></iframe>
+    </div>
+</div>
+<input type="checkbox" id="hamburgercheck">
+<header>
+  <section id="header-ici">
+    <div class="logo">
+      <a href="/"><img id="logo" src="/assets/img/ari24-beyaz.svg"></a>
+    </div>
+    <nav id="menu">
+
+      <label for="hamburgercheck"></label>
+      <ul>
+                        <li>
+                    <a href="/haberler">Haberler</a>
+                                      </li>
+                                <li>
+                    <a href="/etkinlikler" class="secili">Etkinlikler</a>
+                                      </li>
+                                <li>
+                    <a href="/kulupler">Kulüpler</a>
+                                        <div id="kulupler-acilan-menu">
+                        <div class="kulup-turu">
+              <a href="/kulupler/kultur-sanat"><h2>Kültür-Sanat Kulüpleri</h2></a>
+              <ul>
+                                <li><a href="/gonulluluk-kulubu">Gönüllülük Kulübü (220,4)</a></li>
+                                <li><a href="/gezitu">GEZİTÜ (159,3)</a></li>
+                                <li><a href="/muzikal-toplulugu">Müzikal Topluluğu (131,7)</a></li>
+                                <li><a href="/artitu">ArtITU (Sanatsal Bakış Kulübü) (130,4)</a></li>
+                                <li><a href="/psikoloji-kulubu">Psikoloji Kulübü (112,8)</a></li>
+                              </ul>
+            </div>
+                        <div class="kulup-turu">
+              <a href="/kulupler/uzmanlik"><h2>Uzmanlık Kulüpleri</h2></a>
+              <ul>
+                                <li><a href="/girisimcilik-kulubu">Girişimcilik Kulübü (625,6)</a></li>
+                                <li><a href="/ituemk">Endüstri Mühendisliği Kulübü (538,7)</a></li>
+                                <li><a href="/ieee">İTÜ IEEE Öğrenci Kolu (505)</a></li>
+                                <li><a href="/ituecons">Ekonomi Kulübü (367,4)</a></li>
+                                <li><a href="/isletme-muhendisligi-kulubu">İşletme Mühendisliği Kulübü (320,6)</a></li>
+                              </ul>
+            </div>
+                        <div class="kulup-turu">
+              <a href="/kulupler/spor"><h2>Spor Kulüp-Takımları</h2></a>
+              <ul>
+                                <li><a href="/buz-hokeyi-kulubu">İTÜ Buz Hokeyi Kulübü (392,6)</a></li>
+                                <li><a href="/itu-hornets">İTÜ Hornets (263,1)</a></li>
+                                <li><a href="/magara-arastirma-kulubu">Mağara Araştırma Kulübü (196,5)</a></li>
+                                <li><a href="/itueskrim">Eskrim Kulübü (128,4)</a></li>
+                                <li><a href="/frizbi-teknik">Frizbi Teknik (123,1)</a></li>
+                              </ul>
+            </div>
+            			<p style="font-size:0.9em;text-align:left;font-style:italic;margin-top:10px;" href="#">Not: 5 Kasım 2016 tarihinde yeni kriterler eklenerek, puan hesaplama sistemi iyileştirilmiştir.</p>
+            <a class="tum-kulupler" href="/kulupler">Tüm Kulüpler</a>
+          </div>
+                  </li>
+                                <li>
+                    <span class="egitim">Eğitimler</span>
+                                <div id="egitimler-acilan-menu">
+                                <div class="egitim-kutusu">
+                                        <div class="bos-egitim"></div>
+                                    </div>
+                                <div class="egitim-kutusu">
+                                        <a href="/etkinlik/yazilim24-sifirdan-baslayanlar-icin-yazilim-uzmanligi-egitimi-1943">
+                        <div><img src="/assets/img/egitimler/vs.png" alt="" /></div>
+                        <div>Sıfırdan Başlayanlar İçin Yazılım Uzmanlığı Eğitimi</div>
+                    </a>
+                                    </div>
+                                <div class="egitim-kutusu">
+                                        <div class="bos-egitim"></div>
+                                    </div>
+                            </div>
+                            </li>
+                                <li>
+                    <a href="/kurumsal">Kurumsal</a>
+                                      </li>
+                                <li>
+                    <a href="/iletisim">İletişim</a>
+                                      </li>
+                      </ul>
+    </nav>
+    <div id="aramakutusu">
+          <form method="GET" action="/ara">
+              <input type="text" placeholder="Site içi arama" name="arama"><button type="button"></button>
+          </form>
+      </div>
+</section>
+  </header>
+<aside style="display: none;" id="sosyal-medya-petekleri">
+  <a href="https://facebook.com/itu24" target="_blank" class="facebook">
+  </a>
+
+  <div class="fb-like" data-href="https://www.facebook.com/itu24" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+  <a href="https://instagram.com/itu24" target="_blank" class="instagram"></a>
+
+  <a href="https://twitter.com/itu24" target="_blank" class="twitter"></a>
+  <a href="https://twitter.com/itu24" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false" data-lang="tr">Takip et</a>
+
+</aside>
+	<main class="etkinlik">
+		<figure>
+			<img src="/uploads/59a09a2708b37.png">
+		</figure>
+
+		<header>
+			<span class="duzenleyen">
+							yazılım24
+						</span>
+			<h1>Python ile Web Programlama Uzmanlığı Eğitimi
+							</h1>
+				<table class="etkinlik-bilgileri">
+	<tr>
+		<th>Başlangıç Tarihi</th>
+		<td>25 Şubat 2018 12:00</td>
+	</tr>
+			<tr>
+		<th>Yer</th>
+		<td>yazılım24 Mecidiyeköy Ofisi</td>
+	</tr>
+		<tr>
+		<th>Etkinlik Türü</th>
+		<td>Eğitim</td>
+	</tr>
+		<tr>
+		<th>Etkinlik Sorumlusu</th>
+		<td>yazılım24</td>
+	</tr>
+			<tr>
+		<th>İletişim</th>
+		<td>02122667800</td>
+	</tr>
+			<tr>
+		<th>Ayrıntılı Bilgi</th>
+		<td>
+			<a class="web-sitesi" target="_blank" href="http://yazilim24.com/egitimlerimiz/python-web-yazilim-uzmanligi-egitimi-django-kursu/">http://yazilim24.com/egitimlerimiz/python-web-yazilim-uzmanligi-egitimi-django-kursu/</a>
+		</td>
+	</tr>
+			<tr>
+		<th>Katılım Türü</th>
+		<td>Öğrenci: 290 TL x 4 Taksit</td>
+	</tr>
+	</table>
+
+		</header>
+		<article>
+						<p><p>E-ticaret siteleri, forumlar, bloglar, sözlükler, sipariş-rezervasyon sistemleri, üyelik sistemleri... kısacası internet üzerindeki tüm yazılımlar. Evet tüm bunlar için yeni dünyada Python ve Django kullanılıyor. İnternet altyapısı üzerinde çalışan tüm programlar için web yazılım uzmanlığı sizin geleceğinizi netleştirecek.</p>
+<p>Piyasada "web developer" veya "back-end developer" pozisyonlarında bir kariyer planı çiziyorsanız, her şeyin internet üzerinde döndüğü günümüzde sizin de internet projeleriniz varsa bu eğitim size göre. </p>
+<p>Katılımcılar bu eğitimin sonunda kendi web altyapılarını kurabiliyor olacaklar. Mobil uygulamaların ihtiyacı olan web servislerine hakim olacaklar. Belki de Türkiye'den neden bir facebook çıkmıyor sorusunun cevabı olacaklar. Bu eğitimimizle siz de 60 saat boyunca her an web uygulamaları geliştirerek bu sürece birebir şahit olacaksınız. </p>
+<p> </p>
+<p><strong>- Eğitim Süresi: 60 saat</strong></p>
+<p><strong>- Eğitim Günü: Pazar</strong></p>
+<p><strong>- Eğitim Saatleri: 12:00-18:00</strong></p>
+<p><strong>- Eğitim Başlangıç:  25 Şubat 2018 ( Kayıtlarımız devam ediyor )</strong></p>
+<p><strong>- Eğitim Ücreti: 290 TL x 4 Taksit (1160 TL)</strong></p>
+<p> </p>
+<p>- Eğitim Yazılım24 Mecidiyeköy ofisinde yapılacaktır.</p>
+<p>- Eğitim sonunda %70 oranında katılım sağlamış tüm katılımcılar eğitime katılım sertifikası alacaklardır.</p>
+<p>- Eğitimler İTÜ'lü eğitmenlerimiz tarafından verilecektir.</p>
+<p>- Katılımcılar eğitimlere kendi dizüstü bilgisayarlarıyla geleceklerdir.</p>
+<p> </p>
+<p><strong><em>Kimler İçin Uygun?</em></strong></p>
+<p>- Bir web sitesi veya web uygulaması projesi olup hayata geçirmek isteyenler için</p>
+<p>- Türkiye'de çok sayıda mevcut olan yazılım ofislerinde bir gelecek kariyeri planlayanlar</p>
+<p>- Kurumların veya şirketlerin web sitesi veya web altyapılarını yönettiği IT departmanlarında yazılım sorumlusu olarak çalıştığı bir gelecek hayal edenler</p>
+<p>- Aldığı sertifika ile yurtdışı veya yurtiçinde yeni iş imkanları arayan bilişim vb alanlarda üniversite okuyan öğrenciler</p>
+<p>- Bağımsız olarak şirketlere ve kurumlara web siteleri ve web altyapıları kurarak gelir etmeyi planlayanlar için</p>
+<p> </p>
+<p><em><strong>Program Sonunda Alınabilecek Unvanlar?</strong></em></p>
+<p>- Web Programlama Uzmanı</p>
+<p>- Python Geliştirici</p>
+<p>- Back-End Developer</p>
+<p>- Web Programcısı</p>
+<p>- Mobil Uygulamalar İçin Web Servis Programcısı</p>
+<p> </p>
+<p>KAYIT: Kayıt olmak için 02122667800 numaralı telefondan yazılım24'ü arayarak randevu bırakabilir ya da<a href="http://yazilim24.com/kayit/" target="_blank"> http://yazilim24.com/kayit</a>/ linkinden kayıt için randevu oluşturabilirsiniz.</p></p>
+					</article>
+		<section class="paylas-butonlari">
+			<section class="facebook"></section><section class="twitter"></section><section class="google-plus"></section>
+		</section>
+				<script type="text/javascript" src="/assets/js/fullscreeninsideimage.js"></script>
+	</main>
+<footer>
+  <section id="footer-ici">
+    <ul id="footer-linkleri">
+      <h2>Bağlantılar</h2>
+                  <li><a href="/haberler">Haberler</a></li>
+                        <li><a href="/etkinlikler" class="secili">Etkinlikler</a></li>
+                        <li><a href="/kulupler">Kulüpler</a></li>
+                        <li><a href="/egitimler">Eğitimler</a></li>
+                        <li><a href="/kurumsal">Kurumsal</a></li>
+                        <li><a href="/iletisim">İletişim</a></li>
+                </ul>
+    <section id="yemekhane-menusu">
+      <h2>Yemekhane</h2>
+      <ul>
+
+      </ul>
+    </section>
+    <section id="sosyal-medya-linkleri">
+      <a class="facebook" href="https://www.facebook.com/ari24sosyal">Facebook</a>
+      <a class="twitter" href="https://twitter.com/ari24sosyal">Twitter</a>
+      <a class="instagram" href="https://instagram.com/ari24sosyal">Instagram</a>
+    </section>
+
+  </section>
+</footer>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script>
+  ;$(function () {
+    $.get("http://api.ari24.com/yemekhane/menu")
+        .done(function (data) {
+          if (!data.kapali) {
+            var menu = data.menu;
+            for (var i = 0; i < menu.length; i++) {
+              $("#yemekhane-menusu ul").append($("<li/>").text(menu[i].yemek.replace("Vejeteryan","Vejetaryen")));
+            }
+          } else {
+            $("#yemekhane-menusu ul").append($("<li/>").text("Kuru Ekmek"));
+            $("#yemekhane-menusu ul").append($("<li/>").text("Soğan"));
+          }
+        });
+  });
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "http://connect.facebook.net/tr_TR/sdk.js#xfbml=1&appId=202493262526&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script src="/assets/js/jquery.sharrre-1.3.1.js"></script>
+
+
+<script>
+  $(function (){
+    //TODO buradaki url veritabanındaki permalink ile otomatik oluşturulacak
+        var url = "http:\/\/ari24.com\/etkinlik\/python-ile-web-programlama-uzmanligi-egitimi-2418";
+      $($('.paylas-butonlari .twitter')[0]).sharrre({
+    share: {
+      twitter: true
+    },
+    template: '',
+    enableHover: false,
+    enableTracking: true,
+    buttons: { twitter: {via: 'ari24sosyal'}},
+    click: function (api, options) {
+      api.simulateClick();
+      api.openPopup('twitter');
+    },
+    url: url
+  });
+  $($('.paylas-butonlari .facebook')[0]).sharrre({
+    share: {
+      facebook: true
+    },
+    template: '<span class="toplam">{total}</span>',
+    enableHover: false,
+    enableTracking: true,
+    //buttons: { },
+    click: function (api, options) {
+      api.simulateClick();
+      api.openPopup('facebook');
+    },
+    url: url
+  });
+  $($('.paylas-butonlari .google-plus')[0]).sharrre({
+    share: {
+      googlePlus: true
+    },
+    template: '<span class="toplam">{total}</span>',
+    enableHover: false,
+    enableTracking: true,
+    //buttons: { },
+    click: function (api, options) {
+      api.simulateClick();
+      api.openPopup('googlePlus');
+    },
+    url: url,
+    urlCurl: '/assets/js/sharrre.php'
+  });
+  });
+</script>
+<script src="/assets/js/analytics.js"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/12700840" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"905dddfa2b","applicationID":"6936568","transactionName":"bl1aNhNQCBUHV0RYDlcXbRAIHg8IAlFIHxFRSA==","queueTime":0,"applicationTime":45,"atts":"QhpZQFtKGxs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

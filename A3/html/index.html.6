@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+<meta name="author" content="Kim Albrecht">
+<meta name="copyright" content="kimalbrecht.com">
+<meta name="description" content="Visualization of 1.500 individuals and organizations connected directly and indirectly to Donald Trump.">
+<meta name="robots" content="index"/>
+<meta property="og:title" content="Trump Connections">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Visualization of 1.500 individuals and organizations connected directly and indirectly to Donald Trump.">
+<meta property="og:image" content="http://trump.kimalbrecht.com/img/trump-connections-visualization-kim-albrecht.png">
+<meta property="og:url" content="http://trump.kimalbrecht.com">
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-35300482-1', 'auto');
+ga('send', 'pageview', 'trump');
+</script>
+<!-- End Google Analytics -->
+
+<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,700" rel="stylesheet">
+<link rel="stylesheet" href="css/awesomplete.kim.css" />
+<style>
+  body{
+    font-family: 'Libre Franklin', sans-serif;
+    background: white;
+  }
+  #header{
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+  }
+  h1{
+    font-weight: 700;
+    font-size: 12px;
+  }
+  p{
+    font-weight: 300;
+    font-size: 12px;
+  }
+  a{
+    color: black;
+  }
+  #search{
+    font-size: 10px;
+    left: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+  }
+  #search input{
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    font-weight: 300;
+  }
+  textarea:focus, input:focus{
+      outline: none;
+  }
+  li{
+    font-weight: 300;
+  }
+  footer{
+    bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    padding: 10px;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+  }
+  #visContainer{
+    width: 900px;
+    height: 100%;
+    padding: 10px 0px 10px 0px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .node text {
+    font-size: 8px;
+  }
+
+  .d0 text {  
+    font-weight: 700;
+    font-size: 10px;
+  }
+
+  .d1 text {
+    text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+    text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+    text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+    font-weight: 300;
+  }
+
+  .d2 text:hover {  
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .link {
+    fill: none;
+    stroke: #555;
+    stroke-opacity: 1;
+    stroke-width: .5px;
+  }
+  div.tooltip {
+    position: absolute;
+    text-align: right;
+    padding: 2px;
+    background: white;
+    font-size: 8px;
+    width: 83px;
+  }
+</style>
+</head>
+<body>
+  <div id='visContainer'>
+    <div id='header'>
+      <h1>Trump Connections</h1>
+      <p>Visualization of 1.500 individuals and organizations connected directly and indirectly to Donald Trump. To explore the network further select one of the connections on the right of the graph or search below.</p>
+
+      <div id="search"> 
+        <p><a href="http://trump.kimalbrecht.com/network">View full network</a></p>
+        Search: <input id="peopleSearch"/><datalist id="peopleList"></datalist>
+      </div>
+    </div>
+    <br>
+    <div id="treeVis">
+      <svg id='svgVis'></svg>
+    </div>
+  </div>
+
+  <footer>
+    <p>Share: <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ftrump.kimalbrecht.com%2F&t=Trump%20Connections" target="_blank" title="Share on Facebook">Facebook</a> | <a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Ftrump.kimalbrecht.com%2F&text=Trump%20Connections:%20http%3A%2F%2Ftrump.kimalbrecht.com%2F&via=kimay" target="_blank" title="Tweet">Twitter</a> | <a href="http://www.reddit.com/submit?url=http%3A%2F%2Ftrump.kimalbrecht.com%2F&title=Trump%20Connections" target="_blank" title="Submit to Reddit">Reddit</a></p>
+    <hr style="height:0px; visibility:hidden;" />
+    <p>Visualization by <a href="http://kimalbrecht.com/">Kim Albrecht</a></p>
+    <p>Data and investigation by <a href="https://www.buzzfeed.com/johntemplon/help-us-map-trumpworld">
+    Buzzfeed</a></p>
+  </footer>
+</body>
+</html>
+<script src="js/d3.v4.min.js" type="text/javascript" ></script>
+<script src="js/awesomplete.min.js" type="text/javascript" ></script>
+
+<script>
+
+var mobileConnect;
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ mobileConnect = true;
+}
+
+var searchNode;
+
+var margin = {top: 0, right: 0, bottom: 0, left: 0},
+    width = 900,
+    height = 500;
+
+var svg = d3.select("body").select("#svgVis")
+    .attr("width", width)
+    .attr("height", height)
+    
+g = svg.append("g").attr("transform", "translate(200,0)");
+
+var div = d3.select("#treeVis").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
+var tree = d3.cluster();
+
+var stratify = d3.stratify()
+    .parentId(function(d) { return d.id.substring(0, d.id.lastIndexOf('|')); });
+
+d3.tsv("data/trump-nodes.tsv", function(nodes) {
+  d3.tsv("data/trump-edges.tsv", function(edges) {
+
+  // console.log(parseFloat(window.location.hash.substring(1)))
+
+  // nodes[+window.location.hash.substring(1)] != undefined 
+
+  if (!isNaN(parseFloat(window.location.hash.substring(1)))) {
+    if (nodes[+window.location.hash.substring(1)] != undefined) {
+      searchNode = +window.location.hash.substring(1);
+    } else {
+      searchNode = Math.floor(Math.random()*(25));
+      history.pushState(searchNode, "trump", "#"+searchNode);
+    }
+  } else {
+    searchNode = Math.floor(Math.random()*(25));
+    history.pushState(searchNode, "trump", "#"+searchNode);
+  }
+
+  function searchData() {
+    var options = d3.select("#peopleList").selectAll("option")
+      .data(nodes)
+      .enter()
+      .append("option")
+      .attr("label",function (d) { return d.name; })
+      .attr("value", function (d,i) { return i; }); 
+
+    var input = document.getElementById("peopleSearch");
+    new Awesomplete(input, {list: "#peopleList"});
+  }
+
+  searchData();
+
+  function dataTransform() {
+
+      history.pushState(searchNode, "trump", "#"+searchNode);
+
+      ga('send', 'event', 'loadConnection', searchNode);
+
+      var edgesFilterData = edges.filter(function(d){ return +d['source'] === searchNode || +d['target'] === searchNode });
+
+      var vizHeight = 500;
+
+      if (edgesFilterData.length > 50) { vizHeight = edgesFilterData.length * 10 }
+
+      div.style("opacity", 0).style("top",0);
+
+      svg.attr("height", vizHeight)
+      tree.size([vizHeight, width - 400]);
+
+      var nodesFilterData = [];
+
+      edgesFilterData.forEach(function(d){
+        if (d.source == searchNode) {
+          var tree = d.source+'|'+d.connection+'|'+d.target;
+          nodes[d.target].id = tree;
+          nodes[d.target].connection = d.connection;
+          nodes[d.target].ref = d.ref;
+          nodesFilterData.push(nodes[d.target]);
+        } else {
+          var tree = d.target+'|'+d.connection+'|'+d.source;
+          nodes[d.source].id = tree;
+          nodes[d.source].connection = d.connection;
+          nodes[d.source].ref = d.ref;
+          nodesFilterData.push(nodes[d.source]);
+        }
+      });
+
+      var nestedNodes = d3.nest()
+        .key(function(d) { return d.connection; })
+        .entries(nodesFilterData);
+
+      nestedNodes.forEach(function(d){
+        nodesFilterData.unshift({'id': searchNode + '|' + d.key});
+      });
+
+      nodesFilterData.unshift({'id':''+searchNode+''});
+
+      return nodesFilterData;
+  }
+  
+  function drawTree(nodesFilterData) {
+
+    var root = stratify(nodesFilterData)
+        .sort(function(a, b) { return (a.height - b.height) || a.id.localeCompare(b.id); });
+
+    tree(root);
+
+    var link = g.selectAll(".link")
+        .data(root.descendants().slice(1));
+
+      link //.transition()
+        .attr("d", function(d) {
+          return "M" + d.y + "," + d.x
+              + "C" + (d.parent.y + 100) + "," + d.x
+              + " " + (d.parent.y + 100) + "," + d.parent.x
+              + " " + d.parent.y + "," + d.parent.x;
+        });
+
+      link.exit().remove();
+
+      link
+        .enter().append("path")
+        .attr("class", "link")
+        .attr("d", function(d) {
+          return "M" + d.y + "," + d.x
+              + "C" + (d.parent.y + 100) + "," + d.x
+              + " " + (d.parent.y + 100) + "," + d.parent.x
+              + " " + d.parent.y + "," + d.parent.x;
+        });
+        
+
+    var textLenghtBreak = 60;
+
+    var node = g.selectAll(".node")
+        .data(root.descendants(), function(d) { 
+          return d.id.substring(d.id.lastIndexOf("|")+1)
+        });
+
+    node.exit().remove();
+
+    node.transition()
+      .duration(1000)
+      .attr("class", function(d) { return "node "+"d"+ d.depth; })
+      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
+      .select('text')
+      .duration(1000)
+      .attr("dy", function(d) { if (d.depth == 1) { return -1 } else { return 3 } })
+      .attr("x", function(d) { 
+        if (d.depth == 1) { var textLength = d.id.substring(d.id.lastIndexOf("|")+1).length;
+          if (textLength > textLenghtBreak) { return 245 } else { return -8 }
+        } else if (d.depth == 0){ 
+          if (nodes[d.id.substring(d.id.lastIndexOf("|")+1)].name.length > 30) {
+            return -190
+          } else { return 2 } 
+        }
+        else { return 2 } 
+      })
+      .text(function(d) {
+        var nodeID = d.id.substring(d.id.lastIndexOf("|")+1);
+        if (d.depth == 1) {
+          return nodeID;
+        } else if (d.depth == 0){
+          return nodes[nodeID].name;
+        } else {
+          return nodes[nodeID].name;
+        }
+      })
+      .style("text-anchor", function(d) { 
+        if (d.depth == 0) { 
+          if (nodes[d.id.substring(d.id.lastIndexOf("|")+1)].name.length > 30) { return 'start'}
+          else { return 'end' }
+        } else { 
+          if (d.depth == 1 && d.id.substring(d.id.lastIndexOf("|")+1).length > textLenghtBreak) { return 'end'} 
+        else { return 'start' } } 
+      })
+      .style("font-weight", function(d){
+        if (d.depth == 0) { return 700 }
+        else if (d.depth == 2) {
+          var size = nodes[d.id.substring(d.id.lastIndexOf("|")+1)].count;
+          if (size < 2) {
+            return 300
+          } else { return 700 }
+        } else { return 300 }
+      });
+
+
+    node
+      .enter().append("g")
+      .attr("class", function(d) { return "node "+"d"+ d.depth; })
+      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
+      .append("text")
+      .attr("dy", function(d) { if (d.depth == 1) { return -1 } else { return 3 } })
+      .attr("x", function(d) { 
+        if (d.depth == 1) { var textLength = d.id.substring(d.id.lastIndexOf("|")+1).length;
+          if (textLength > textLenghtBreak) { return 245 } else { return -8 }
+        } else if (d.depth == 0){ 
+          if (nodes[d.id.substring(d.id.lastIndexOf("|")+1)].name.length > 30) {
+            return -190
+          } else { return 2 } 
+        }
+        else { return 2 } 
+      })
+      .text(function(d) {
+        var nodeID = d.id.substring(d.id.lastIndexOf("|")+1);
+        if (d.depth == 1) {
+          return nodeID;
+        } else if (d.depth == 0){
+          return nodes[nodeID].name;
+        } else {
+          return nodes[nodeID].name;
+        }
+      })
+      .style("text-anchor", function(d) { 
+        if (d.depth == 0) { 
+          if (nodes[d.id.substring(d.id.lastIndexOf("|")+1)].name.length > 30) { return 'start'}
+          else { return 'end' }
+        } else { 
+          if (d.depth == 1 && d.id.substring(d.id.lastIndexOf("|")+1).length > textLenghtBreak) { return 'end'} 
+        else { return 'start' } } 
+      })
+      .style("font-weight", function(d){
+        if (d.depth == 0) { return 700 }
+        else if (d.depth == 2) {
+          var size = nodes[d.id.substring(d.id.lastIndexOf("|")+1)].count;
+          if (size < 2) {
+            return 300
+          } else { return 700 }
+        } else { return 300 }
+      })
+      .on('click', nodeClick)
+      .on("mouseover", nodeHover);
+
+      function nodeClick() {
+        if (this.__data__.depth == 2) {
+          searchNode = +this.__data__.id.substring(this.__data__.id.lastIndexOf("|")+1);
+          transformedData = dataTransform();
+          drawTree(transformedData);
+        }
+      }
+
+      function nodeHover() {
+        if(mobileConnect == true){
+          return
+        }
+        if (this.__data__.depth == 2) {
+          var thisInfo = nodes[this.__data__.id.substring(this.__data__.id.lastIndexOf("|")+1)];
+          var thisData = this.__data__;
+          var infoText;
+
+          if (thisInfo.ref.substring(0,4) !== "http") {
+            infoText = thisInfo.ref + "<br/>"  + "No. Connections: "+ thisInfo.count
+          } 
+          else { infoText = "<a target='_blank' href="+thisInfo.ref+">Reference</a>" + "<br/>"  + "No. Connections: "+ thisInfo.count }
+
+          div.transition()
+            .duration(200)
+            .style("opacity", 1);
+
+          div.html(infoText)     
+            .style("left", (window.innerWidth/2+163) + "px")
+            .style("top", (thisData.x+182) + "px");
+        }
+      }
+
+  }
+
+  document.getElementById('peopleSearch').addEventListener('awesomplete-selectcomplete',function(){
+    searchNode = +this.value;
+    document.getElementById("peopleSearch").value = '';
+    transformedData = dataTransform();
+    drawTree(transformedData);
+  }); 
+
+  var transformedData = dataTransform();
+
+  drawTree(transformedData);
+
+
+  });
+});
+
+</script>

@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KV544DH');</script>
+<!-- End Google Tag Manager -->
+  <script src="https://use.typekit.net/rpf7rfb.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <meta charset="utf-8">
+
+    <title>Singer | Open Source ETL</title>
+    <meta property="og:title" content="Singer | Open Source ETL" />
+
+    <meta name="description" content="Simple, Composable, Open Source ETL">
+    <meta property="og:description" content="Simple, Composable, Open Source ETL" />
+
+  <meta name="author" content="Singer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://singer.io" />
+  <meta property="og:image" content="https://singer.io/img/singer_icon.png" />
+  <meta property="og:site_name" content="Singer" />
+
+  <meta name="twitter:creator" content="@singer_io">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="https://singer.io/" " />
+  <meta name="twitter:image" content="https://singer.io/img/singer_icon.png" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57-d2a35458.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114-5f3d1bdf.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72-20a74f7a.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144-8378785e.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/img/apple-touch-icon-60x60-80838461.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120-cb700f75.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/apple-touch-icon-76x76-64ab9343.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152-0ef3793a.png" />
+  <link rel="icon" type="image/png" href="/img/favicon-196x196-0f57afb0.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="/img/favicon-96x96-71b77aac.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/img/favicon-32x32-41722e72.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/img/favicon-16x16-a1cbb37c.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="/img/favicon-128-4c22c0c9.png" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;"/>
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+  <link href="font-awesome-4.7.0/css/font-awesome-eaa4987f.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/stylesheets/screen-1f85f3d0.css" rel="stylesheet" />
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KV544DH"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="color-block">
+  <section class="header">
+    <div class="container">
+      <div class="flexgrid left">
+        <a href="/"><img src="img/singer_logo_full_white-0b326143.svg" title="Singer Logo" /></a>
+      </div>
+      <div class="flexgrid center">
+        <a title="Singer Features" href="#what-it-is">How it Works</a>
+        <a title="Singer Taps" href="#taps">Taps & Targets</a>
+        <a title="Contibute to Singer" href="#contribute">Contribute</a>
+      </div>
+      <div class="flexgrid right">
+
+        <a title="Singer GitHub Repo" href="https://github.com/singer-io"><i class="fa fa-github"></i>GitHub</a>
+        <a title="Singer Roadmap on Trello" href="https://trello.com/b/BMNRnIoU/singer-roadmap"><i class="fa fa-trello"></i>Roadmap</a>
+      </div>
+      <a class="to-nav" href="#">☰</a>
+    </div>
+  </section>
+
+  <section class="intro" id="intro">
+    <div class="container">
+      <h1>Simple, Composable, Open Source ETL</h1>
+      <p>Singer powers data extraction and consolidation for all of your organization’s tools: advertising platforms, web analytics, payment processors, email service providers, marketing automation, databases, and more.</p>
+      <a class="button large reverse" id="main-github" title="See how Singer works" href="#what-it-is">See It in Action <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+    </div>
+    <div class="container wide featured-container">
+      <div class="featured">
+        <ul class="featured-list">
+
+
+
+
+              <li>
+                <div class="featured-header">Featured Tap</div>
+                <div class="featured-content">
+                  <a title="Braintree Tap Repo" href="https://github.com/singer-io/tap-braintree"><img src="//images.contentful.com/qeopvtiy4eew/5Uliq8dexyyCA4AC4Ya4ko/405f2e4040449582487231c5be4051c3/braintree_logo_200x200_square.svg" /></a>
+                  <h4>Braintree</h4>
+                  <p>Extract your payments and ecommerce data.</p>
+                  <a class="button outline small" title="Braintree Tap Repo" href="https://github.com/singer-io/tap-braintree">View the Repo</a>
+                </div>
+              </li>
+
+
+
+
+              <li>
+                <div class="featured-header">Featured Tap</div>
+                <div class="featured-content">
+                  <a title="Freshdesk Tap Repo" href="https://github.com/singer-io/tap-freshdesk"><img src="//images.contentful.com/qeopvtiy4eew/2nOHo089jC6Cwu8qk488Ka/7f8e4ed623f3b382c08892e2404e05ca/freshdesk_logo_200x200_square.png" /></a>
+                  <h4>Freshdesk</h4>
+                  <p>Extract your customer support and helpdesk data.</p>
+                  <a class="button outline small" title="Freshdesk Tap Repo" href="https://github.com/singer-io/tap-freshdesk">View the Repo</a>
+                </div>
+              </li>
+
+
+
+              <li>
+                <div class="featured-header">Featured Tap</div>
+                <div class="featured-content">
+                  <a title="GitLab Tap Repo" href="https://github.com/singer-io/tap-gitlab"><img src="//images.contentful.com/qeopvtiy4eew/40ia5ETQ4EEaAOWskUKueA/f922a253228bd8b9fc49cc0323394186/gitlab_logo_200x200_square.svg" /></a>
+                  <h4>GitLab</h4>
+                  <p>Extract data from your repository management service.</p>
+                  <a class="button outline small" title="GitLab Tap Repo" href="https://github.com/singer-io/tap-gitlab">View the Repo</a>
+                </div>
+              </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </ul>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <section class="what-it-is" id="what-it-is">
+    <div class="container">
+      <h3 class="section-header center">
+        Singer is an open-source standard for writing scripts
+        that move data.
+      </h3>
+      <div class="content">
+        <h4>How it works</h4>
+        <p>
+          It describes how data extraction scripts&mdash;called <span class="span-taps">“taps”</span>
+          &mdash;and data loading scripts&mdash;called <span class="span-targets">“targets”</span>&mdash;
+          should communicate, allowing them to be used in any combination
+          to move data from any source to any destination. Send data between databases, web APIs, files,
+          queues, and just about anything else you can think of.
+        </p>
+        <div class="text-box">
+          <h4>Try it</h4>
+          <p>
+            For example, these two simple commands pull currency exchange rate data from
+            <a title="fixer.io" href="http://fixer.io">Fixer.io</a> into a CSV file:
+          </p>
+        </div>
+        <p class="hidden-mobile">
+          Check out the directory of <a href="#taps">taps</a> and <a href="#targets">targets</a> for more data sources and destinations.
+        </p>
+      </div><!--
+      --><div class="content">
+        <pre class="example-code">
+          <code>› pip install target-csv tap-fixerio</code>
+          <code>› tap-fixerio | target-csv</code>
+          <code>    INFO Replicating the latest exchange rate data from fixer.io</code>
+          <code>    INFO Tap exiting normally</code>
+          <code>› cat exchange_rate.csv</code>
+          <code>AUD,BGN,BRL,CAD,CHF,CNY,CZK,DKK,GBP,HKD,HRK,HUF,IDR,ILS,INR,JPY,KRW,MXN,MYR,NOK,NZD,PHP,PLN,RON,RUB,SEK,SGD,THB,TRY,ZAR,EUR,USD,date</code>
+          <code>1.3023,1.8435,3.0889,1.3109,1.0038,6.869,25.47,7.0076,0.79652,7.7614,7.0011,290.88,13317.0,3.6988,66.608,112.21,1129.4,19.694,4.4405,8.3292,1.3867,50.198,4.0632,4.2577,58.105,8.9724,1.4037,34.882,3.581,12.915,0.9426,1.0,2017-02-24T00:00:00Z</code>
+        </pre>
+
+        <p class="hidden-desktop">
+          Check out the directory of <a href="#taps">taps</a> and <a href="#targets">targets</a> for more data sources and destinations.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+    <hr />
+      <h3>Features</h3>
+      <ul class="feature-list">
+        <li><h4>Unix-inspired</h4> Singer taps and targets are simple applications composed with pipes&mdash;no daemons or complicated plugins needed.</li>
+        <li><h4>JSON-based</h4> Singer applications communicate with JSON, making them easy to work with and implement in any programming language. Singer also supports JSON Schema to provide rich data types and rigid structure when needed.</li>
+        <li><h4>Efficient</h4> Singer makes it easy to maintain state between invocations to support incremental extraction.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="taps" id="taps">
+    <div class="container">
+      <hr />
+      <h3>Singer Taps</h3>
+      <p><strong>Taps</strong> extract data from any source and write it to a standard stream in a JSON-based format.</p>
+    </div>
+    <div class="container wide">
+      <ul class="grid">
+
+
+          <a title="AppsFlyer Tap Repo" href="https://github.com/singer-io/tap-appsflyer"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/1pzNOp2nWs86yiYwGMYYaA/ec7b8859a9f5b1619407da2e564f8191/appsflyer_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>AppsFlyer</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Autopilot Tap Repo" href="https://github.com/singer-io/tap-autopilot"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/6yiIqpOAPmW4w6cK4icoeM/0757d2cafe29674d29202206ec900040/autopilot_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>Autopilot</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Braintree Tap Repo" href="https://github.com/singer-io/tap-braintree"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/5Uliq8dexyyCA4AC4Ya4ko/405f2e4040449582487231c5be4051c3/braintree_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>Braintree</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Close.io Tap Repo" href="https://github.com/singer-io/tap-closeio"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/5IbVwkT1v2sSkUKySS4Eqs/49e8de2cd13d4f498defd21ac5a19fa3/close_io_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>Close.io</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Facebook Tap Repo" href="https://github.com/singer-io/tap-facebook"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/6OUviTqaIMM2IkQWWuC2QI/f876db30e19ea22daffd3e62d6742c4b/facebook_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>Facebook</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Fixer.io Tap Repo" href="https://github.com/singer-io/tap-fixerio"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/snzfoB7vvEyKy2w2qiquo/0d81fc864e26926ccc0bd50de2db34d3/fixer_io_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>Fixer.io</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Freshdesk Tap Repo" href="https://github.com/singer-io/tap-freshdesk"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/2nOHo089jC6Cwu8qk488Ka/7f8e4ed623f3b382c08892e2404e05ca/freshdesk_logo_200x200_square.png" />
+            <div class="description">
+              <h5>Freshdesk</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="FullStory Tap Repo" href="https://github.com/singer-io/tap-fullstory"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/5jAmUoI5OoeckkWo6sO6sO/af2fc57c28a94c5cf648d2114d60b577/fullstory_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>FullStory</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="GitHub Tap Repo" href="https://github.com/singer-io/tap-github"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/1az4EaCeCC4ocEIGkMiiO0/6be39f60f4d25fef8d976d09150321c1/github_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>GitHub</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="GitLab Tap Repo" href="https://github.com/singer-io/tap-gitlab"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/40ia5ETQ4EEaAOWskUKueA/f922a253228bd8b9fc49cc0323394186/gitlab_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>GitLab</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Google AdWords Tap Repo" href="https://github.com/singer-io/tap-adwords"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/ATTNEGhL8WUi8OEaOMUou/45bdb962f13299739c9a065959e45056/google_adwords_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>Google AdWords</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Harvest Tap Repo" href="https://github.com/singer-io/tap-harvest"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/2wYNFVOFkIcyCEguQcY8So/33490b6f31b7062a861d593c8456f5af/harvest_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>Harvest</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Hubspot Tap Repo" href="https://github.com/singer-io/tap-hubspot"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/6ysv9zm6kMOE0aKkKEMQki/383d6129ae9ac4c5c0c6ea9efe190640/hubspot_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>Hubspot</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Jira Tap Repo" href="https://github.com/singer-io/tap-jira"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/4xy4NmmsZassKYMqUC0gCE/8fecb34e7d29dc68363faa0d4f492b58/jira_logo.svg" />
+            <div class="description">
+              <h5>Jira</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Klaviyo Tap Repo" href="https://github.com/singer-io/tap-klaviyo"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/4JfwYR22k8iycO20OUQOWW/1ca302207033b7043a278c555637acb0/klaviyo_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>Klaviyo</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Marketo Tap Repo" href="https://github.com/singer-io/tap-marketo"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/5hu6Bsq4tq0kO8w6kkq8kS/9d6ff3f1f2bdbe815e3eb0a280eaa9a8/marketo_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>Marketo</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="MySQL Tap Repo" href="https://github.com/singer-io/tap-mysql"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/6zjqLXB22k466GmQMEgESs/b31a5cbd34cc07668080bdc9818cf3b0/mysql_logo.svg" />
+            <div class="description">
+              <h5>MySQL</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Outbrain Tap Repo" href="https://github.com/singer-io/tap-outbrain"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/4i3ORZyRCEA2sCWYW4SEoC/9794f7ef0451db4c6687d00e93f8c478/outbrain_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>Outbrain</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Referral SaaSquatch Tap Repo" href="https://github.com/singer-io/tap-referral-saasquatch"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/2qh2vUc7nm8kCaWY2qmg8i/cae431f16dbff2bdec2d6ae1b40bc7d9/referral_saasquatch_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>Referral SaaSquatch</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Selligent Tap Repo" href="https://github.com/singer-io/tap-selligent"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/4T9eRIFdXO8CeiAIyMqKuw/282c8b4b97457bcc9a3ef035f24a9375/selligent_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>Selligent</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="SendGrid Core Tap Repo" href="https://github.com/singer-io/tap-sendgrid"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/4lwfJOnGda6cWkM2ciO4Su/15b31cd02ceed17d28e088a18dd4f2d4/sendgrid_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>SendGrid Core</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Shippo Tap Repo" href="https://github.com/singer-io/tap-shippo"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/2SXcwJt0HYsqskyEQQqYcu/995da09d16362ca0ca4ef406beebcec0/shippo_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>Shippo</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Taboola Tap Repo" href="https://github.com/singer-io/tap-taboola"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/MAN4S1xjK60maki0ySkoW/22a958e9057660e741c6b2dde58e1db7/taboola_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>Taboola</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Urban Airship Tap Repo" href="https://github.com/singer-io/tap-urban-airship"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/6lICyUPJyEO0c62a4ioOUk/e856e8b6444b0ed4554b600d4a118696/urban_airship_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>Urban Airship</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Wootric Tap Repo" href="https://github.com/singer-io/tap-wootric"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/2Rix9NIKz6gku62ououkew/0b01b35fdc0f2f7cc556cffaa26ddb31/wootric_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>Wootric</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Xero Tap Repo" href="https://github.com/singer-io/tap-xero"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/GEt3Ykb9eeIycuyqeui0I/a6dc9b3fc73d4595afd00117c3040329/xero_logo.svg" />
+            <div class="description">
+              <h5>Xero</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Yotpo Tap Repo" href="https://github.com/singer-io/tap-yotpo"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/6476ul5TKEoE2EMQ8ieEEu/9b8f45c274d2ca9c75729f23e25225fc/yotpo_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>Yotpo</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+          <a title="Zendesk Chat Tap Repo" href="https://github.com/singer-io/tap-zendesk-chat"><li>
+            <img src="//images.contentful.com/qeopvtiy4eew/7oYtnR7A6kEoUQY6wKKGqu/e4668dd19b0a688e8d8d7b4363c1ad76/zendesk_chat_logo_200x200_square.svg" />
+            <div class="description">
+              <h5>Zendesk Chat</h5>
+              <p class="repo-link">View the repo</p>
+            </div>
+          </li></a>
+
+        <a title="Develop a Singer Tap" href="https://github.com/singer-io/getting-started">
+          <li class="develop">
+            <img src="img/icon_tap-a9c09d37.svg">
+            <div class="description">
+              <h5>Develop a Tap</h5>
+            </div>
+          </li>
+        </a>
+
+      </ul>
+    </div>
+  </section>
+
+  <section class="targets" id="targets">
+    <div class="container">
+      <hr />
+      <h3>Singer Targets</h3>
+      <p><strong>Targets</strong> consume data from taps and do something with it, like load it into a file, API or database.</p>
+    </div>
+    <div class="container wide">
+      <div class="grid">
+        <ul>
+
+
+            <a title="CSV Tap Repo" href="https://github.com/singer-io/target-csv"><li>
+              <img src="//images.contentful.com/qeopvtiy4eew/5tsP1J5rkQcuUksUQwMAii/9b9c2e8965d31429558f8f3db2592bc4/csv_logo_200x200_square.svg" />
+              <div class="description">
+                <h5>CSV </h5>
+                <p class="repo-link">View the repo</p>
+              </div>
+            </li></a>
+
+            <a title="Google Sheets Tap Repo" href="https://github.com/singer-io/target-gsheet"><li>
+              <img src="//images.contentful.com/qeopvtiy4eew/5R8xEtbV96IcUUmsiY2AmA/3bb4a33896bb26d94ff87e5835bd3f95/google_sheets_logo_200x200_square.svg" />
+              <div class="description">
+                <h5>Google Sheets </h5>
+                <p class="repo-link">View the repo</p>
+              </div>
+            </li></a>
+
+            <a title="Keboola Tap Repo" href="https://bitbucket.org/chanleoc/target-keboola"><li>
+              <img src="//images.contentful.com/qeopvtiy4eew/24OK4O1CP6wyYgQW0qK00k/b603341bb11059591704707be0cf2052/keboola_logo_200x200_square.svg" />
+              <div class="description">
+                <h5>Keboola </h5>
+                <p class="repo-link">View the repo</p>
+              </div>
+            </li></a>
+
+            <a title="Magento BI Tap Repo" href="https://github.com/robertjmoore/target-magentobi"><li>
+              <img src="//images.contentful.com/qeopvtiy4eew/6AMQRVQFXiAkMECk2KEQQO/209f99eda3fc16aecd5182a96f3af4e4/magento_logo_512x512_square.svg" />
+              <div class="description">
+                <h5>Magento BI </h5>
+                <p class="repo-link">View the repo</p>
+              </div>
+            </li></a>
+
+            <a title="Rakam Tap Repo" href="https://github.com/rakam-io/singer-target-rakam"><li>
+              <img src="//images.contentful.com/qeopvtiy4eew/1vnIZ2r9WQoyiQUOQuWIwC/2b3e8d6132dce6970af398d4bdecc955/rakam_logo_200x200_square.svg" />
+              <div class="description">
+                <h5>Rakam </h5>
+                <p class="repo-link">View the repo</p>
+              </div>
+            </li></a>
+
+            <a title="Stitch Tap Repo" href="https://github.com/singer-io/target-stitch"><li>
+              <img src="//images.contentful.com/qeopvtiy4eew/MbtDdAt5yUaCgaM8AKM0w/6c213af523869f8b4b7b6c4b9b7cf9d5/stitch_import_api_logo_200x200_square.svg" />
+              <div class="description">
+                <h5>Stitch </h5>
+                <p class="repo-link">View the repo</p>
+              </div>
+            </li></a>
+
+          <a title="Develop a Singer Target" href="https://github.com/singer-io/getting-started">
+            <li class="develop">
+              <img src="img/icon_target-779f51b4.svg">
+              <div class="description">
+                <h5>Develop a Target</h5>
+              </div>
+            </li>
+          </a>
+
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contribute" id="contribute">
+  <hr />
+    <div class="container">
+      <div class="content">
+        <h3>How to Contribute</h3>
+        <p>Ready to create a tap or target? Check out the <a title="Singer Getting Started Guide" href="https://github.com/singer-io/getting-started">getting started guide</a> on GitHub. The <a title="Singer Trello Roadmap" href="https://trello.com/b/BMNRnIoU/singer-roadmap">Singer Roadmap</a> on Trello tracks what's currently being worked on, what's up next and some of the top requested Singer projects. You can also join the <a title="Singer Slack Community" href="https://singer-slackin.herokuapp.com/">Singer Slack</a> to get help from the community.</p>
+        <script async defer src="https://singer-slackin.herokuapp.com/slackin.js?large"></script>
+        <!-- append "?" to the URL for the large version -->
+      </div><!--
+      --><div class="content mailing-list highlight" id="mailing-list">
+        <h4>Join the mailing list</h4>
+        <p>We'll send you periodic updates about Singer news.</p>
+
+        <form accept-charset="UTF-8" action="https://formkeep.com/f/5c1f15c54b25" method="POST">
+        <input type="hidden" name="utf8" value="✓">
+
+        <label for="email-address">Email Address</label>
+        <input type="email" id="email-address" name="email">
+
+        <button type="submit">Get on the list</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer reverse">
+  <div class="container flex">
+    <div class="footer-menu">
+      <div class="content">
+        <p class="smallcaps">Sponsored by</p>
+        <a title="Stitch Data" href="https://www.stitchdata.com/?utm_source=singer&utm_medium=singer-site&utm_campaign=singer-launch" title="Stitch"><img src="img/stitch-logomark-01d24e27.svg" /></a>
+        <div class="description">
+          <p>Singer is sponsored by <a href="https://stitchdata.com?utm_source=singer&utm_medium=singer-site&utm_campaign=singer" title="Stitch">Stitch</a>, a fully-managed data pipeline. With Stitch you can run Singer taps on your schedule, stream the data to your warehouse, and enjoy automated monitoring and alerting. Stitch offers other resources about working with data sources and destinations. See our sample guides on sending <a href="http://mysql.toredshift.com">MySQL to Redshift</a>, or <a href="http://adwords.tobigquery.com/">Google AdWords to BigQuery</a>.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-menu">
+      <div class="content">
+        <p class="smallcaps">Community</p>
+        <ul class="navigation">
+          <li><a title="Singer GitHub Repo" href="https://github.com/singer-io">GitHub</a></li>
+          <li><a title="Singer Slack Community" href="https://singer-slackin.herokuapp.com/">Slack Community</a></li>
+          <li><a title="Singer on Twitter" href="https://twitter.com/singer_io">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="credits darker">
+    <div class="container flex">
+      <div class="credits-menu">
+        <div class="content">
+          <p>Singer supports <a title="The Human Utility" href="https://www.detroitwaterproject.org/">The Human Utility</a> to help families pay their water bills.</p>
+        </div>
+      </div>
+      <div class="credits-menu">
+        <div class="content">
+          <img title="Singer Logo" src="img/singer_logo_full_white-0b326143.svg" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+$('.to-nav').click(function() {
+    $('.flexgrid.center').toggleClass("visible");
+    $('.flexgrid.right').toggleClass("visible");
+});
+</script>
+</body>
+</html>

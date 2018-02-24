@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="profile" href="http://gmpg.org/xfn/11"/>
+<link rel="pingback" href="http://www.mishou.be/xmlrpc.php"/>
+<title>Pythonの始め方3：Jupyterで計算 &#8211; Think it aloud</title>
+          <script>(function(d){var js,id='powr-js',ref=d.getElementsByTagName('script')[0];if(d.getElementById(id)){return;}
+js=d.createElement('script');js.id=id;js.async=true;js.src='//www.powr.io/powr.js';js.setAttribute('powr-token','d9Dolr318A1504244050');js.setAttribute('external-type','wordpress');ref.parentNode.insertBefore(js,ref);}(document));</script>
+          <link rel='dns-prefetch' href='//cdn.datacamp.com'/>
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com'/>
+<link rel='dns-prefetch' href='//s.w.org'/>
+<link rel="alternate" type="application/rss+xml" title="Think it aloud &raquo; Feed" href="http://www.mishou.be/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="Think it aloud &raquo; Comments Feed" href="http://www.mishou.be/comments/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="Think it aloud &raquo; Pythonの始め方3：Jupyterで計算 Comments Feed" href="http://www.mishou.be/2017/09/01/python%e3%81%ae%e5%a7%8b%e3%82%81%e6%96%b9/feed/"/>
+
+<!-- This site uses the Google Analytics by MonsterInsights plugin v 6.2.8 - https://www.monsterinsights.com/ -->
+<!-- Normally you will find the Google Analytics tracking code here, but the webmaster disabled your user group. -->
+<!-- / Google Analytics by MonsterInsights -->
+
+		<script type="text/javascript">window._wpemojiSettings={"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.mishou.be\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.4"}};!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);</script>
+		<style type="text/css">img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-.1em!important;background:none!important;padding:0!important}</style>
+<link rel='stylesheet' id='ai1ec_style-css' href='//www.mishou.be/wp-content/plugins/all-in-one-event-calendar/public/themes-ai1ec/vortex/css/ai1ec_parsed_css.css?ver=2.5.28' type='text/css' media='all'/>
+<link rel='stylesheet' id='datacamp-light-style-css' href='http://www.mishou.be/wp-content/plugins/datacamp-light-wordpress-0.1.0/style/frontend_style.css?ver=4.9.4' type='text/css' media='all'/>
+<link rel='stylesheet' id='sb_instagram_styles-css' href='http://www.mishou.be/wp-content/plugins/instagram-feed/css/sb-instagram.min.css?ver=1.6' type='text/css' media='all'/>
+<link rel='stylesheet' id='sb-font-awesome-css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='bwg_frontend-css' href='http://www.mishou.be/wp-content/plugins/photo-gallery/css/bwg_frontend.css?ver=1.3.68' type='text/css' media='all'/>
+<link rel='stylesheet' id='bwg_font-awesome-css' href='http://www.mishou.be/wp-content/plugins/photo-gallery/css/font-awesome/font-awesome.css?ver=4.6.3' type='text/css' media='all'/>
+<link rel='stylesheet' id='bwg_mCustomScrollbar-css' href='http://www.mishou.be/wp-content/plugins/photo-gallery/css/jquery.mCustomScrollbar.css?ver=1.3.68' type='text/css' media='all'/>
+<link rel='stylesheet' id='bwg_sumoselect-css' href='http://www.mishou.be/wp-content/plugins/photo-gallery/css/sumoselect.css?ver=3.0.2' type='text/css' media='all'/>
+<link rel='stylesheet' id='SFSImainCss-css' href='http://www.mishou.be/wp-content/plugins/ultimate-social-media-icons/css/sfsi-style.css?ver=4.9.4' type='text/css' media='all'/>
+<link rel='stylesheet' id='wpum-frontend-css-css' href='http://www.mishou.be/wp-content/plugins/wp-user-manager/assets/css/wp_user_manager_frontend.min.css?ver=4.9.4' type='text/css' media='all'/>
+<link rel='stylesheet' id='tablepress-default-css' href='http://www.mishou.be/wp-content/plugins/tablepress/css/default.min.css?ver=1.9' type='text/css' media='all'/>
+<link rel='stylesheet' id='__EPYT__style-css' href='http://www.mishou.be/wp-content/plugins/youtube-embed-plus/styles/ytprefs.min.css?ver=4.9.4' type='text/css' media='all'/>
+<style id='__EPYT__style-inline-css' type='text/css'>.epyt-gallery-thumb{width:33.333%}</style>
+<link rel='stylesheet' id='um_minified-css' href='http://www.mishou.be/wp-content/plugins/ultimate-member/assets/css/um.min.css?ver=1.3.88' type='text/css' media='all'/>
+<link rel='stylesheet' id='nirvanas-fonts-css' href='http://www.mishou.be/wp-content/themes/nirvana/fonts/fontfaces.css?ver=1.4.3' type='text/css' media='all'/>
+<link rel='stylesheet' id='nirvanas-css' href='http://www.mishou.be/wp-content/themes/nirvana/style.css?ver=1.4.3' type='text/css' media='all'/>
+<script type='text/javascript'>//<![CDATA[
+var _EPYT_={"ajaxurl":"http:\/\/www.mishou.be\/wp-admin\/admin-ajax.php","security":"b894c62223","gallery_scrolloffset":"20","eppathtoscripts":"http:\/\/www.mishou.be\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","epresponsiveselector":"[\"iframe.__youtube_prefs_widget__\"]","epdovol":"1","version":"11.8.5","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","stopMobileBuffer":"1"};
+//]]></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-content/plugins/photo-gallery/js/bwg_frontend.js?ver=1.3.68'></script>
+<script type='text/javascript'>//<![CDATA[
+var bwg_objectsL10n={"bwg_select_tag":"Select Tag","bwg_search":"Search"};
+//]]></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-content/plugins/photo-gallery/js/jquery.sumoselect.min.js?ver=3.0.2'></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-content/plugins/photo-gallery/js/jquery.mobile.js?ver=1.3.68'></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-content/plugins/photo-gallery/js/jquery.mCustomScrollbar.concat.min.js?ver=1.3.68'></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-content/plugins/photo-gallery/js/jquery.fullscreen-0.4.1.js?ver=0.4.1'></script>
+<script type='text/javascript'>//<![CDATA[
+var bwg_objectL10n={"bwg_field_required":"field is required.","bwg_mail_validation":"This is not a valid email address.","bwg_search_result":"There are no images matching your search."};
+//]]></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-content/plugins/photo-gallery/js/bwg_gallery_box.js?ver=1.3.68'></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js?ver=4.9.4'></script>
+<link rel='https://api.w.org/' href='http://www.mishou.be/wp-json/'/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.mishou.be/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.mishou.be/wp-includes/wlwmanifest.xml"/> 
+<link rel='prev' title='Using quantmod with R, only five lines visualize your data' href='http://www.mishou.be/2017/09/01/using-quantmod-r-five-lines-visualize-data/'/>
+<link rel='next' title='Rで日経平均株価の終値と移動平均線を描く' href='http://www.mishou.be/2017/09/02/r%e3%81%a7%e6%97%a5%e7%b5%8c%e5%b9%b3%e5%9d%87%e6%a0%aa%e4%be%a1%e3%81%ae%e7%b5%82%e5%80%a4%e3%81%a8%e7%a7%bb%e5%8b%95%e5%b9%b3%e5%9d%87%e7%b7%9a%e3%82%92%e6%8f%8f%e3%81%8f/'/>
+<meta name="generator" content="WordPress 4.9.4"/>
+<link rel='shortlink' href='http://www.mishou.be/?p=42'/>
+<link rel="alternate" type="application/json+oembed" href="http://www.mishou.be/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.mishou.be%2F2017%2F09%2F01%2Fpython%25e3%2581%25ae%25e5%25a7%258b%25e3%2582%2581%25e6%2596%25b9%2F"/>
+<link rel="alternate" type="text/xml+oembed" href="http://www.mishou.be/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.mishou.be%2F2017%2F09%2F01%2Fpython%25e3%2581%25ae%25e5%25a7%258b%25e3%2582%2581%25e6%2596%25b9%2F&#038;format=xml"/>
+
+<link rel="stylesheet" href="http://www.mishou.be/wp-content/plugins/count-per-day/counter.css" type="text/css"/>
+<meta name="specificfeeds-verification-code-RlRObDYrNUsxb1dQc1ZOaGpQaUhDTXRMbEFGSm50R1NXQm9lYzF2TEVGbGRmZjV1RWVpWGExNzlyY3pLRzF2SS9Qb29qaHdEcWZqVUZnRDV4OCtOc2ROT2toL3NMY3lsa24yclgremI0bERWYmZ1Z0NjNW9UbDFSTmxmanhjd0R8bWczV290Wi91cEZxZ0hlZTFMYkFMVEQzVXovTnp6YkhLMzlsbk9EdzU2MD0=" content="GUXHQuEPj2cl38Nvp1Cm"/><meta name="viewport" content="width=device-width, initial-scale=1"><meta property="og:image" content="http://www.mishou.be/wp-content/uploads/2017/09/スクリーンショット-2017-09-02-7.13.09.png" data-id="sfsi"><meta property="og:image:type" content="" data-id="sfsi"/><meta property="og:image:width" content="1066" data-id="sfsi"/><meta property="og:image:height" content="882" data-id="sfsi"/><meta property="og:url" content="http://www.mishou.be/2017/09/01/python%e3%81%ae%e5%a7%8b%e3%82%81%e6%96%b9/" data-id="sfsi"/><meta property="og:description" content="
+
+
+Jupyter Notebookで計算
+Anacondaをインストールすると、Python実行のための統合環境（IDE）であるJunyter Notebookもインストールされます。
+Jupyter Notebookは、ブラウザを利用するという点で親しみやすく、スクリプトを実行するとその下に結果の表示される対話形式なので理解しやすいです。
+単純な計算は次のようになります。式を書き実行するとその結果が下に示されます。プログラミングはこの繰り返しになります。
+&nbsp;
+
+
+
+
+&nbsp;
+エクスプローラ（Windows）あるいはファインダ（Mac）で、ファイルを開いて作業するのと同じようにファイルを扱いますので、どのファイルを開いているのか、どこに保存したのかなどがわかりやすいです。
+
+
+&nbsp;
+
+Pythonウィジェットで実行
+&nbsp;
+このブログではDatacamp-light-wordpressというWordPressのプラグインを利用し、ブログ内でPythonを実行できるようにしています。
+次のRunをクリックしてください。掲載結果が表示されます。
+
+
+&nbsp;
+
+
+[datacamp_exercise lang=python]
+[datacamp_pre_exercise_code]
+
+[/datacamp_pre_exercise_code]
+[datacamp_sample_code]
+(1+2)*4/5
+
+[/datacamp_sample_code]
+[datacamp_solution]
+
+[/datacamp_solution]
+[datacamp_sct]
+
+[/datacamp_sct]
+[datacamp_hint]
+
+[/datacamp_hint]
+[/datacamp_exercise]" data-id="sfsi"/><meta property="og:title" content="Pythonの始め方3：Jupyterで計算" data-id="sfsi"/><script type="text/javascript">(function(url){if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){return;}
+var addEvent=function(evt,handler){if(window.addEventListener){document.addEventListener(evt,handler,false);}else if(window.attachEvent){document.attachEvent('on'+evt,handler);}};var removeEvent=function(evt,handler){if(window.removeEventListener){document.removeEventListener(evt,handler,false);}else if(window.detachEvent){document.detachEvent('on'+evt,handler);}};var evts='contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');var logHuman=function(){var wfscr=document.createElement('script');wfscr.type='text/javascript';wfscr.async=true;wfscr.src=url+'&r='+Math.random();(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);for(var i=0;i<evts.length;i++){removeEvent(evts[i],logHuman);}};for(var i=0;i<evts.length;i++){addEvent(evts[i],logHuman);}})('//www.mishou.be/?wordfence_lh=1&hid=72DC2BA6E6E36B0DF090BE4752E7BBC1');</script><!-- <meta name="NextGEN" version="2.2.45" /> -->
+<link rel="author" href="http://www.multilingualhearts.com/"> 
+		<script type="text/javascript">var ultimatemember_image_upload_url='http://www.mishou.be/wp-content/plugins/ultimate-member/core/lib/upload/um-image-upload.php';var ultimatemember_file_upload_url='http://www.mishou.be/wp-content/plugins/ultimate-member/core/lib/upload/um-file-upload.php';var ultimatemember_ajax_url='http://www.mishou.be/wp-admin/admin-ajax.php';</script>
+
+	
+		<style type="text/css">.request_name{display:none!important}</style>
+
+	<style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("http://www.mishou.be/wp-content/uploads/2017/09/tシャツおかしな人間の夢前面.jpg"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: scroll; }
+</style>
+<style type="text/css">#header-container{width:1200px}#header-container,#access>.menu,#forbottom,#colophon,#footer-widget-area,#topbar-inner,.ppbox,#pp-afterslider #container,#breadcrumbs-box{max-width:1200px}#container.one-column{}#container.two-columns-right #secondary{width:300px;float:right}#container.two-columns-right #content{width:810px;float:left}#container.two-columns-right #content{width:calc(100% - 330px);float:left}#container.two-columns-left #primary{width:300px;float:left}#container.two-columns-left #content{width:810px;float:right}#container.two-columns-left #content{width:-moz-calc(100% - 330px);float:right;width:-webkit-calc(100% - 330px);width:calc(100% - 330px)}#container.three-columns-right .sidey{width:150px;float:left}#container.three-columns-right #primary{margin-left:30px;margin-right:30px}#container.three-columns-right #content{width:780px;float:left}#container.three-columns-right #content{width:-moz-calc(100% - 360px);float:left;width:-webkit-calc(100% - 360px);width:calc(100% - 360px)}#container.three-columns-left .sidey{width:150px;float:left}#container.three-columns-left #secondary{margin-left:30px;margin-right:30px}#container.three-columns-left #content{width:780px;float:right}#container.three-columns-left #content{width:-moz-calc(100% - 360px);float:right;width:-webkit-calc(100% - 360px);width:calc(100% - 360px)}#container.three-columns-sided .sidey{width:150px;float:left}#container.three-columns-sided #secondary{float:right}#container.three-columns-sided #content{width:780px;float:right;width:-moz-calc(100% - 360px);float:right;width:-webkit-calc(100% - 360px);float:right;width:calc(100% - 360px);float:right;margin:0 180px 0 -1140px}body{font-family:"Source Sans Pro"}#content h1.entry-title a,#content h2.entry-title a,#content h1.entry-title,#content h2.entry-title{font-family:inherit}.widget-title,.widget-title a{line-height:normal;font-family:inherit}.widget-container,.widget-container a{font-family:inherit}.entry-content h1,.entry-content h2,.entry-content h3,.entry-content h4,.entry-content h5,.entry-content h6,#comments #reply-title,.nivo-caption h2,#front-text1 h1,#front-text2 h1,h3.column-header-image{font-family:inherit}#site-title span a{font-family:inherit}#access ul li a,#access ul li a span{font-family:inherit}body{color:#555;background-color:#fff}a{color:#1ec8bb}a:hover,.entry-meta span a:hover,.comments-link a:hover,body.coldisplay2 #front-columns a:active{color:#cb5920}a:active{background-color:#cb5920;color:#fff}.entry-meta a:hover,.widget-container a:hover,.footer2 a:hover{border-bottom-color:#ccc}.sticky h2.entry-title a{background-color:#1ec8bb;color:#fff}#header{background-color: }#site-title span a{color:#1ec8bb}#site-description{color:#666}.socials a:hover .socials-hover{background-color:#1ec8bb}.socials .socials-hover{background-color:#adbf2d}#access a,#nav-toggle span{color:#eee}#access,#nav-toggle,#access ul li{background-color:#3a3b3d}#access>.menu>ul>li>a>span{}#access ul li:hover{background-color:#1ec8bb;color:#fff}#access ul>li.current_page_item,#access ul>li.current-menu-item,#access ul>li.current_page_ancestor,#access ul>li.current-menu-ancestor{background-color:#47484a}#access ul ul li,#access ul ul{background-color:#1ec8bb}#access ul ul li a{color:#fff}#access ul ul li:hover{background:#2cd6c9}#breadcrumbs{background:#f5f5f5}#access ul ul li.current_page_item,#access ul ul li.current-menu-item,#access ul ul li.current_page_ancestor,#access ul ul li.current-menu-ancestor{background-color:#2cd6c9}#topbar{background-color:#fff;border-bottom-color:#ebebeb}.menu-header-search .searchform{background:#f7f7f7}.topmenu ul li a,.search-icon:before{color:#999}.topmenu ul li a:hover{color:#fff;background-color:#1ec8bb}.search-icon:hover:before{color:#1ec8bb}#main{background-color:#fff}#author-info,#entry-author-info,.page-title{border-color:#ccc}.page-title-text{border-color:#cb5920}.page-title span{border-color:#1ec8bb}#entry-author-info #author-avatar,#author-info #author-avatar{border-color:#eee}.avatar-container:before{background-color:#cb5920}.sidey .widget-container{color:#555;background-color: }.sidey .widget-title{color:#cb5920;background-color: ;border-color:#ccc}.sidey .widget-container a{color:}.sidey .widget-container a:hover{color:}.widget-title span{border-color:#cb5920}.entry-content h1,.entry-content h2,.entry-content h3,.entry-content h4,.entry-content h5,.entry-content h6{color:#444}.entry-title,.entry-title a{color:#444}.entry-title a:hover{color:#000}#content span.entry-format{color:#ccc}#footer{color:#aaa;background-color:#f5f5f5}#footer2{color:#aaa;background-color:#3a3b3d}#sfooter-full{background-color:#353638}.footermenu ul li{border-color:#494a4c}.footermenu ul li:hover{border-color:#5d5e60}#footer a{color: }#footer a:hover{color: }#footer2 a,.footermenu ul li:after{color: }#footer2 a:hover{color: }#footer .widget-container{color:#555;background-color: }#footer .widget-title{color:#cb5920;background-color: ;border-color:#ccc}a.continue-reading-link{color:#1ec8bb;border-color:#1ec8bb}a.continue-reading-link:hover{background-color:#1ec8bb!important;color:#fff!important}#cryout_ajax_more_trigger{border:1px solid #ccc}#cryout_ajax_more_trigger:hover{background-color:#f7f7f7}a.continue-reading-link i.crycon-right-dir{color:#1ec8bb}a.continue-reading-link:hover i.crycon-right-dir{color:#fff}.page-link a,.page-link>span>em{border-color:#ccc}.columnmore a{background:#cb5920;color:#f7f7f7}.columnmore a:hover{background:#1ec8bb}.file,.button,#respond .form-submit input#submit,input[type="submit"],input[type="reset"]{background-color:#fff;border-color:#ccc}.button:hover,#respond .form-submit input#submit:hover{background-color:#f7f7f7}.entry-content tr th,.entry-content thead th{color:#444}#content tr th{background-color:#1ec8bb;color:#fff}#content tr.even{background-color:#f7f7f7}hr{background-color:#ccc}input[type="text"],input[type="password"],input[type="email"],textarea,select,input[type="color"],input[type="date"],input[type="datetime"],input[type="datetime-local"],input[type="month"],input[type="number"],input[type="range"],input[type="search"],input[type="tel"],input[type="time"],input[type="url"],input[type="week"]{border-color:#ccc #eee #eee #ccc;color:#555}input[type="submit"],input[type="reset"]{color:#555}input[type="text"]:hover,input[type="password"]:hover,input[type="email"]:hover,textarea:hover,input[type="color"]:hover,input[type="date"]:hover,input[type="datetime"]:hover,input[type="datetime-local"]:hover,input[type="month"]:hover,input[type="number"]:hover,input[type="range"]:hover,input[type="search"]:hover,input[type="tel"]:hover,input[type="time"]:hover,input[type="url"]:hover,input[type="week"]:hover{background-color:rgba(247,247,247,.4)}.entry-content code{background-color:#f7f7f7;border-color:rgba(30,200,187,.1)}.entry-content pre{border-color:#ccc}abbr,acronym{border-color:#555}.comment-meta a{color:#999}#respond .form-allowed-tags{color:#999}.comment .reply a{border-color:#eee}.comment .reply a:hover{color:#1ec8bb}.entry-meta{border-color:#eee}.entry-meta .crycon-metas:before{color:#cb5920}.entry-meta span a,.comments-link a{color:}.entry-meta span a:hover,.comments-link a:hover{color:}.entry-meta span,.entry-utility span,.footer-tags{color:#999}.nav-next a:hover,.nav-previous a:hover{background:#1ec8bb;color:#fff}.pagination{border-color:#ededed}.pagination a:hover{background:#cb5920;color:#fff}h3#comments-title{border-color:#ccc}h3#comments-title span{background:#1ec8bb;color:#fff}.comment-details{border-color:#eee}.searchform input[type="text"]{color:#999}.searchform:after{background-color:#cb5920}.searchform:hover:after{background-color:#1ec8bb}.searchsubmit[type="submit"]{color:#f7f7f7}li.menu-main-search .searchform .s{background-color:#fff}li.menu-main-search .searchsubmit[type="submit"]{color:#999}.caption-accented .wp-caption{background-color:rgba(30,200,187,.8);color:#fff}.nirvana-image-one .entry-content img[class*="align"],.nirvana-image-one .entry-summary img[class*="align"],.nirvana-image-two .entry-content img[class*="align"],.nirvana-image-two .entry-summary img[class*="align"]{border-color:#1ec8bb}#content p,#content ul,#content ol,#content,.ppbox{text-align:default}#content p,#content ul,#content ol,.widget-container,.widget-container a,table,table td,.ppbox,.navigation,#content dl,#content{font-size:18px;line-height:1.8em;word-spacing:default;letter-spacing:}#content h1.entry-title,#content h2.entry-title{font-size:42px}.widget-title,.widget-title a{font-size:22px}.widget-container,.widget-container a{font-size:18px}#content .entry-content h1,#pp-afterslider h1{font-size:42px}#content .entry-content h2,#pp-afterslider h2{font-size:36px}#content .entry-content h3,#pp-afterslider h3{font-size:31px}#content .entry-content h4,#pp-afterslider h4{font-size:26px}#content .entry-content h5,#pp-afterslider h5{font-size:21px}#content .entry-content h6,#pp-afterslider h6{font-size:16px}#site-title span a{font-size:46px}#access ul li a{font-size:14px}#access ul ul ul a{font-size:12px}.nocomments,.nocomments2{display:none}#header-container>div{margin:35px 0 0 0px}#content p,#content ul,#content ol,#content dd,#content pre,#content hr{margin-bottom:1.0em}article footer.entry-meta{display:none}#toTop:hover .crycon-back2top:before{color:#cb5920}#main{margin-top:5px}#forbottom{padding-left:0px;padding-right:0px}#header-widget-area{width:33%}#branding{height:150px}</style> 
+
+<link rel="icon" href="http://www.mishou.be/wp-content/uploads/2017/09/cropped-tシャツアリョーシャとイリューシャ前面-32x32.jpg" sizes="32x32"/>
+<link rel="icon" href="http://www.mishou.be/wp-content/uploads/2017/09/cropped-tシャツアリョーシャとイリューシャ前面-192x192.jpg" sizes="192x192"/>
+<link rel="apple-touch-icon-precomposed" href="http://www.mishou.be/wp-content/uploads/2017/09/cropped-tシャツアリョーシャとイリューシャ前面-180x180.jpg"/>
+<meta name="msapplication-TileImage" content="http://www.mishou.be/wp-content/uploads/2017/09/cropped-tシャツアリョーシャとイリューシャ前面-270x270.jpg"/>
+<!--[if lt IE 9]>
+<script>
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+</script>
+<![endif]-->
+<link rel='stylesheet' id='nirvana-mobile-css' href='http://www.mishou.be/wp-content/themes/nirvana/styles/style-mobile.css?ver=1.4.3' type='text/css' media='all'/>
+</head>
+<body class="post-template-default single single-post postid-42 single-format-standard custom-background nirvana-image-one caption-simple nirvana-menu-left">
+
+
+<div id="wrapper" class="hfeed">
+<div id="topbar"><div id="topbar-inner"> <nav class="topmenu"><ul id="menu-menu1" class="menu"><li id="menu-item-457" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-457"><a href="http://www.mishou.be/">Home</a></li>
+<li id="menu-item-458" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-458"><a href="http://www.mishou.be/sample-page/">About this site</a></li>
+<li id="menu-item-459" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-459"><a href="http://www.mishou.be/calendar/">Calendar</a></li>
+<li id="menu-item-460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-460"><a href="http://www.mishou.be/ict/">ICT</a></li>
+<li id="menu-item-462" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-462"><a href="http://www.mishou.be/images/">IMAGES</a></li>
+<li id="menu-item-848" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-848"><a href="http://www.mishou.be/links/">Links</a></li>
+<li id="menu-item-1051" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1051"><a href="http://www.mishou.be/%e6%9a%97%e5%8f%b7%e9%80%9a%e8%b2%a8%ef%bc%88%e4%bb%ae%e6%83%b3%e9%80%9a%e8%b2%a8%ef%bc%89%e3%83%aa%e3%83%b3%e3%82%af%e9%9b%86-ver-16/">暗号通貨リンク集 ver. 30</a></li>
+<li class='menu-header-search'>
+							<i class='search-icon'></i> 
+<form role="search" method="get" class="searchform" action="http://www.mishou.be/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="s" placeholder="Search" value="" name="s"/>
+	</label>
+	<button type="submit" class="searchsubmit"><span class="screen-reader-text">Search</span><i class="crycon-search"></i></button>
+</form>
+</li></ul></nav> </div></div>
+<div class="socials" id="srights">
+			<a target="_blank" href="#" class="socialicons social-YouTube" title="YouTube">
+				<script pagespeed_no_defer="">//<![CDATA[
+(function(){var g=this,h=function(b,d){var a=b.split("."),c=g;a[0]in c||!c.execScript||c.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===d?c[e]?c=c[e]:c=c[e]={}:c[e]=d};var l=function(b){var d=b.length;if(0<d){for(var a=Array(d),c=0;c<d;c++)a[c]=b[c];return a}return[]};var m=function(b){var d=window;if(d.addEventListener)d.addEventListener("load",b,!1);else if(d.attachEvent)d.attachEvent("onload",b);else{var a=d.onload;d.onload=function(){b.call(this);a&&a.call(this)}}};var n,p=function(b,d,a,c,e){this.f=b;this.h=d;this.i=a;this.c=e;this.e={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.g=c;this.b={};this.a=[];this.d={}},q=function(b,d){var a,c,e=d.getAttribute("pagespeed_url_hash");if(a=e&&!(e in b.d))if(0>=d.offsetWidth&&0>=d.offsetHeight)a=!1;else{c=d.getBoundingClientRect();var f=document.body;a=c.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);c=c.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+c;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.e.height&&c<=b.e.width)}a&&(b.a.push(e),b.d[e]=!0)};p.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&q(this,b)};h("pagespeed.CriticalImages.checkImageForCriticality",function(b){n.checkImageForCriticality(b)});h("pagespeed.CriticalImages.checkCriticalImages",function(){r(n)});var r=function(b){b.b={};for(var d=["IMG","INPUT"],a=[],c=0;c<d.length;++c)a=a.concat(l(document.getElementsByTagName(d[c])));if(0!=a.length&&a[0].getBoundingClientRect){for(c=0;d=a[c];++c)q(b,d);a="oh="+b.i;b.c&&(a+="&n="+b.c);if(d=0!=b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),c=1;c<b.a.length;++c){var e=","+encodeURIComponent(b.a[c]);131072>=a.length+e.length&&(a+=e)}b.g&&(e="&rd="+encodeURIComponent(JSON.stringify(s())),131072>=a.length+e.length&&(a+=e),d=!0);t=a;if(d){c=b.f;b=b.h;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(k){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(u){}}f&&(f.open("POST",c+(-1==c.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}},s=function(){var b={},d=document.getElementsByTagName("IMG");if(0==d.length)return{};var a=d[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var c=0;a=d[c];++c){var e=a.getAttribute("pagespeed_url_hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].k&&a.height>=b[e].j)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b},t="";h("pagespeed.CriticalImages.getBeaconData",function(){return t});h("pagespeed.CriticalImages.Run",function(b,d,a,c,e,f){var k=new p(b,d,a,e,f);n=k;c&&m(function(){window.setTimeout(function(){r(k)},0)})});})();pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','http://www.mishou.be/2017/09/01/python%e3%81%ae%e5%a7%8b%e3%82%81%e6%96%b9/','YddRYU7ik1',true,false,'zl_i40KsTCo');
+//]]></script><img alt="YouTube" src="http://www.mishou.be/wp-content/themes/nirvana/images/socials/YouTube.png" pagespeed_url_hash="2770394493" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+			</a>
+			<a target="_blank" href="#" class="socialicons social-Twitter" title="Twitter">
+				<img alt="Twitter" src="http://www.mishou.be/wp-content/themes/nirvana/images/socials/Twitter.png" pagespeed_url_hash="597967545" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+			</a>
+			<a target="_blank" href="#" class="socialicons social-RSS" title="RSS">
+				<img alt="RSS" src="http://www.mishou.be/wp-content/themes/nirvana/images/socials/RSS.png" pagespeed_url_hash="5360660" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+			</a></div>
+<div id="header-full">
+	<header id="header">
+		<div id="masthead">
+					<div id="branding" role="banner">
+				<img id="bg_image" alt="" title="" src="http://www.mishou.be/wp-content/uploads/2017/09/cropped-2017-09-02-15.05.39.png" pagespeed_url_hash="2718441494" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/><div id="header-container"><div class="site-identity"><div id="site-title"><span> <a href="http://www.mishou.be/" title="Think it aloud" rel="home">Think it aloud</a> </span></div><div id="site-description"> Show it clearly</div></div></div>								<div style="clear:both;"></div>
+			</div><!-- #branding -->
+			<a id="nav-toggle"><span>&nbsp;</span></a>
+			<nav id="access" role="navigation">
+					<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+	<div class="menu"><ul id="prime_nav" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-457"><a href="http://www.mishou.be/"><span>Home</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-458"><a href="http://www.mishou.be/sample-page/"><span>About this site</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-459"><a href="http://www.mishou.be/calendar/"><span>Calendar</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-460"><a href="http://www.mishou.be/ict/"><span>ICT</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-461"><a href="http://www.mishou.be/ict/ictechnology/"><span>ICTechnology ver. 3</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-462"><a href="http://www.mishou.be/images/"><span>IMAGES</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-463" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-463"><a href="http://www.mishou.be/images/mishou-t-shirts/"><span>mishou: illustrations for T-shirts</span></a></li>
+	<li id="menu-item-464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-464"><a href="http://www.mishou.be/images/shibatauimages/"><span>shibatau:illustrations</span></a></li>
+	<li id="menu-item-465" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-465"><a href="http://www.mishou.be/images/shibatauphotos/"><span>shibatau:photos</span></a></li>
+	<li id="menu-item-466" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-466"><a href="http://www.mishou.be/images/shibatauphotos/shibatauchineseteaphotos/"><span>shibatau:ChineseTeaPhotos</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-848"><a href="http://www.mishou.be/links/"><span>Links</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1051"><a href="http://www.mishou.be/%e6%9a%97%e5%8f%b7%e9%80%9a%e8%b2%a8%ef%bc%88%e4%bb%ae%e6%83%b3%e9%80%9a%e8%b2%a8%ef%bc%89%e3%83%aa%e3%83%b3%e3%82%af%e9%9b%86-ver-16/"><span>暗号通貨リンク集 ver. 30</span></a></li>
+</ul></div>			</nav><!-- #access -->
+			
+			
+		</div><!-- #masthead -->
+	</header><!-- #header -->
+</div><!-- #header-full -->
+
+<div style="clear:both;height:0;"> </div>
+<div id="breadcrumbs"><div id="breadcrumbs-box"><a href="http://www.mishou.be"><i class="crycon-homebread"></i><span class="screen-reader-text">Home</span></a><i class="crycon-angle-right"></i> <a href="http://www.mishou.be/category/python-related/">Python related</a> <i class="crycon-angle-right"></i> <span class="current">Pythonの始め方3：Jupyterで計算</span></div></div><div id="main">
+		<div id="toTop"><i class="crycon-back2top"></i> </div>	<div id="forbottom">
+		
+		<div style="clear:both;"> </div>
+		<section id="container" class="two-columns-right">
+			<div id="content" role="main">
+			
+
+				<div id="post-42" class="post-42 post type-post status-publish format-standard has-post-thumbnail hentry category-python-related">
+					<h1 class="entry-title">Pythonの始め方3：Jupyterで計算</h1>
+										<div class="entry-meta">
+						<span class="author vcard"><i class="crycon-author crycon-metas" title="Author "></i>
+				<a class="url fn n" rel="author" href="http://www.mishou.be/profile-2/shibatau" title="View all posts by shibatau">shibatau</a></span><span>
+						<i class="crycon-time crycon-metas" title="Date"></i>
+						<time class="onDate date published" datetime="2017-09-01T22:59:29+00:00">
+							<a href="http://www.mishou.be/2017/09/01/python%e3%81%ae%e5%a7%8b%e3%82%81%e6%96%b9/" rel="bookmark">September 1, 2017</a>
+						</time>
+					</span><time class="updated" datetime="2018-02-13T15:18:17+00:00">February 13, 2018</time><span class="bl_categ"><i class="crycon-folder-open crycon-metas" title="Categories"></i><a href="http://www.mishou.be/category/python-related/" rel="tag">Python related</a></span> 					</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+						<div id="comp-iqpzfhou_SinglePostMediaTop_MediaPost__0_0__type_MediaPost" class=" flex_vbox" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$n749s_DESKTOP.$inlineContent.$comp-iqpzfhou.$inlineContent.0.$child.$0.$inlineContent.$1.$5">
+<div id="5996403daf7c912f821deb8fcomp-iqpzfhou_SinglePostMediaTop_MediaPost__0_0_mediaText" class="s_usaAWRichTextClickableSkin" data-proxy-name="MediaLabel" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$n749s_DESKTOP.$inlineContent.$comp-iqpzfhou.$inlineContent.0.$child.$0.$inlineContent.$1.$5.$0" data-width="630">
+<div id="5996403daf7c912f821deb8fcomp-iqpzfhou_SinglePostMediaTop_MediaPost__0_0_mediaTextrichTextContainer" class="s_usaAWRichTextClickableSkin_richTextContainer s_usaAWRichTextClickableSkinrichTextContainer" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$n749s_DESKTOP.$inlineContent.$comp-iqpzfhou.$inlineContent.0.$child.$0.$inlineContent.$1.$5.$0.$richTextContainer">
+<h5 class="font_8" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$n749s_DESKTOP.$inlineContent.$comp-iqpzfhou.$inlineContent.0.$child.$0.$inlineContent.$1.$5.$0.$richTextContainer.i"><span style="font-family: 'Source Sans Pro';">Jupyter Notebookで計算</span></h5>
+<p style="padding-left: 30px;">Anacondaをインストールすると、Python実行のための統<span data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$n749s_DESKTOP.$inlineContent.$comp-iqpzfhou.$inlineContent.0.$child.$0.$inlineContent.$1.$5.$0.$richTextContainer.i.0">合環境（IDE）であるJunyter Notebookもインストールされます。</span></p>
+<p class="font_8" style="padding-left: 30px;" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$n749s_DESKTOP.$inlineContent.$comp-iqpzfhou.$inlineContent.0.$child.$0.$inlineContent.$1.$5.$0.$richTextContainer.i">Jupyter Notebookは、ブラウザを利用するという点で親しみやすく、スクリプトを実行するとその下に結果の表示される対話形式なので理解しやすいです。</p>
+<p class="font_8" style="padding-left: 30px;" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$n749s_DESKTOP.$inlineContent.$comp-iqpzfhou.$inlineContent.0.$child.$0.$inlineContent.$1.$5.$0.$richTextContainer.i"><span style="font-family: 'Source Sans Pro';">単純な計算は次のようになります。式を書き実行するとその結果が下に示されます。プログラミングはこの繰り返しになります。</span></p>
+<p data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$n749s_DESKTOP.$inlineContent.$comp-iqpzfhou.$inlineContent.0.$child.$0.$inlineContent.$1.$5.$0.$richTextContainer.i">&nbsp;</p>
+</div>
+</div>
+<p data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$n749s_DESKTOP.$inlineContent.$comp-iqpzfhou.$inlineContent.0.$child.$0.$inlineContent.$1.$5.$0.$richTextContainer.i"><img class=" wp-image-45 aligncenter" src="http://www.mishou.be/wp-content/uploads/2017/09/スクリーンショット-2017-09-02-7.13.09-300x248.png" alt="" width="424" height="350" srcset="http://www.mishou.be/wp-content/uploads/2017/09/スクリーンショット-2017-09-02-7.13.09-300x248.png 300w, http://www.mishou.be/wp-content/uploads/2017/09/スクリーンショット-2017-09-02-7.13.09-768x635.png 768w, http://www.mishou.be/wp-content/uploads/2017/09/スクリーンショット-2017-09-02-7.13.09-1024x847.png 1024w, http://www.mishou.be/wp-content/uploads/2017/09/スクリーンショット-2017-09-02-7.13.09.png 1066w" sizes="(max-width: 424px) 100vw, 424px"/></p>
+<p data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$n749s_DESKTOP.$inlineContent.$comp-iqpzfhou.$inlineContent.0.$child.$0.$inlineContent.$1.$5.$0.$richTextContainer.i">&nbsp;</p>
+<p style="padding-left: 30px;" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$n749s_DESKTOP.$inlineContent.$comp-iqpzfhou.$inlineContent.0.$child.$0.$inlineContent.$1.$5.$0.$richTextContainer.i">エクスプローラ（Windows）あるいはファインダ（Mac）で、ファイルを開いて作業するのと同じようにファイルを扱いますので、どのファイルを開いているのか、どこに保存したのかなどがわかりやすいです。</p>
+</div>
+<p data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$n749s_DESKTOP.$inlineContent.$comp-iqpzfhou.$inlineContent.0.$child.$0.$inlineContent.$1.$5.$0.$richTextContainer.i">&nbsp;</p>
+<h5 data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$n749s_DESKTOP.$inlineContent.$comp-iqpzfhou.$inlineContent.0.$child.$0.$inlineContent.$1.$5.$0.$richTextContainer.i">Pythonウィジェットで実行</h5>
+<p data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$n749s_DESKTOP.$inlineContent.$comp-iqpzfhou.$inlineContent.0.$child.$0.$inlineContent.$1.$5.$0.$richTextContainer.i">&nbsp;</p>
+<p style="padding-left: 30px;" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$n749s_DESKTOP.$inlineContent.$comp-iqpzfhou.$inlineContent.0.$child.$0.$inlineContent.$1.$5.$0.$richTextContainer.i">このブログではDatacamp-light-wordpressというWordPressのプラグインを利用し、ブログ内でPythonを実行できるようにしています。</p>
+<p style="padding-left: 30px;" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$n749s_DESKTOP.$inlineContent.$comp-iqpzfhou.$inlineContent.0.$child.$0.$inlineContent.$1.$5.$0.$richTextContainer.i">次のRunをクリックしてください。掲載結果が表示されます。</p>
+<div id="comp-iqpzfhou_SinglePostMediaTop_MediaPost__0_0__type_MediaPost" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$n749s_DESKTOP.$inlineContent.$comp-iqpzfhou.$inlineContent.0.$child.$0.$inlineContent.$1.$5">
+<p data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$n749s_DESKTOP.$inlineContent.$comp-iqpzfhou.$inlineContent.0.$child.$0.$inlineContent.$1.$5.$0.$richTextContainer.i">&nbsp;</p>
+</div>
+<div data-datacamp-exercise data-lang="python">
+<code data-type="pre-exercise-code">
+
+</code>
+<code data-type="sample-code">
+(1+2)*4/5
+
+</code>
+<code data-type="solution">
+
+</code>
+<code data-type="sct">
+
+</code>
+<div data-type="hint">
+
+</div>
+</div><div class='sfsi_Sicons' style='width: 100%; display: inline-block; vertical-align: middle; text-align:left'>
+<div style='margin:0px 8px 0px 0px; line-height: 24px'><span>Please follow and like us:</span></div>
+<div class='sfsi_socialwpr'>
+<div class='sf_subscrbe' style='text-align:left;float:left;width:64px'><a href="http://www.specificfeeds.com/widgets/emailSubscribeEncFeed/RlRObDYrNUsxb1dQc1ZOaGpQaUhDTXRMbEFGSm50R1NXQm9lYzF2TEVGbGRmZjV1RWVpWGExNzlyY3pLRzF2SS9Qb29qaHdEcWZqVUZnRDV4OCtOc2ROT2toL3NMY3lsa24yclgremI0bERWYmZ1Z0NjNW9UbDFSTmxmanhjd0R8bWczV290Wi91cEZxZ0hlZTFMYkFMVEQzVXovTnp6YkhLMzlsbk9EdzU2MD0=/OA==/" target="_blank"><img src="http://www.mishou.be/wp-content/plugins/ultimate-social-media-icons/images/follow_subscribe.png" pagespeed_url_hash="3785841353" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a></div>
+<div class='sf_fb' style='text-align:left;width:98px'>
+<div class="fb-like" href="http://www.mishou.be/2017/09/01/python%e3%81%ae%e5%a7%8b%e3%82%81%e6%96%b9/" width="180" send="false" showfaces="false" action="like" data-share="true" data-layout="button"></div>
+</div>
+<div class='sf_twiter' style='text-align:left;float:left;width:auto'><a href="http://twitter.com/share" data-count="none" class="sr-twitter-button twitter-share-button" lang="en" data-url="http://www.mishou.be/2017/09/01/python%e3%81%ae%e5%a7%8b%e3%82%81%e6%96%b9/" data-text="Pythonの始め方3：Jupyterで計算"></a></div>
+<div class='sf_pinit' style='text-align:left;float:left;line-height: 20px;width:47px'><a href="https://www.pinterest.com/pin/create/button/?url=&#038;media=&#038;description=" data-pin-do="buttonPin" data-pin-save="true" data-pin-count="none"></a></div>
+<div class='sf_google' style='text-align:left;float:left;max-width:62px;min-width:35px;'>
+<div class="g-plusone" data-href="http://www.mishou.be/2017/09/01/python%e3%81%ae%e5%a7%8b%e3%82%81%e6%96%b9/" data-size="large" data-annotation="none"></div>
+</div>
+</div>
+</div>
+											</div><!-- .entry-content -->
+
+					<div id="entry-author-info">
+						<div id="author-avatar">
+							<img src="http://www.mishou.be/wp-content/plugins/ultimate-member/assets/img/default_avatar.jpg" class="func-um_user gravatar avatar avatar-80 um-avatar um-avatar-default" width="80" height="80" alt="Shibatau Hirogami" pagespeed_url_hash="2231735250" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>						</div><!-- #author-avatar -->
+						<div id="author-description">
+							<h2>About shibatau</h2>
+							I was born and grown up in Kyoto. I studied western philosophy at the University and specialized in analytic philosophy, especially Ludwig Wittgenstein at the postgraduate school.
+
+I'm  interested in new technology, especially machine learning
+and have been learning R language for two years and began to learn Python this summer.
+
+Listening toParamore, Sia, Amazarashi and MIyuki Nakajima.
+
+Favorite movies I've recently seen: "Remember".
+
+Favorite actors and actresses: Anthony Hopkins, Denzel Washington, Ellen Page, Meryl Streep, Mia Wasikowska and Robert DeNiro.
+
+Favorite books: Fyodor Mikhailovich Dostoyevsky, "The Karamazov Brothers", Shinran, "Lamentations of Divergences".
+
+Favorite phrase: Salvation by Faith.							<div id="author-link">
+								<a href="http://www.mishou.be/profile-2/shibatau">
+									View all posts by shibatau <span class="meta-nav">&rarr;</span>								</a>
+							</div><!-- #author-link	-->
+						</div><!-- #author-description -->
+					</div><!-- #entry-author-info -->
+
+					<footer class="entry-meta">
+						<span class="bl_bookmark"><i class="crycon-bookmark crycon-metas" title=" Bookmark the permalink"></i> <a href="http://www.mishou.be/2017/09/01/python%e3%81%ae%e5%a7%8b%e3%82%81%e6%96%b9/" title="Permalink to Pythonの始め方3：Jupyterで計算" rel="bookmark"> Bookmark</a>.</span>											</footer><!-- .entry-meta -->
+				</div><!-- #post-## -->
+
+				<div id="nav-below" class="navigation">
+					<div class="nav-previous"><a href="http://www.mishou.be/2017/09/01/using-quantmod-r-five-lines-visualize-data/" rel="prev"><i class="crycon-left-dir"></i> Using quantmod with R, only five lines visualize your data</a></div>
+					<div class="nav-next"><a href="http://www.mishou.be/2017/09/02/r%e3%81%a7%e6%97%a5%e7%b5%8c%e5%b9%b3%e5%9d%87%e6%a0%aa%e4%be%a1%e3%81%ae%e7%b5%82%e5%80%a4%e3%81%a8%e7%a7%bb%e5%8b%95%e5%b9%b3%e5%9d%87%e7%b7%9a%e3%82%92%e6%8f%8f%e3%81%8f/" rel="next">Rで日経平均株価の終値と移動平均線を描く <i class="crycon-right-dir"></i></a></div>
+				</div><!-- #nav-below -->
+
+				 <div id="comments" class=""> 	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2017/09/01/python%e3%81%ae%e5%a7%8b%e3%82%81%e6%96%b9/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="http://www.mishou.be/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label><textarea placeholder="Comment" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p><p class="comment-form-author"><label for="author">Name<span class="required">*</span></label> <input id="author" placeholder="Name*" name="author" type="text" value="" size="30" aria-required='true'/></p>
+<p class="comment-form-email"><label for="email">Email<span class="required">*</span></label> <input id="email" placeholder="Email*" name="email" type="text" value="" size="30" aria-required='true'/></p>
+<p class="comment-form-url"><label for="url">Website</label><input id="url" placeholder="Website" name="url" type="text" value="" size="30"/></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"/> <input type='hidden' name='comment_post_ID' value='42' id='comment_post_ID'/>
+<input type='hidden' name='comment_parent' id='comment_parent' value='0'/>
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="2dc9b64bd9"/></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="109"/></p>			</form>
+			</div><!-- #respond -->
+	</div><!-- #comments -->
+
+
+						</div><!-- #content -->
+			<div id="secondary" class="widget-area sidey" role="complementary">
+		
+			<ul class="xoxo">
+									<li id="socials-left" class="widget-container">
+					<div class="socials" id="smenur">
+			<a target="_blank" href="#" class="socialicons social-YouTube" title="YouTube">
+				<img alt="YouTube" src="http://www.mishou.be/wp-content/themes/nirvana/images/socials/YouTube.png" pagespeed_url_hash="2770394493" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+			</a>
+			<a target="_blank" href="#" class="socialicons social-Twitter" title="Twitter">
+				<img alt="Twitter" src="http://www.mishou.be/wp-content/themes/nirvana/images/socials/Twitter.png" pagespeed_url_hash="597967545" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+			</a>
+			<a target="_blank" href="#" class="socialicons social-RSS" title="RSS">
+				<img alt="RSS" src="http://www.mishou.be/wp-content/themes/nirvana/images/socials/RSS.png" pagespeed_url_hash="5360660" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+			</a></div>					</li>
+								<li id="ai1ec_agenda_widget-3" class="widget-container widget_ai1ec_agenda_widget">
+
+	<h3 class="widget-title"><span>Upcoming Events</span></h3>
+
+<style></style>
+<div class="timely ai1ec-agenda-widget-view ai1ec-clearfix">
+
+			<p class="ai1ec-no-results">
+			There are no upcoming events.
+		</p>
+	 
+			<div class="ai1ec-subscribe-buttons-widget">
+							<a class="ai1ec-btn ai1ec-btn-default ai1ec-btn-xs ai1ec-pull-right
+					ai1ec-calendar-link" href="http&#x3A;&#x2F;&#x2F;www.mishou.be&#x2F;calendar&#x2F;">
+					View Calendar
+					<i class="ai1ec-fa ai1ec-fa-arrow-right"></i>
+				</a>
+			
+							<div class="ai1ec-subscribe-dropdown ai1ec-dropdown ai1ec-btn
+	ai1ec-btn-default ai1ec-btn-xs">
+	<span role="button" class="ai1ec-dropdown-toggle ai1ec-subscribe" data-toggle="ai1ec-dropdown">
+		<i class="ai1ec-fa ai1ec-icon-rss ai1ec-fa-lg ai1ec-fa-fw"></i>
+		<span class="ai1ec-hidden-xs">
+							Add
+						<span class="ai1ec-caret"></span>
+		</span>
+	</span>
+			<ul class="ai1ec-dropdown-menu ai1ec-pull-left" role="menu">
+		<li>
+			<a class="ai1ec-tooltip-trigger ai1ec-tooltip-auto" target="_blank" data-placement="right" title="Copy this URL for your own Timely calendar or click to add to your rich-text calendar" href="http&#x3A;&#x2F;&#x2F;www.mishou.be&#x2F;&#x3F;plugin&#x3D;all-in-one-event-calendar&amp;controller&#x3D;ai1ec_exporter_controller&amp;action&#x3D;export_events">
+				<i class="ai1ec-fa ai1ec-fa-lg ai1ec-fa-fw ai1ec-icon-timely"></i>
+				Add to Timely Calendar
+			</a>
+		</li>
+		<li>
+			<a class="ai1ec-tooltip-trigger ai1ec-tooltip-auto" target="_blank" data-placement="right" title="Subscribe to this calendar in your Google Calendar" href="https://www.google.com/calendar/render?cid=http&#x25;3A&#x25;2F&#x25;2Fwww.mishou.be&#x25;2F&#x25;3Fplugin&#x25;3Dall-in-one-event-calendar&#x25;26controller&#x25;3Dai1ec_exporter_controller&#x25;26action&#x25;3Dexport_events&#x25;26no_html&#x25;3Dtrue&#x25;26&#x25;26">
+				<i class="ai1ec-fa ai1ec-icon-google ai1ec-fa-lg ai1ec-fa-fw"></i>
+				Add to Google
+			</a>
+		</li>
+		<li>
+			<a class="ai1ec-tooltip-trigger ai1ec-tooltip-auto" target="_blank" data-placement="right" title="Subscribe to this calendar in MS Outlook" href="webcal&#x3A;&#x2F;&#x2F;www.mishou.be&#x2F;&#x3F;plugin&#x3D;all-in-one-event-calendar&amp;controller&#x3D;ai1ec_exporter_controller&amp;action&#x3D;export_events&amp;no_html&#x3D;true">
+				<i class="ai1ec-fa ai1ec-icon-windows ai1ec-fa-lg ai1ec-fa-fw"></i>
+				Add to Outlook
+			</a>
+		</li>
+		<li>
+			<a class="ai1ec-tooltip-trigger ai1ec-tooltip-auto" target="_blank" data-placement="right" title="Subscribe to this calendar in Apple Calendar/iCal" href="webcal&#x3A;&#x2F;&#x2F;www.mishou.be&#x2F;&#x3F;plugin&#x3D;all-in-one-event-calendar&amp;controller&#x3D;ai1ec_exporter_controller&amp;action&#x3D;export_events&amp;no_html&#x3D;true">
+				<i class="ai1ec-fa ai1ec-icon-apple ai1ec-fa-lg ai1ec-fa-fw"></i>
+				Add to Apple Calendar
+			</a>
+		</li>
+		<li>
+						<a class="ai1ec-tooltip-trigger ai1ec-tooltip-auto" data-placement="right" title="Subscribe to this calendar in another plain-text calendar" href="http&#x3A;&#x2F;&#x2F;www.mishou.be&#x2F;&#x3F;plugin&#x3D;all-in-one-event-calendar&amp;controller&#x3D;ai1ec_exporter_controller&amp;action&#x3D;export_events&amp;no_html&#x3D;true">
+				<i class="ai1ec-fa ai1ec-icon-calendar ai1ec-fa-fw"></i>
+				Add to other calendar
+			</a>
+		</li>
+		<li>
+			<a class="ai1ec-tooltip-trigger ai1ec-tooltip-auto" data-placement="right" title="" href="http&#x3A;&#x2F;&#x2F;www.mishou.be&#x2F;&#x3F;plugin&#x3D;all-in-one-event-calendar&amp;controller&#x3D;ai1ec_exporter_controller&amp;action&#x3D;export_events&xml=true">
+				<i class="ai1ec-fa ai1ec-fa-file-text ai1ec-fa-lg ai1ec-fa-fw"></i>
+				Export to XML
+			</a>
+		</li>
+	</ul>
+</div>
+
+					</div>
+	 
+</div>
+
+
+
+</li><li id="categories-4" class="widget-container widget_categories"><h3 class="widget-title"><span>Categories</span></h3>		<ul>
+	<li class="cat-item cat-item-37"><a href="http://www.mishou.be/category/animation/">animation</a>
+</li>
+	<li class="cat-item cat-item-24"><a href="http://www.mishou.be/category/applications/">applications</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="http://www.mishou.be/category/blender/">Blender</a>
+</li>
+	<li class="cat-item cat-item-42"><a href="http://www.mishou.be/category/criptocurrecy/">cryptocurrecy</a>
+</li>
+	<li class="cat-item cat-item-40"><a href="http://www.mishou.be/category/economics/">economics</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="http://www.mishou.be/category/editing-videos/">editing videos</a>
+</li>
+	<li class="cat-item cat-item-28"><a href="http://www.mishou.be/category/gimp/">GIMP</a>
+</li>
+	<li class="cat-item cat-item-27"><a href="http://www.mishou.be/category/inkscape/">Inkscape</a>
+</li>
+	<li class="cat-item cat-item-45"><a href="http://www.mishou.be/category/krita/">Krita</a>
+</li>
+	<li class="cat-item cat-item-33"><a href="http://www.mishou.be/category/licture/">licture</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://www.mishou.be/category/machine-learning/">machine learning</a>
+</li>
+	<li class="cat-item cat-item-20"><a href="http://www.mishou.be/category/miscellaneous/">miscellaneous</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://www.mishou.be/category/movies/">movies</a>
+</li>
+	<li class="cat-item cat-item-43"><a href="http://www.mishou.be/category/music/">music</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://www.mishou.be/category/philosophy/">philosophy</a>
+</li>
+	<li class="cat-item cat-item-47"><a href="http://www.mishou.be/category/pops/">pops</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://www.mishou.be/category/python-related/">Python related</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="http://www.mishou.be/category/r-related/">R related</a>
+</li>
+	<li class="cat-item cat-item-22"><a href="http://www.mishou.be/category/remember/">remember</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.mishou.be/category/uncategorized/">Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-19"><a href="http://www.mishou.be/category/wordpress/">wordpress</a>
+</li>
+		</ul>
+</li><li id="recent-comments-4" class="widget-container widget_recent_comments"><h3 class="widget-title"><span>Recent Comments</span></h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href='https://wordpress.org/' rel='external nofollow' class='url'>A WordPress Commenter</a></span> on <a href="http://www.mishou.be/2017/06/12/hello-world/#comment-1">Hello world!</a></li></ul></li><li id="countperday_widget-3" class="widget-container widget_countperday_widget"><h3 class="widget-title"><span>Count per Day</span></h3><ul class="cpd"><li class="cpd-l"><span id="cpd_number_getuserall" class="cpd-r">10454</span>Total visitors:</li><li class="cpd-l"><span id="cpd_number_getusertoday" class="cpd-r">10</span>Visitors today:</li><li class="cpd-l"><span id="cpd_number_getuseryesterday" class="cpd-r">39</span>Visitors yesterday:</li><li class="cpd-l"><span id="cpd_number_getuserthismonth" class="cpd-r">2606</span>Visitors per month:</li><li class="cpd-l"><span id="cpd_number_getuserperday" class="cpd-r"><abbr title="last 7 days without today">76</abbr></span>Visitors per day:</li></ul></li><li id="wpum-login-form-2" class="widget-container wpum-login-form"><h3 class="widget-title"><span>Login</span></h3>
+
+<div id="wpum-form-" class="wpum-login-form" data-redirect="http://www.mishou.be/2017/09/01/python%e3%81%ae%e5%a7%8b%e3%82%81%e6%96%b9/">
+
+	
+	
+		<form name="" id="" action="http://www.mishou.be/wp-login.php" method="post">
+			
+			<p class="login-username">
+				<label for="user_login">Username</label>
+				<input type="text" name="log" id="user_login" class="input" value="" size="20"/>
+			</p>
+			<p class="login-password">
+				<label for="user_pass">Password</label>
+				<input type="password" name="pwd" id="user_pass" class="input" value="" size="20"/>
+			</p>
+			<input type="hidden" name="wpum_is_login_form" value="wpum"><input type="hidden" name="wpum_test" value="">
+			<p class="login-remember"><label><input name="rememberme" type="checkbox" id="rememberme" value="forever"/> Remember Me</label></p>
+			<p class="login-submit">
+				<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary" value="Login"/>
+				<input type="hidden" name="redirect_to" value="http://www.mishou.be/2017/09/01/python%e3%81%ae%e5%a7%8b%e3%82%81%e6%96%b9/"/>
+			</p>
+			
+		</form>
+	
+</div>
+
+<div class="wpum-helper-links">
+
+		<p class="wpum-login-url">
+		Already have an account? <a href="http://www.mishou.be/members/login-2/">Sign In &raquo;</a>	</p>
+	
+		<p class="wpum-register-url">
+		Don't have an account? <a href="http://www.mishou.be/members/register-2/">Signup Now &raquo;</a>	</p>
+	
+		<p class="wpum-password-recovery-url">
+		<a href="http://www.mishou.be/members/password-reset-2/">
+			Lost your password?		</a>
+	</p>
+	
+</div>
+</li>			</ul>
+
+			
+		</div>
+		</section><!-- #container -->
+
+	<div style="clear:both;"></div>
+	</div> <!-- #forbottom -->
+
+
+	<footer id="footer" role="contentinfo">
+		<div id="colophon">
+		
+			
+			
+		</div><!-- #colophon -->
+
+		<div id="footer2">
+			<div id="footer2-inside">
+			<div id="site-copyright">This text can be changed from the Miscellaneous section of the settings page. <br/>
+<b>Lorem ipsum</b> dolor sit amet, <a href="#">consectetur adipiscing</a> elit, cras ut imperdiet augue.</div>	<em style="display:table;margin:0 auto;float:none;text-align:center;padding:7px 0;font-size:13px;">
+	Powered by <a target="_blank" href="http://www.cryoutcreations.eu" title="Nirvana Theme by Cryout Creations">Nirvana</a> &amp;
+	<a target="_blank" href="http://wordpress.org/" title="Semantic Personal Publishing Platform">  WordPress.</a></em>
+	<div id="sfooter-full"><div class="socials" id="sfooter">
+			<a target="_blank" href="#" class="socialicons social-YouTube" title="YouTube">
+				<img alt="YouTube" src="http://www.mishou.be/wp-content/themes/nirvana/images/socials/YouTube.png" pagespeed_url_hash="2770394493" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+			</a>
+			<a target="_blank" href="#" class="socialicons social-Twitter" title="Twitter">
+				<img alt="Twitter" src="http://www.mishou.be/wp-content/themes/nirvana/images/socials/Twitter.png" pagespeed_url_hash="597967545" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+			</a>
+			<a target="_blank" href="#" class="socialicons social-RSS" title="RSS">
+				<img alt="RSS" src="http://www.mishou.be/wp-content/themes/nirvana/images/socials/RSS.png" pagespeed_url_hash="5360660" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+			</a></div></div>			</div> <!-- #footer2-inside -->
+		</div><!-- #footer2 -->
+
+	</footer><!-- #footer -->
+
+	</div><!-- #main -->
+</div><!-- #wrapper -->
+
+
+<!-- ngg_resource_manager_marker --><script type='text/javascript' src='https://cdn.datacamp.com/datacamp-light-latest.min.js?ver=4.9.4'></script>
+<script type='text/javascript'>//<![CDATA[
+var sb_instagram_js_options={"sb_instagram_at":""};
+//]]></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-content/plugins/instagram-feed/js/sb-instagram.min.js?ver=1.6'></script>
+<script type='text/javascript'>//<![CDATA[
+var cssTarget={"Bodhi":"img.style-svg","ForceInlineSVG":"style-svg"};var ForceInlineSVGActive="true";
+//]]></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-content/plugins/svg-support/js/svgs-inline.js?ver=1.0.0'></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-content/plugins/ultimate-social-media-icons/js/shuffle/modernizr.custom.min.js?ver=4.9.4'></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-content/plugins/ultimate-social-media-icons/js/shuffle/jquery.shuffle.min.js?ver=4.9.4'></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-content/plugins/ultimate-social-media-icons/js/shuffle/random-shuffle-min.js?ver=4.9.4'></script>
+<script type='text/javascript'>//<![CDATA[
+var ajax_object={"ajax_url":"http:\/\/www.mishou.be\/wp-admin\/admin-ajax.php"};var ajax_object={"ajax_url":"http:\/\/www.mishou.be\/wp-admin\/admin-ajax.php","plugin_url":"http:\/\/www.mishou.be\/wp-content\/plugins\/ultimate-social-media-icons\/"};
+//]]></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-content/plugins/ultimate-social-media-icons/js/custom.js?ver=4.9.4'></script>
+<script type='text/javascript'>//<![CDATA[
+var wpum_frontend_js={"ajax":"http:\/\/www.mishou.be\/wp-admin\/admin-ajax.php","checking_credentials":"Checking credentials...","pwd_meter":"","disable_ajax":""};
+//]]></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-content/plugins/wp-user-manager/assets/js/wp_user_manager.min.js?ver=1.4.3'></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-content/plugins/wp-user-manager/assets/js//vendor/hideShowPassword.min.js?ver=1.4.3'></script>
+<script type='text/javascript'>//<![CDATA[
+var nirvana_settings={"mobile":"1","fitvids":"1"};
+//]]></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-content/themes/nirvana/js/frontend.js?ver=1.4.3'></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-includes/js/comment-reply.min.js?ver=4.9.4'></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-includes/js/masonry.min.js?ver=3.3.2'></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-includes/js/jquery/jquery.masonry.min.js?ver=3.1.2b'></script>
+<script type='text/javascript'>//<![CDATA[
+var um_scripts={"ajaxurl":"http:\/\/www.mishou.be\/wp-admin\/admin-ajax.php","fileupload":"http:\/\/www.mishou.be\/wp-content\/plugins\/ultimate-member\/core\/lib\/upload\/um-file-upload.php","imageupload":"http:\/\/www.mishou.be\/wp-content\/plugins\/ultimate-member\/core\/lib\/upload\/um-image-upload.php"};
+//]]></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-content/plugins/ultimate-member/assets/js/um.min.js?ver=1.3.88'></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-content/plugins/youtube-embed-plus/scripts/fitvids.min.js?ver=4.9.4'></script>
+<script type='text/javascript' src='http://www.mishou.be/wp-includes/js/wp-embed.min.js?ver=4.9.4'></script>
+<script async="async" type='text/javascript' src='http://www.mishou.be/wp-content/plugins/akismet/_inc/form.js?ver=4.0.2'></script>
+<script type='text/javascript' src='http://www.mishou.be/?ai1ec_render_js=common_frontend&#038;is_backend=false&#038;ver=2.5.28'></script>
+<div id="um_upload_single" style="display:none">
+	
+</div><div id="um_view_photo" style="display:none">
+
+	<a href="#" data-action="um_remove_modal" class="um-modal-close"><i class="um-faicon-times"></i></a>
+	
+	<div class="um-modal-body photo">
+	
+		<div class="um-modal-photo">
+
+		</div>
+
+	</div>
+	
+</div>        <!--facebook like and share js -->
+        <div id="fb-root"></div>
+		<script>(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));</script>
+		<!--<div id="fb-root"></div>
+        <script>
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1425108201100352&version=v2.0";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>-->
+ 	         <!--google share and  like and e js -->
+        <script type="text/javascript">window.___gcfg={lang:'en-US'};(function(){var po=document.createElement('script');po.type='text/javascript';po.async=true;po.src='https://apis.google.com/js/plusone.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(po,s);})();</script>
+		
+		<!-- google share -->
+        <script type="text/javascript">(function(){var po=document.createElement('script');po.type='text/javascript';po.async=true;po.src='https://apis.google.com/js/platform.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(po,s);})();</script>
+		 	<!-- Addthis js -->
+        <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-558ac14e7f79bff7"></script>
+        <script type="text/javascript">var addthis_config={ui_click:true};</script>
+			<!--pinit js -->
+		<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+			<!-- twitter JS End -->
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>	
+	     <script>jQuery(document).scroll(function($)
+{var y=jQuery(this).scrollTop();if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+{if(jQuery(window).scrollTop()+jQuery(window).height()>=jQuery(document).height()-100)
+{jQuery('.sfsi_outr_div').css({'z-index':'9996',opacity:1,top:jQuery(window).scrollTop()+"px",position:"absolute"});jQuery('.sfsi_outr_div').fadeIn(200);jQuery('.sfsi_FrntInner_chg').fadeIn(200);}
+else{jQuery('.sfsi_outr_div').fadeOut();jQuery('.sfsi_FrntInner_chg').fadeOut();}}
+else
+{if(jQuery(window).scrollTop()+jQuery(window).height()>=jQuery(document).height()-3)
+{jQuery('.sfsi_outr_div').css({'z-index':'9996',opacity:1,top:jQuery(window).scrollTop()+200+"px",position:"absolute"});jQuery('.sfsi_outr_div').fadeIn(200);jQuery('.sfsi_FrntInner_chg').fadeIn(200);}
+else
+{jQuery('.sfsi_outr_div').fadeOut();jQuery('.sfsi_FrntInner_chg').fadeOut();}}});</script>
+         	<script>jQuery(document).ready(function(e){jQuery("body").addClass("sfsi_1.84")});function sfsi_processfurther(ref){var feed_id='RlRObDYrNUsxb1dQc1ZOaGpQaUhDTXRMbEFGSm50R1NXQm9lYzF2TEVGbGRmZjV1RWVpWGExNzlyY3pLRzF2SS9Qb29qaHdEcWZqVUZnRDV4OCtOc2ROT2toL3NMY3lsa24yclgremI0bERWYmZ1Z0NjNW9UbDFSTmxmanhjd0R8bWczV290Wi91cEZxZ0hlZTFMYkFMVEQzVXovTnp6YkhLMzlsbk9EdzU2MD0=';var feedtype=8;var email=jQuery(ref).find('input[name="data[Widget][email]"]').val();var filter=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;if((email!="Enter your email")&&(filter.test(email))){if(feedtype=="8"){var url="https://www.specificfeeds.com/widgets/subscribeWidget/"+feed_id+"/"+feedtype;window.open(url,"popupwindow","scrollbars=yes,width=1080,height=760");return true;}}else{alert("Please enter email address");jQuery(ref).find('input[name="data[Widget][email]"]').focus();return false;}}</script>
+        <style type="text/css" aria-selected="true">.sfsi_subscribe_Popinner{width:100%!important;height:auto!important;border:1px solid #b5b5b5!important;padding:18px 0px!important;background-color:#fff!important}.sfsi_subscribe_Popinner form{margin:0 20px!important}.sfsi_subscribe_Popinner h5{font-family:Helvetica,Arial,sans-serif!important;font-weight:bold!important;color:#000!important;font-size:16px!important;text-align:center!important;margin:0 0 10px!important;padding:0!important}.sfsi_subscription_form_field{margin:5px 0!important;width:100%!important;display:inline-flex;display:-webkit-inline-flex}.sfsi_subscription_form_field input{width:100%!important;padding:10px 0px!important}.sfsi_subscribe_Popinner input[type="email"]{font-family:Helvetica,Arial,sans-serif!important;font-style:normal!important;color:  !important;font-size:14px!important;text-align:center!important}.sfsi_subscribe_Popinner input[type="email"]::-webkit-input-placeholder{font-family:Helvetica,Arial,sans-serif!important;font-style:normal!important;color:  !important;font-size:14px!important;text-align:center!important}.sfsi_subscribe_Popinner input[type="email"]:-moz-placeholder{font-family:Helvetica,Arial,sans-serif!important;font-style:normal!important;color:  !important;font-size:14px!important;text-align:center!important}.sfsi_subscribe_Popinner input[type="email"]::-moz-placeholder{font-family:Helvetica,Arial,sans-serif!important;font-style:normal!important;color:  !important;font-size:14px!important;text-align:center!important}.sfsi_subscribe_Popinner input[type="email"]:-ms-input-placeholder{font-family:Helvetica,Arial,sans-serif!important;font-style:normal!important;color:  !important;font-size:14px!important;text-align:center!important}.sfsi_subscribe_Popinner input[type="submit"]{font-family:Helvetica,Arial,sans-serif!important;font-weight:bold!important;color:#000!important;font-size:16px!important;text-align:center!important;background-color:#dedede!important}</style>
+	<script type="text/javascript">var cryout_global_content_width=900;</script>
+		<script type="text/javascript">jQuery('#request').val('');</script>
+
+	
+  <div id="bitnami-banner" data-banner-id="994cc">  <style>#bitnami-banner{z-index:100000;height:80px;padding:0px;width:120px;background:transparent;position:fixed;right:0px;bottom:0px;border:0px solid #ededed}#bitnami-banner .bitnami-corner-image-div{position:fixed;right:0px;bottom:0px;border:0px;z-index:100001;height:110px}#bitnami-banner .bitnami-corner-image-div .bitnami-corner-image{position:fixed;right:0px;bottom:0px;border:0px;z-index:100001;height:110px}#bitnami-close-banner-button{height:12px;width:12px;z-index:10000000000;position:fixed;right:5px;bottom:65px;display:none;cursor:pointer}</style>  <img id="bitnami-close-banner-button" src="/bitnami/images/close.png" pagespeed_url_hash="967591997" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>  <div class="bitnami-corner-image-div">     <a href="/bitnami/index.html" target="_blank">       <img class="bitnami-corner-image" alt="Bitnami" src="/bitnami/images/corner-logo.png" pagespeed_url_hash="1995635412" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>     </a>  </div>  <script type="text/javascript" src="/bitnami/banner.js"></script> </div>   </body>
+</html>

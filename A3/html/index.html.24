@@ -1,0 +1,606 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>  <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+<head>
+<meta charset="UTF-8" /><link rel='stylesheet' id='google-fonts-css' href="https://fonts.googleapis.com/css?family=PT+Sans%3A700%7CTitillium+Web%3A400%2C700" type='text/css' media='all' /><link data-optimized='2' rel='stylesheet' href='https://truepundit.com/min/4f1e0.css' />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width">
+<title>President Trump Drops Vicious Late-Night Round House Tweet on Oprah&#039;s Third Chin &ndash; True PunditTrue Pundit</title>
+<link href="//truepundit.com/wp-content/uploads/2013/02/New-True-Pundit-Favicon-Logo.fw_-1.png" rel="shortcut icon" /> <link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://truepundit.com/xmlrpc.php" />
+<script type="text/javascript">
+
+!function(){function t(){for(h=[],n=document.getElementsByTagName("iframe"),i=0;i<n.length;i++)n[i].src.match(/^(http[s]?:)?\/\/[^\/]*rumble.com\//)&&h.push(n[i]);e()}function e(){var t,n;for(o=0,i=0;i<h.length;i++)h[i].width="100%",t=h[i].offsetWidth,0!=t||o||(o=setTimeout(e,100)),t>0&&(n=Math.ceil(t/16*9),h[i].height=(360>n?360:n)+"px")}var n,i,o,a,h=[],c="";(a=window.addEventListener)||(a=window.attachEvent)&&(c="on"),a(c+"load",t),a(c+"resize",e),t()}();
+
+</script>
+<script type="text/javascript">
+window._taboola = window._taboola || [];
+_taboola.push({article:'auto'});
+!function (e, f, u, i) {
+if (!document.getElementById(i)){
+e.async = 1;
+e.src = u;
+e.id = i;
+f.parentNode.insertBefore(e, f);
+}
+}(document.createElement('script'),
+document.getElementsByTagName('script')[0],
+'//cdn.taboola.com/libtrc/truepunditmedia-network/loader.js',
+'tb_loader_script');
+if(window.performance && typeof window.performance.mark == 'function')
+{window.performance.mark('tbl_ic');}
+</script>
+
+<link rel="canonical" href="https://truepundit.com/president-trump-drops-late-night-round-house-tweet-oprahs-third-chin/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="President Trump Drops Vicious Late-Night Round House Tweet on Oprah&#039;s Third Chin &ndash; True Pundit" />
+<meta property="og:description" content="If Oprah Winfrey thinks she is ready to battle for the 2020 presidential race, President Trump just told her very clearly to take an early seat and sit it out. Trump Tweeted late Sunday night, dropping a bomb on the television billionaire. Just watched a very insecure Oprah Winfrey, who at one point I knew &hellip;" />
+<meta property="og:url" content="https://truepundit.com/president-trump-drops-late-night-round-house-tweet-oprahs-third-chin/" />
+<meta property="og:site_name" content="True Pundit" />
+<meta property="article:section" content="Uncategorized" />
+<meta property="article:published_time" content="2018-02-18T23:35:00-05:00" />
+<meta property="article:modified_time" content="2018-02-18T23:45:23-05:00" />
+<meta property="og:updated_time" content="2018-02-18T23:45:23-05:00" />
+<meta property="og:image" content="https://truepundit.com/wp-content/uploads/2018/02/OprahHarvey-640x480.jpg" />
+<meta property="og:image:secure_url" content="https://truepundit.com/wp-content/uploads/2018/02/OprahHarvey-640x480.jpg" />
+<meta property="og:image:width" content="640" />
+<meta property="og:image:height" content="480" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="If Oprah Winfrey thinks she is ready to battle for the 2020 presidential race, President Trump just told her very clearly to take an early seat and sit it out. Trump Tweeted late Sunday night, dropping a bomb on the television billionaire. Just watched a very insecure Oprah Winfrey, who at one point I knew [&hellip;]" />
+<meta name="twitter:title" content="President Trump Drops Vicious Late-Night Round House Tweet on Oprah&#039;s Third Chin &ndash; True Pundit" />
+<meta name="twitter:image" content="https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/OprahHarvey-640x480.jpg?fit=640%2C480&#038;ssl=1" />
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/truepundit.com\/","name":"True Pundit","potentialAction":{"@type":"SearchAction","target":"https:\/\/truepundit.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/truepundit.com\/president-trump-drops-late-night-round-house-tweet-oprahs-third-chin\/","sameAs":[],"@id":"#organization","name":"True Pundit","logo":"https:\/\/truepundit.com\/wp-content\/uploads\/2017\/02\/True-Pundit-Circle-Logo.jpg"}</script>
+
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//checkout.stripe.com' />
+<link rel='dns-prefetch' href='//cdn.plaid.com' />
+<link rel='dns-prefetch' href='//secure.gravatar.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="True Pundit &raquo; Feed" href="https://truepundit.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="True Pundit &raquo; Comments Feed" href="https://truepundit.com/comments/feed/" />
+<script>
+					advanced_ads_ready=function(){var fns=[],listener,doc=typeof document==="object"&&document,hack=doc&&doc.documentElement.doScroll,domContentLoaded="DOMContentLoaded",loaded=doc&&(hack?/^loaded|^c/:/^loaded|^i|^c/).test(doc.readyState);if(!loaded&&doc){listener=function(){doc.removeEventListener(domContentLoaded,listener);window.removeEventListener("load",listener);loaded=1;while(listener=fns.shift())listener()};doc.addEventListener(domContentLoaded,listener);window.addEventListener("load",listener)}return function(fn){loaded?setTimeout(fn,0):fns.push(fn)}}();
+			</script>
+<script type='text/javascript' src='https://truepundit.com/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='https://truepundit.com/wp-includes/js/jquery/jquery-migrate.min.js' defer onload=''></script>
+<script type='text/javascript' src='https://truepundit.com/wp-content/plugins/ad-inserter/includes/js/ai-jquery.js'></script>
+<script type='text/javascript'>
+/*
+ http://www.gnu.org/licenses/gpl.html [GNU General Public License]
+ @param {jQuery} {base64Encode:function(input))
+ @param {jQuery} {base64Decode:function(input))
+ @return string
+*/
+function ai_insert(insertion,selector,insertion_code){jQuery(selector).each(function(index,element){if(typeof jQuery(this).attr("id")!="undefined")selector_string="#"+jQuery(this).attr("id");else if(typeof jQuery(this).attr("class")!="undefined")selector_string="."+jQuery(this).attr("class").replace(" ",".");else selector_string="";var insertion_function=insertion;var ai_code=jQuery(insertion_code);jQuery(".ai-selector-counter",ai_code).text(index+1);jQuery(".ai-debug-name.ai-main",ai_code).text(insertion.toUpperCase()+
+" "+jQuery(this).prop("tagName").toLowerCase()+selector_string);jQuery(this)[insertion_function](ai_code)})}
+function ai_insert_viewport(element){var ai_debug=typeof ai_debugging!=="undefined";if(ai_debug)console.log("AI VIEWPORT INSERTION: class",element.attr("class"));var visible=element.is(":visible");var block=element.data("block");if(visible){var insertion_code=element.data("code");var insertion_type=element.data("insertion");var selector=element.data("selector");if(typeof insertion_code!="undefined")if(typeof insertion_type!="undefined"&&typeof selector!="undefined"){var selector_exists=jQuery(selector).length;
+if(ai_debug)console.log("AI VIEWPORT VISIBLE: block",block,insertion_type,selector,selector_exists?"":"NOT FOUND");ai_insert(insertion_type,selector,jQuery.base64Decode(insertion_code));if(selector_exists)element.removeClass("ai-viewports")}else{if(ai_debug)console.log("AI VIEWPORT VISIBLE: block",block);var ai_code=jQuery(jQuery.base64Decode(insertion_code));element.after(ai_code);element.removeClass("ai-viewports")}}else{if(ai_debug)console.log("AI VIEWPORT NOT VISIBLE: block",block);var debug_bar=
+element.prev();if(debug_bar.hasClass("ai-debug-bar")&&debug_bar.hasClass("ai-debug-script")){debug_bar.removeClass("ai-debug-script");debug_bar.addClass("ai-debug-viewport-invisible")}}}(function($){$(document).ready(function(){$(".ai-viewports").each(function(index,element){ai_insert_viewport($(this))})})})(jQuery);(function($){$(document).ready(function(){$(".ai-viewports").each(function(index,element){ai_insert_viewport($(this))})})})(jQuery);
+(function($){var keyString="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";var uTF8Encode=function(string){string=string.replace(/\x0d\x0a/g,"\n");var output="";for(var n=0;n<string.length;n++){var c=string.charCodeAt(n);if(c<128)output+=String.fromCharCode(c);else if(c>127&&c<2048){output+=String.fromCharCode(c>>6|192);output+=String.fromCharCode(c&63|128)}else{output+=String.fromCharCode(c>>12|224);output+=String.fromCharCode(c>>6&63|128);output+=String.fromCharCode(c&63|128)}}return output};
+var uTF8Decode=function(input){var string="";var i=0;var c=c1=c2=0;while(i<input.length){c=input.charCodeAt(i);if(c<128){string+=String.fromCharCode(c);i++}else if(c>191&&c<224){c2=input.charCodeAt(i+1);string+=String.fromCharCode((c&31)<<6|c2&63);i+=2}else{c2=input.charCodeAt(i+1);c3=input.charCodeAt(i+2);string+=String.fromCharCode((c&15)<<12|(c2&63)<<6|c3&63);i+=3}}return string};$.extend({base64Encode:function(input){var output="";var chr1,chr2,chr3,enc1,enc2,enc3,enc4;var i=0;input=uTF8Encode(input);
+while(i<input.length){chr1=input.charCodeAt(i++);chr2=input.charCodeAt(i++);chr3=input.charCodeAt(i++);enc1=chr1>>2;enc2=(chr1&3)<<4|chr2>>4;enc3=(chr2&15)<<2|chr3>>6;enc4=chr3&63;if(isNaN(chr2))enc3=enc4=64;else if(isNaN(chr3))enc4=64;output=output+keyString.charAt(enc1)+keyString.charAt(enc2)+keyString.charAt(enc3)+keyString.charAt(enc4)}return output},base64Decode:function(input){var output="";var chr1,chr2,chr3;var enc1,enc2,enc3,enc4;var i=0;input=input.replace(/[^A-Za-z0-9\+\/=]/g,"");while(i<
+input.length){enc1=keyString.indexOf(input.charAt(i++));enc2=keyString.indexOf(input.charAt(i++));enc3=keyString.indexOf(input.charAt(i++));enc4=keyString.indexOf(input.charAt(i++));chr1=enc1<<2|enc2>>4;chr2=(enc2&15)<<4|enc3>>2;chr3=(enc3&3)<<6|enc4;output=output+String.fromCharCode(chr1);if(enc3!=64)output=output+String.fromCharCode(chr2);if(enc4!=64)output=output+String.fromCharCode(chr3)}output=uTF8Decode(output);return output}})})(jQuery);
+</script>
+<script type='text/javascript' src='https://truepundit.com/wp-content/plugins/add-to-any/addtoany.min.js' defer onload=''></script>
+<script type='text/javascript' src='https://truepundit.com/wp-content/plugins/free-responsive-iframe-video-embeds/iplayerhd-embed.js' defer onload=''></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var give_global_vars = {"ajaxurl":"https:\/\/truepundit.com\/wp-admin\/admin-ajax.php","checkout_nonce":"2b77212d08","currency":"USD","currency_sign":"$","currency_pos":"before","thousands_separator":",","decimal_separator":".","no_gateway":"Please select a payment method.","bad_minimum":"The minimum custom donation amount for this form is","general_loading":"Loading...","purchase_loading":"Please Wait...","number_decimals":"0","give_version":"2.0.3","magnific_options":{"main_class":"give-modal","close_on_bg_click":false},"form_translation":{"payment-mode":"Please select payment mode.","give_first":"Please enter your first name.","give_email":"Please enter a valid email address.","give_user_login":"Invalid username. Only lowercase letters (a-z) and numbers are allowed.","give_user_pass":"Enter a password.","give_user_pass_confirm":"Enter the password confirmation.","give_agree_to_terms":"You must agree to the terms and conditions."},"confirm_email_sent_message":"Please check your email and click on the link to access your complete donation history."};
+var give_scripts = {"ajaxurl":"https:\/\/truepundit.com\/wp-admin\/admin-ajax.php","ajaxNonce":"938c235e99","loading":"Loading","select_option":"Please select an option","default_gateway":"stripe","permalinks":"1","number_decimals":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://truepundit.com/wp-content/plugins/give/assets/js/frontend/give.all.min.js' defer onload=''></script>
+<script type='text/javascript' src='https://truepundit.com/wp-content/plugins/simple-follow-me-social-buttons-widget/assets/js/front-widget.js' defer onload=''></script>
+<script type='text/javascript' src='https://checkout.stripe.com/checkout.js' defer onload=''></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var give_stripe_vars = {"zero_based_currency":"","sitename":"True Pundit","publishable_key":"pk_live_SMtnnvlq4TpJelMdklNha8iD","checkout_image":"","checkout_alipay":"","checkout_bitcoin":"on","checkout_address":"on","checkout_processing_text":"Donation Processing...","zipcode_option":"","remember_option":"1","give_version":"2.0.3"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://truepundit.com/wp-content/plugins/give-stripe/assets/js/give-stripe-popup.js' defer onload=''></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var give_stripe_ach_vars = {"sitename":"True Pundit","plaid_endpoint":"production","plaid_public_key":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://truepundit.com/wp-content/plugins/give-stripe/assets/js/give-stripe-ach.js' defer onload=''></script>
+<script type='text/javascript' src='https://truepundit.com/wp-content/themes/bayside/js/libs/modernizr-2.6.2.min.js' defer onload=''></script>
+<script type='text/javascript' src='https://truepundit.com/wp-content/themes/bayside/js/plugins.js' defer onload=''></script>
+<script type='text/javascript' src='https://truepundit.com/wp-content/themes/bayside/js/script.js' defer onload=''></script>
+<link rel='https://api.w.org/' href='https://truepundit.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://truepundit.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://truepundit.com/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 4.9.4" />
+<link rel='shortlink' href='https://wp.me/p7CQH5-2PNU' />
+<link rel="alternate" type="application/json+oembed" href="https://truepundit.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftruepundit.com%2Fpresident-trump-drops-late-night-round-house-tweet-oprahs-third-chin%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://truepundit.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftruepundit.com%2Fpresident-trump-drops-late-night-round-house-tweet-oprahs-third-chin%2F&#038;format=xml" />
+<script data-cfasync="false">
+window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};
+(function(d,s,a,b){a=d.createElement(s);b=d.getElementsByTagName(s)[0];a.async=1;a.src="https://static.addtoany.com/menu/page.js";b.parentNode.insertBefore(a,b);})(document,"script");
+</script>
+<script data-cfasync="false" type="text/javascript">(function(s,o,l,v,e,d){if(s[o]==null&&s[l+e]){s[o]="loading";s[l+e](d,l=function(){s[o]="complete";s[v+e](d,l,!1)},!1)}})(document,"readyState","add","remove","EventListener","DOMContentLoaded");(function(){var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="//cdn.engine.addroplet.com/Scripts/infinity.js.aspx?guid=ed99daba-f267-4fcd-8639-2f0b59adbf58";s.id="infinity";s.setAttribute("data-guid","ed99daba-f267-4fcd-8639-2f0b59adbf58");s.setAttribute("data-version","async");var e=document.getElementsByTagName('script')[0];e.parentNode.insertBefore(s,e)})();</script><meta name="generator" content="Give v2.0.3" />
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MXW4B3P');</script>
+
+<script>
+(function(d, s, host, ipid) {
+var e = d.createElement(s);
+e.type = 'application/javascript';
+e.async = !0;e.src = '//' + host + '/intellitxt/front.asp?ipid=' + ipid;
+d.getElementsByTagName(s)[0].parentNode.appendChild(e);
+}
+)(document, 'script', 'k.intellitxt.com',93575);
+</script><style type="text/css">	.sfb {
+									
+									
+									
+									-moz-border-radius: 10px; -webkit-border-radius: 10px; -khtml-border-radius: 10px;  border-radius: 10px; -o-border-radius: 10px;
+								}
+								.sfb img
+								{
+									width: 200px !important;
+									padding: 5px;
+									border:  0;
+									box-shadow: none !important;
+									display: inline !important;
+									vertical-align: middle;
+								}
+								.sfb, .sfb a
+								{
+									text-decoration:none;
+									border:0;
+									background: none;
+									
+									font-size: 	20px;
+									
+									font-weight: bold;
+								}</style>
+<link rel='dns-prefetch' href='//v0.wordpress.com' />
+<link rel='dns-prefetch' href='//i0.wp.com' />
+<link rel='dns-prefetch' href='//i1.wp.com' />
+<link rel='dns-prefetch' href='//i2.wp.com' />
+<style type='text/css'>img#wpstats{display:none}</style>
+<style type="text/css">
+.header-top {background-color:#1f2021;}
+header, .sf-menu ul {background-color:#ff0000;}
+body {background-color:#f3f3f4;}
+.content-container, #home-page-content .content-container:hover {background-color:#ffffff; border-bottom:2px solid #e5e5e6;}
+.content-container:hover {border-bottom-color:#ff0000;}
+body .advertisement-bayside:hover {border-bottom:2px solid #e5e5e6;}
+body a.progression-blue, body input.button, .pagination a.selected, .pagination a:hover, .wpcf7 input.wpcf7-submit, #respond input#submit, .load-more-manual #page-nav a {background:#ff0000; color:#ffffff;}
+.header-top a {color:#000000;}
+.header-top a:hover {color:#dddddd;}
+body a.progression-blue:hover, body input.button:hover, .wpcf7 input.wpcf7-submit:hover, #respond input#submit:hover, .load-more-manual #page-nav a:hover {background:#000000; }
+body, .progression-etabs a {color:#777777;}
+.sf-menu a, .sf-menu a:hover, .sf-menu a:visited  {color:#ffffff;}
+a {color:#ff0000;}
+a:hover, #sidebar a:hover h6 {color:#ff0000;}
+h1 {color:#2e2f32;}
+h2, h3, h4, h5, h6 {color:#424347;}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color:#424347;}
+#sidebar h5 {color:#d2d3d3;}
+body #logo, body #logo img {max-width:300px;}
+.sf-menu a {padding-top:23px; padding-bottom:25px;} 
+body .sf-menu li:hover ul, body .sf-menu li.sfHover ul {top:64px;} 
+.header-top, .sf-menu, .meta-data-index, .media-overlay, #sidebar h5, #sidebar .time-stamp-sidebar, #sidebar  .progression-tab a, h6.bayside-category {font-family: 'Titillium Web', sans-serif; }
+h1, h2, h3, h4, h5, h6, a#jtwt_date, .pagination a, a.progression-button, input.button, .wpcf7 input.wpcf7-submit, ul.progression-toggle li, .progression-etabs, #respond input#submit, .load-more-manual #page-nav a {font-family: 'PT Sans', sans-serif; }
+body {font-family:"Helvetica Neue", Helvetica, Arial, Sans-Serif;}
+.col2 { width:275px; }
+#page-content, #full-width {background:#ffffff; border-right:2px solid #e7e7e9; border-bottom:2px solid #e7e7e9; }
+	.embed-youtube {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.embed-youtube iframe,
+.embed-youtube object,
+.embed-youtube embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}</style>
+<link rel="icon" href="https://i2.wp.com/truepundit.com/wp-content/uploads/2017/05/cropped-New-True-Pundit-Favicon-Logo.fw_.png?fit=32%2C32&#038;ssl=1" sizes="32x32" />
+<link rel="icon" href="https://i2.wp.com/truepundit.com/wp-content/uploads/2017/05/cropped-New-True-Pundit-Favicon-Logo.fw_.png?fit=192%2C192&#038;ssl=1" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://i2.wp.com/truepundit.com/wp-content/uploads/2017/05/cropped-New-True-Pundit-Favicon-Logo.fw_.png?fit=180%2C180&#038;ssl=1" />
+<meta name="msapplication-TileImage" content="https://i2.wp.com/truepundit.com/wp-content/uploads/2017/05/cropped-New-True-Pundit-Favicon-Logo.fw_.png?fit=270%2C270&#038;ssl=1" />
+<style type='text/css'>
+.ai-viewport-3                { display: none !important;}
+.ai-viewport-2                { display: none !important;}
+.ai-viewport-1                { display: inherit !important;}
+.ai-viewport-0                { display: none !important;}
+@media (min-width: 768px) and (max-width: 979px) {
+.ai-viewport-1                { display: none !important;}
+.ai-viewport-2                { display: inherit !important;}
+}
+@media (max-width: 767px) {
+.ai-viewport-1                { display: none !important;}
+.ai-viewport-3                { display: inherit !important;}
+}
+.code-block-default {margin: 8px 0; clear: both;}
+.code-block-center {margin: 8px auto; text-align: center; clear: both;}
+</style>
+</head>
+<body class="post-template-default single single-post postid-675794 single-format-standard">
+<header>
+<div class="header-top">
+<div class="grid2column">
+<div class="header-menu"><ul>
+<li class="page_item page-item-6"><a href="https://truepundit.com/contact-us/">Send a Tip &#038; Contact</a></li>
+<li class="page_item page-item-650066"><a href="https://truepundit.com/sponsor/">Sponsor</a></li>
+<li class="page_item page-item-533 page_item_has_children"><a href="https://truepundit.com/">True Pundit</a></li>
+<li class="page_item page-item-35784"><a href="https://truepundit.com/true-pundit-store/">True Pundit Store</a></li>
+</ul></div>
+</div>
+<div class="grid2column lastcolumn">
+<div class="social-icons">
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+<h1 id="logo"><a href="https://truepundit.com/" title="True Pundit" rel="home"><img src="//truepundit.com/wp-content/uploads/2013/02/True-Pundit-Wordmark-Logo-1.fw_.png" alt="True Pundit" width="300" /></a></h1>
+<nav>
+<div class="menu-main-navigation-container"><ul id="menu-main-navigation" class="sf-menu"><li id="menu-item-74731" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-74731"><a href="https://truepundit.com">Home</a></li>
+<li id="menu-item-652184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-652184"><a href="https://truepundit.com/sponsor/">Sponsor</a></li>
+<li id="menu-item-544" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-544"><a href="https://truepundit.com/category/featured/">Featured</a></li>
+<li id="menu-item-20942" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20942"><a href="https://truepundit.com/category/tv/">Video</a></li>
+<li id="menu-item-539" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-539"><a href="https://truepundit.com/category/politics/">Politics</a></li>
+<li id="menu-item-259" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-259"><a href="https://truepundit.com/category/business/">Business</a></li>
+<li id="menu-item-547" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-547"><a href="https://truepundit.com/category/world/">World</a></li>
+<li id="menu-item-6344" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6344"><a href="https://truepundit.com/category/security/">Security</a></li>
+<li id="menu-item-260" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-260"><a href="https://truepundit.com/category/technology/">Technology</a></li>
+<li id="menu-item-631" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631"><a href="https://truepundit.com/category/science/">Science</a></li>
+<li id="menu-item-545" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-545"><a href="https://truepundit.com/category/entertainment/">Entertainment</a></li>
+<li id="menu-item-548" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-548"><a href="https://truepundit.com/category/sports/">Sports</a></li>
+<li id="menu-item-319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319"><a href="https://truepundit.com/contact-us/">News Tips</a></li>
+</ul></div> </nav>
+<div class="clearfix"></div>
+</header>
+<div id="main" class="site-main">
+<div id="sidebar" class="123">
+<div class="sidebar-icon"><a href="#" class="sidebar-icon-link"></a></div>
+<form method="get" class="searchform" action="https://truepundit.com/" role="search">
+<label for="s" class="assistive-text">Search</label>
+<input type="text" class="field" name="s" value="" id="s" placeholder="Search &hellip;" />
+<input type="submit" class="submit button" name="submit" id="searchsubmit" value="Search" />
+</form>
+<div class="search-base"></div>
+<div class="sidebar-spacer search-base-spacer"></div>
+<div id="sidebar-widgets">
+<div id="lat-pop-widget-1" class="widget lat-pop">
+
+<div class="progression-tab-container">
+<ul class="progression-etabs">
+<li class="progression-tab"><a href="#recent" class="recent-title">Recent</a></li>
+<li class="progression-tab"><a href="#popular" class="popular-title">TV</a></li>
+</ul>
+
+<div id="recent">
+<ul class="recent-posts">
+<li><a href="https://truepundit.com/florida-gov-rick-scott-calls-fbi-immediately-release-details-surrounding-bureaus-failure-act-tips-received-prior-deadly-school-shooting/">
+<div class="recent-post-image"><img width="300" height="208" src="https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/wray-scott-800x416.jpg?resize=300%2C208&amp;ssl=1" class="attachment-progression-sidebar size-progression-sidebar wp-post-image" alt="" srcset="https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/wray-scott-800x416.jpg?resize=300%2C208&amp;ssl=1 300w, https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/wray-scott-800x416.jpg?zoom=2&amp;resize=300%2C208&amp;ssl=1 600w" sizes="(max-width: 300px) 100vw, 300px" /></div> <h6>Florida Gov. Rick Scott calls on FBI &#8220;to immediately release all details surrounding the Bureau’s failure to act&#8221; on tips it received prior to deadly school shooting</h6>
+<div class="time-stamp-sidebar">44 mins ago</div>
+</a></li>
+<li><a href="https://truepundit.com/scum-bag-illegal-mexican-alien-accused-molesting-raping-7-year-old-girl-mother/">
+<div class="recent-post-image"><img width="300" height="208" src="https://i2.wp.com/truepundit.com/wp-content/uploads/2018/02/Daniel-Hernandez-Del-Angel-Mugshot.png?resize=300%2C208&amp;ssl=1" class="attachment-progression-sidebar size-progression-sidebar wp-post-image" alt="" srcset="https://i2.wp.com/truepundit.com/wp-content/uploads/2018/02/Daniel-Hernandez-Del-Angel-Mugshot.png?resize=300%2C208&amp;ssl=1 300w, https://i2.wp.com/truepundit.com/wp-content/uploads/2018/02/Daniel-Hernandez-Del-Angel-Mugshot.png?zoom=2&amp;resize=300%2C208&amp;ssl=1 600w" sizes="(max-width: 300px) 100vw, 300px" /></div> <h6>SCUM BAG: Illegal Mexican Alien Accused of Molesting, Raping 7-Year-Old Girl and Her Mother</h6>
+<div class="time-stamp-sidebar">52 mins ago</div>
+</a></li>
+<li><a href="https://truepundit.com/fbi-looks-like-federal-bureau-incompetence-ignoring-warning-florida-gunman/">
+<div class="recent-post-image"><img width="300" height="208" src="https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/171127_JURIS_FBI_search.jpg.CROP_.promo-xlarge2.jpg?resize=300%2C208&amp;ssl=1" class="attachment-progression-sidebar size-progression-sidebar wp-post-image" alt="" srcset="https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/171127_JURIS_FBI_search.jpg.CROP_.promo-xlarge2.jpg?resize=300%2C208&amp;ssl=1 300w, https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/171127_JURIS_FBI_search.jpg.CROP_.promo-xlarge2.jpg?zoom=2&amp;resize=300%2C208&amp;ssl=1 600w, https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/171127_JURIS_FBI_search.jpg.CROP_.promo-xlarge2.jpg?zoom=3&amp;resize=300%2C208&amp;ssl=1 900w" sizes="(max-width: 300px) 100vw, 300px" /></div> <h6>The FBI looks like the Federal Bureau of Incompetence after ignoring warning about Florida gunman</h6>
+<div class="time-stamp-sidebar">1 hour ago</div>
+</a></li>
+<li><a href="https://truepundit.com/driver-msm-press-van-trumps-motorcade-stopped-secret-service-found-gun-found-possession/">
+<div class="recent-post-image"><img width="300" height="208" src="https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/AP_18048008913862_c0-178-4070-2551_s885x516.jpg?resize=300%2C208&amp;ssl=1" class="attachment-progression-sidebar size-progression-sidebar wp-post-image" alt="" srcset="https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/AP_18048008913862_c0-178-4070-2551_s885x516.jpg?resize=300%2C208&amp;ssl=1 300w, https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/AP_18048008913862_c0-178-4070-2551_s885x516.jpg?zoom=2&amp;resize=300%2C208&amp;ssl=1 600w" sizes="(max-width: 300px) 100vw, 300px" /></div> <h6>Driver of MSM Press Van in Trump&#8217;s Motorcade Stopped After Secret Service Found Gun Found in His Possession</h6>
+<div class="time-stamp-sidebar">1 hour ago</div>
+</a></li>
+<li><a href="https://truepundit.com/fire-fbi-chief-preventable-school-massacre-child-bureaucratic-failure/">
+<div class="recent-post-image"><img width="300" height="208" src="https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/christopher-wray-fbi-director-capitol-hill.jpg?resize=300%2C208&amp;ssl=1" class="attachment-progression-sidebar size-progression-sidebar wp-post-image" alt="" srcset="https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/christopher-wray-fbi-director-capitol-hill.jpg?resize=300%2C208&amp;ssl=1 300w, https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/christopher-wray-fbi-director-capitol-hill.jpg?zoom=2&amp;resize=300%2C208&amp;ssl=1 600w" sizes="(max-width: 300px) 100vw, 300px" /></div> <h6>Fire the FBI Chief; Preventable School Massacre is the Child of Bureaucratic Failure</h6>
+<div class="time-stamp-sidebar">2 hours ago</div>
+</a></li>
+</ul>
+</div>
+<div id="popular">
+<ul class="recent-posts">
+<li><a href="https://truepundit.com/lou-holtz-program-benefit-inner-city-youth-going-stand-flag-going-kneel-cross-video/">
+<div class="recent-post-image"><img width="300" height="208" src="https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/20130108_mjr_su5_764.0.jpg?resize=300%2C208&amp;ssl=1" class="attachment-progression-sidebar size-progression-sidebar wp-post-image" alt="" srcset="https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/20130108_mjr_su5_764.0.jpg?resize=300%2C208&amp;ssl=1 300w, https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/20130108_mjr_su5_764.0.jpg?zoom=2&amp;resize=300%2C208&amp;ssl=1 600w, https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/20130108_mjr_su5_764.0.jpg?zoom=3&amp;resize=300%2C208&amp;ssl=1 900w" sizes="(max-width: 300px) 100vw, 300px" /></div> <h6>Lou Holtz on Program to Benefit Inner-City Youth: ‘We’re Going to Stand for the Flag and We’re Going to Kneel for the Cross’ (VIDEO)</h6>
+<div class="time-stamp-sidebar">2 hours ago</div>
+</a></li>
+<li><a href="https://truepundit.com/watch-obamas-dhs-sec-says-administration-knew-russian-hack-waited-tell-public-fear-label-taking-sides/">
+<div class="recent-post-image"><img width="300" height="208" src="https://i2.wp.com/truepundit.com/wp-content/uploads/2017/04/2013_10_JehJohnson_DODPhoto.jpg?resize=300%2C208&amp;ssl=1" class="attachment-progression-sidebar size-progression-sidebar wp-post-image" alt="" srcset="https://i2.wp.com/truepundit.com/wp-content/uploads/2017/04/2013_10_JehJohnson_DODPhoto.jpg?resize=300%2C208&amp;ssl=1 300w, https://i2.wp.com/truepundit.com/wp-content/uploads/2017/04/2013_10_JehJohnson_DODPhoto.jpg?zoom=2&amp;resize=300%2C208&amp;ssl=1 600w, https://i2.wp.com/truepundit.com/wp-content/uploads/2017/04/2013_10_JehJohnson_DODPhoto.jpg?zoom=3&amp;resize=300%2C208&amp;ssl=1 900w" sizes="(max-width: 300px) 100vw, 300px" /></div> <h6>WATCH: Obama’s DHS Sec Says Administration Knew About Russian Hack, Waited To Tell Public For Fear Of Label As ‘Taking Sides’</h6>
+<div class="time-stamp-sidebar">2 hours ago</div>
+</a></li>
+<li><a href="https://truepundit.com/nbcs-chuck-todd-promotes-abolishing-second-amendment-video/">
+<div class="recent-post-image"><img width="300" height="208" src="https://i1.wp.com/truepundit.com/wp-content/uploads/2016/11/o-CHUCK-TODD-facebook.jpg?resize=300%2C208&amp;ssl=1" class="attachment-progression-sidebar size-progression-sidebar wp-post-image" alt="" srcset="https://i1.wp.com/truepundit.com/wp-content/uploads/2016/11/o-CHUCK-TODD-facebook.jpg?resize=300%2C208&amp;ssl=1 300w, https://i1.wp.com/truepundit.com/wp-content/uploads/2016/11/o-CHUCK-TODD-facebook.jpg?zoom=2&amp;resize=300%2C208&amp;ssl=1 600w, https://i1.wp.com/truepundit.com/wp-content/uploads/2016/11/o-CHUCK-TODD-facebook.jpg?zoom=3&amp;resize=300%2C208&amp;ssl=1 900w" sizes="(max-width: 300px) 100vw, 300px" /></div> <h6>NBC’s Chuck Todd Promotes Abolishing the Second Amendment (VIDEO)</h6>
+<div class="time-stamp-sidebar">3 hours ago</div>
+</a></li>
+<li><a href="https://truepundit.com/watch-gun-control-enacted-fla-jrotc-student-advocating-arming-responsible-teachers/">
+<div class="recent-post-image"><img width="300" height="208" src="https://i0.wp.com/truepundit.com/wp-content/uploads/2018/02/DWPbY_yWsAAf6Ow.jpg?resize=300%2C208&amp;ssl=1" class="attachment-progression-sidebar size-progression-sidebar wp-post-image" alt="" srcset="https://i0.wp.com/truepundit.com/wp-content/uploads/2018/02/DWPbY_yWsAAf6Ow.jpg?resize=300%2C208&amp;ssl=1 300w, https://i0.wp.com/truepundit.com/wp-content/uploads/2018/02/DWPbY_yWsAAf6Ow.jpg?zoom=2&amp;resize=300%2C208&amp;ssl=1 600w, https://i0.wp.com/truepundit.com/wp-content/uploads/2018/02/DWPbY_yWsAAf6Ow.jpg?zoom=3&amp;resize=300%2C208&amp;ssl=1 900w" sizes="(max-width: 300px) 100vw, 300px" /></div> <h6>WATCH: Until Gun Control Is Enacted, Fla. JROTC Student Is Advocating for Arming Responsible Teachers</h6>
+<div class="time-stamp-sidebar">3 hours ago</div>
+</a></li>
+<li><a href="https://truepundit.com/watch-florida-sheriff-game-changer-plan-arm-teachers-end-gun-free-school-zones/">
+<div class="recent-post-image"><img width="300" height="208" src="https://i2.wp.com/truepundit.com/wp-content/uploads/2018/02/ZVT457LWMIZ4ZPFAE2HG5IZJQU.jpg?resize=300%2C208&amp;ssl=1" class="attachment-progression-sidebar size-progression-sidebar wp-post-image" alt="" srcset="https://i2.wp.com/truepundit.com/wp-content/uploads/2018/02/ZVT457LWMIZ4ZPFAE2HG5IZJQU.jpg?resize=300%2C208&amp;ssl=1 300w, https://i2.wp.com/truepundit.com/wp-content/uploads/2018/02/ZVT457LWMIZ4ZPFAE2HG5IZJQU.jpg?zoom=2&amp;resize=300%2C208&amp;ssl=1 600w, https://i2.wp.com/truepundit.com/wp-content/uploads/2018/02/ZVT457LWMIZ4ZPFAE2HG5IZJQU.jpg?zoom=3&amp;resize=300%2C208&amp;ssl=1 900w" sizes="(max-width: 300px) 100vw, 300px" /></div> <h6>WATCH: Florida sheriff has ‘game-changer’ plan to arm teachers and end gun-free school zones</h6>
+<div class="time-stamp-sidebar">3 hours ago</div>
+</a></li>
+</ul>
+</div>
+</div>
+</div><div class="sidebar-spacer"></div><div id="archives-1" class="widget widget_archive"><h5 class="widget-title">Archives</h5> <ul>
+<li><a href='https://truepundit.com/2018/02/'>February 2018</a>&nbsp;(1184)</li>
+<li><a href='https://truepundit.com/2018/01/'>January 2018</a>&nbsp;(1891)</li>
+<li><a href='https://truepundit.com/2017/12/'>December 2017</a>&nbsp;(1785)</li>
+<li><a href='https://truepundit.com/2017/11/'>November 2017</a>&nbsp;(2386)</li>
+<li><a href='https://truepundit.com/2017/10/'>October 2017</a>&nbsp;(2218)</li>
+<li><a href='https://truepundit.com/2017/09/'>September 2017</a>&nbsp;(2464)</li>
+<li><a href='https://truepundit.com/2017/08/'>August 2017</a>&nbsp;(2604)</li>
+<li><a href='https://truepundit.com/2017/07/'>July 2017</a>&nbsp;(1611)</li>
+<li><a href='https://truepundit.com/2017/06/'>June 2017</a>&nbsp;(1864)</li>
+<li><a href='https://truepundit.com/2017/05/'>May 2017</a>&nbsp;(1443)</li>
+<li><a href='https://truepundit.com/2017/04/'>April 2017</a>&nbsp;(816)</li>
+<li><a href='https://truepundit.com/2017/03/'>March 2017</a>&nbsp;(774)</li>
+<li><a href='https://truepundit.com/2017/02/'>February 2017</a>&nbsp;(1254)</li>
+<li><a href='https://truepundit.com/2017/01/'>January 2017</a>&nbsp;(2391)</li>
+<li><a href='https://truepundit.com/2016/12/'>December 2016</a>&nbsp;(1309)</li>
+<li><a href='https://truepundit.com/2016/11/'>November 2016</a>&nbsp;(1261)</li>
+<li><a href='https://truepundit.com/2016/10/'>October 2016</a>&nbsp;(1159)</li>
+<li><a href='https://truepundit.com/2016/09/'>September 2016</a>&nbsp;(1759)</li>
+<li><a href='https://truepundit.com/2016/08/'>August 2016</a>&nbsp;(1252)</li>
+<li><a href='https://truepundit.com/2016/07/'>July 2016</a>&nbsp;(746)</li>
+<li><a href='https://truepundit.com/2016/06/'>June 2016</a>&nbsp;(300)</li>
+</ul>
+</div><div class="sidebar-spacer"></div><div id="text-1" class="widget widget_text"><h5 class="widget-title">Latest Tweets</h5> <div class="textwidget"><a class="twitter-timeline" href="https://twitter.com/true_pundit">Tweets by true_pundit</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+</div><div class="sidebar-spacer"></div><div id="wpcom_social_media_icons_widget-3" class="widget widget_wpcom_social_media_icons_widget"><h5 class="widget-title">Social</h5><ul><li></li></ul></div><div class="sidebar-spacer"></div><div id="twitter_timeline-2" class="widget widget_twitter_timeline"><h5 class="widget-title">Follow me on Twitter</h5><a class="twitter-timeline" data-height="400" data-theme="light" data-link-color="#f96e5b" data-border-color="#e8e8e8" data-lang="EN" data-partner="jetpack" href="https://twitter.com/">My Tweets</a></div><div class="sidebar-spacer"></div>
+<footer>
+<div id="copyright">
+&copy; 2017 All Rights Reserved by True Pundit </div>
+</footer>
+</div>
+</div>
+<section id="page-content">
+<div id="rcjsload_d0b225"></div>
+<div id="post-675794" class="post-675794 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+<h6 class="bayside-category"><a href="https://truepundit.com/category/uncategorized/" rel="category tag">Uncategorized</a></h6>
+<h2 class="blog-post">President Trump Drops Vicious Late-Night Round House Tweet on Oprah&#8217;s Third Chin</h2>
+<div class="post-meta-bayside"><span class="date-bayside">Posted on <a href="https://truepundit.com/2018/02/" title="11:35 pm" rel="bookmark"><time class="entry-date" datetime="2018-02-18T23:35:00+00:00" pubdate>February 18, 2018</time></a></span><span class="author-bayside"> by <a class="url fn n" href="https://truepundit.com/author/admin/" title="View all posts by admin" rel="author">admin</a></span></div>
+
+
+
+<div class="featured-media">
+<a href="https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/OprahHarvey-640x480.jpg?fit=640%2C480&ssl=1" rel="prettyPhoto"><img width="640" height="480" src="https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/OprahHarvey-640x480.jpg?resize=640%2C480&amp;ssl=1" class="attachment-progression-single size-progression-single wp-post-image" alt="" srcset="https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/OprahHarvey-640x480.jpg?resize=640%2C480&amp;ssl=1 640w, https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/OprahHarvey-640x480.jpg?resize=550%2C413&amp;ssl=1 550w, https://i1.wp.com/truepundit.com/wp-content/uploads/2018/02/OprahHarvey-640x480.jpg?resize=275%2C206&amp;ssl=1 275w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+</div>
+
+<div class="social-networks-bayside">
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "b779a7d6-8947-431e-8a89-abe575e1b4b0"}); </script>
+<span class='st_facebook' displayText='Facebook'></span>
+<span class='st_twitter' displayText='Tweet'></span>
+<span class='st_pinterest' displayText='Pinterest'></span>
+<span class='st_email' displayText='Email'></span>
+<span class="st_print"><a href="javascript:window.print()">Print</a></span>
+<div class="clearfix"></div>
+</div>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_top"><div class="addtoany_header">Share:</div><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://truepundit.com/president-trump-drops-late-night-round-house-tweet-oprahs-third-chin/" data-a2a-title="President Trump Drops Vicious Late-Night Round House Tweet on Oprah’s Third Chin"><a class="a2a_button_copy_link" href="https://www.addtoany.com/add_to/copy_link?linkurl=https%3A%2F%2Ftruepundit.com%2Fpresident-trump-drops-late-night-round-house-tweet-oprahs-third-chin%2F&amp;linkname=President%20Trump%20Drops%20Vicious%20Late-Night%20Round%20House%20Tweet%20on%20Oprah%E2%80%99s%20Third%20Chin" title="Copy Link" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Ftruepundit.com%2Fpresident-trump-drops-late-night-round-house-tweet-oprahs-third-chin%2F&amp;linkname=President%20Trump%20Drops%20Vicious%20Late-Night%20Round%20House%20Tweet%20on%20Oprah%E2%80%99s%20Third%20Chin" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Ftruepundit.com%2Fpresident-trump-drops-late-night-round-house-tweet-oprahs-third-chin%2F&amp;linkname=President%20Trump%20Drops%20Vicious%20Late-Night%20Round%20House%20Tweet%20on%20Oprah%E2%80%99s%20Third%20Chin" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=https%3A%2F%2Ftruepundit.com%2Fpresident-trump-drops-late-night-round-house-tweet-oprahs-third-chin%2F&amp;linkname=President%20Trump%20Drops%20Vicious%20Late-Night%20Round%20House%20Tweet%20on%20Oprah%E2%80%99s%20Third%20Chin" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a></div></div>
+<style>
+.uixd-custom-social-buttons .addtoany_header {
+  position: relative;
+  height: 20px;
+
+}
+.uixd-custom-social-buttons .addtoany_header::after {
+  position: absolute;
+  content: 'FOLLOW US!';
+}
+</style>
+<div class="sfb sfb-wrap uixd-custom-social-buttons">
+<div style="text-align:left">
+<h4 class="addtoany_header"></h4>
+<a class="sfb_facebook_follow" href="https://www.facebook.com/truepunditnews" target="_blank">
+<img src="https://i2.wp.com/truepundit.com/wp-content/uploads/2017/02/facebook.jpg?resize=200%2C34&#038;ssl=1" title="Facebook" class="sfb sfb-img" alt="Follow on Facebook" width="200" height="34" data-recalc-dims="1">
+</a>
+<a class="sfb_twitter_follow" href="https://twitter.com/true_pundit" target="_blank">
+<img src="https://i0.wp.com/truepundit.com/wp-content/uploads/2017/02/twitter.jpg?resize=200%2C33&#038;ssl=1" title="Twitter" class="sfb sfb-img" alt="Follow on Twitter" width="200" height="33" data-recalc-dims="1">
+</a>
+</div>
+</div>
+
+
+<p>If Oprah Winfrey thinks she is ready to battle for the 2020 presidential race, President Trump just told her very clearly to take an early seat and sit it out.</p>
+<p>Trump Tweeted late Sunday night, dropping a bomb on the television billionaire.</p>
+<blockquote class="twitter-tweet" data-lang="en">
+<p dir="ltr" lang="en">Just watched a very insecure Oprah Winfrey, who at one point I knew very well, interview a panel of people on 60 Minutes. The questions were biased and slanted, the facts incorrect. Hope Oprah runs so she can be exposed and defeated just like all of the others!</p>
+<p>— Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/965442990134251520?ref_src=twsrc%5Etfw">February 19, 2018</a></p></blockquote>
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p><div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<div id="ld-4903-3606"></div><script>(function(w,d,s,i){w.ldAdInit=w.ldAdInit||[];w.ldAdInit.push({slot:10165223504200806,size:[0, 0],id:"ld-4903-3606"});if(!d.getElementById(i)){var j=d.createElement(s),p=d.getElementsByTagName(s)[0];j.async=true;j.src="//cdn2.lockerdomecdn.com/_js/ajs.js";j.id=i;p.parentNode.insertBefore(j,p);}})(window,document,"script","ld-ajs");</script>
+</div>
+<div id="give-form-79809-wrap" class="give-form-wrap give-display-reveal">
+<h2 class="give-form-title">Like Our News? Then Help Support Our Independent Journalism!</h2> <form id="give-form-79809" class="give-form give-form-79809 give-form-type-set float-labels-enabled" action="https://truepundit.com/president-trump-drops-late-night-round-house-tweet-oprahs-third-chin/?payment-mode=paypal" data-currency_symbol="&#36;" data-currency_code="USD" data-currency_position="before" data-thousands_separator="," data-decimal_separator="." data-number_decimals="0" method="post">
+
+<span class="give-hidden" style="display: none !important;">
+<label for="give-form-honeypot-79809"></label>
+<input id="give-form-honeypot-79809" type="text" name="give-honeypot" class="give-honeypot give-hidden" />
+</span>
+<input type="hidden" name="give-form-id" value="79809" />
+<input type="hidden" name="give-form-title" value="Like Our News? Then Help Support Our Independent Journalism!" />
+<input type="hidden" name="give-current-url" value="https://truepundit.com/president-trump-drops-late-night-round-house-tweet-oprahs-third-chin/" />
+<input type="hidden" name="give-form-url" value="https://truepundit.com/president-trump-drops-late-night-round-house-tweet-oprahs-third-chin/" />
+<input type="hidden" name="give-form-minimum" value="10" />
+<input type="hidden" id="_wpnonce" name="_wpnonce" value="37c7e366d9" /> <div class="give-total-wrap">
+<div class="give-donation-amount form-row-wide">
+<span class="give-currency-symbol give-currency-position-before">&#36;</span> <label class="give-hidden" for="give-amount">Donation Amount:</label>
+<input class="give-text-input give-amount-top" id="give-amount" name="give-amount" type="tel" placeholder="" value="0" autocomplete="off">
+</div>
+</div>
+<p class="give-custom-amount-text">We can only deliver independent news & Intel with your support. Keep our unique voice alive.</p>
+<button type="button" class="give-btn give-btn-reveal">Donate Now</button>
+<fieldset id="give-payment-mode-select">
+<legend class="give-payment-mode-label">Select Payment Method <span class="give-loading-text"><span class="give-loading-animation"></span>
+</span>
+</legend>
+<div id="give-payment-mode-wrap">
+<ul id="give-gateway-radio-list">
+<li class="give-gateway-option-selected">
+<input type="radio" name="payment-mode" class="give-gateway" id="give-gateway-paypal-79809" value="paypal" checked='checked'>
+<label for="give-gateway-paypal-79809" class="give-gateway-option" id="give-gateway-option-paypal"> PayPal</label>
+</li>
+<li>
+<input type="radio" name="payment-mode" class="give-gateway" id="give-gateway-stripe-79809" value="stripe">
+<label for="give-gateway-stripe-79809" class="give-gateway-option" id="give-gateway-option-stripe"> Credit Card</label>
+</li>
+<li>
+<input type="radio" name="payment-mode" class="give-gateway" id="give-gateway-stripe_ach-79809" value="stripe_ach">
+<label for="give-gateway-stripe_ach-79809" class="give-gateway-option" id="give-gateway-option-stripe_ach"> Bank Account</label>
+</li>
+</ul>
+</div>
+</fieldset>
+<div id="give_purchase_form_wrap">
+<fieldset id="give_checkout_user_info">
+<legend>Personal Info</legend>
+<p id="give-first-name-wrap" class="form-row form-row-first form-row-responsive">
+<label class="give-label" for="give-first">
+First Name <span class="give-required-indicator">*</span>
+<span class="give-tooltip hint--top hint--medium hint--bounce" aria-label="We will use this to personalize your account experience." rel="tooltip"><i class="give-icon give-icon-question"></i></span> </label>
+<input class="give-input required" type="text" name="give_first" placeholder="First Name" id="give-first" value="" required aria-required="true" />
+</p>
+<p id="give-last-name-wrap" class="form-row form-row-last form-row-responsive">
+<label class="give-label" for="give-last">
+Last Name <span class="give-tooltip hint--top hint--medium hint--bounce" aria-label="We will use this as well to personalize your account experience." rel="tooltip"><i class="give-icon give-icon-question"></i></span> </label>
+<input class="give-input" type="text" name="give_last" id="give-last" placeholder="Last Name" value="" />
+</p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+</div>
+<p id="give-email-wrap" class="form-row form-row-wide">
+<label class="give-label" for="give-email">
+Email Address <span class="give-required-indicator">*</span>
+<span class="give-tooltip hint--top hint--medium hint--bounce" aria-label="We will send the donation receipt to this address." rel="tooltip"><i class="give-icon give-icon-question"></i></span> </label>
+<input class="give-input required" type="email" name="give_email" placeholder="Email Address" id="give-email" value="" required aria-required="true" />
+</p>
+</fieldset>
+<fieldset id="give_purchase_submit">
+<input type="hidden" name="give_action" value="purchase" />
+<input type="hidden" name="give-gateway" value="paypal" />
+<div class="give-submit-button-wrap give-clearfix">
+<input type="submit" class="give-submit give-btn" id="give-purchase-button" name="give-purchase" value="Donate Now" data-before-validation-label="Donate Now" />
+<span class="give-loading-animation"></span>
+</div>
+</fieldset>
+</div>
+</form>
+</div>
+<div id="ld-1633-6105"></div><script>(function(w,d,s,i){w.ldAdInit=w.ldAdInit||[];w.ldAdInit.push({slot:10438213001240166,size:[0, 0],id:"ld-1633-6105"});if(!d.getElementById(i)){var j=d.createElement(s),p=d.getElementsByTagName(s)[0];j.async=true;j.src="//cdn2.lockerdomecdn.com/_js/ajs.js";j.id=i;p.parentNode.insertBefore(j,p);}})(window,document,"script","ld-ajs");</script>
+<div class="sfb sfb-wrap"><div style="text-align:left">FOLLOW US!<br /><a class="sfb_facebook_follow" href="https://www.facebook.com/truepunditnews" target="_blank"><img src="https://i2.wp.com/truepundit.com/wp-content/uploads/2017/02/facebook.jpg?w=340" title="Facebook" class="sfb sfb-img" alt="Follow on Facebook" data-recalc-dims="1" /></a><a class="sfb_twitter_follow" href="https://twitter.com/true_pundit" target="_blank"><img src="https://i0.wp.com/truepundit.com/wp-content/uploads/2017/02/twitter.jpg?w=340" title="Twitter" class="sfb sfb-img" alt="Follow on Twitter" data-recalc-dims="1" /></a></div></div><div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="addtoany_header">Share:</div><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://truepundit.com/president-trump-drops-late-night-round-house-tweet-oprahs-third-chin/" data-a2a-title="President Trump Drops Vicious Late-Night Round House Tweet on Oprah’s Third Chin"><a class="a2a_button_copy_link" href="https://www.addtoany.com/add_to/copy_link?linkurl=https%3A%2F%2Ftruepundit.com%2Fpresident-trump-drops-late-night-round-house-tweet-oprahs-third-chin%2F&amp;linkname=President%20Trump%20Drops%20Vicious%20Late-Night%20Round%20House%20Tweet%20on%20Oprah%E2%80%99s%20Third%20Chin" title="Copy Link" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Ftruepundit.com%2Fpresident-trump-drops-late-night-round-house-tweet-oprahs-third-chin%2F&amp;linkname=President%20Trump%20Drops%20Vicious%20Late-Night%20Round%20House%20Tweet%20on%20Oprah%E2%80%99s%20Third%20Chin" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Ftruepundit.com%2Fpresident-trump-drops-late-night-round-house-tweet-oprahs-third-chin%2F&amp;linkname=President%20Trump%20Drops%20Vicious%20Late-Night%20Round%20House%20Tweet%20on%20Oprah%E2%80%99s%20Third%20Chin" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=https%3A%2F%2Ftruepundit.com%2Fpresident-trump-drops-late-night-round-house-tweet-oprahs-third-chin%2F&amp;linkname=President%20Trump%20Drops%20Vicious%20Late-Night%20Round%20House%20Tweet%20on%20Oprah%E2%80%99s%20Third%20Chin" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a></div></div><div class='code-block code-block-1' style='margin: 8px 0; clear: both;'>
+<div id="rcjsload_1620c3"></div>
+<script type="text/javascript">
+(function() {
+var referer="";try{if(referer=document.referrer,"undefined"==typeof referer||""==referer)throw"undefined"}catch(exception){referer=document.location.href,(""==referer||"undefined"==typeof referer)&&(referer=document.URL)}referer=referer.substr(0,700);
+var rcel = document.createElement("script");
+rcel.id = 'rc_' + Math.floor(Math.random() * 1000);
+rcel.type = 'text/javascript';
+rcel.src = "https://trends.revcontent.com/serve.js.php?w=77744&t="+rcel.id+"&c="+(new Date()).getTime()+"&width="+(window.outerWidth || document.documentElement.clientWidth)+"&referer="+referer;
+rcel.async = true;
+var rcds = document.getElementById("rcjsload_1620c3"); rcds.appendChild(rcel);
+})();
+</script>
+</div>
+<div class="clearfix"></div>
+<hr>
+</div>
+<div class="clearfix"></div>
+<div id="taboola-below-article-thumbnails"></div>
+<script type="text/javascript">
+window._taboola = window._taboola || [];
+_taboola.push({
+mode: 'thumbnails-a',
+container: 'taboola-below-article-thumbnails',
+placement: 'Below Article Thumbnails',
+target_type: 'mix'
+});
+</script>
+</section> 
+<div class="clearfix"></div>
+</div>
+<script>
+    jQuery(document).ready(function() {
+    ai_insert ('after', '#ld-1633-6105', jQuery.base64Decode ('PGRpdiBjbGFzcz0nY29kZS1ibG9jayBjb2RlLWJsb2NrLTknIHN0eWxlPSdtYXJnaW46IDhweCBhdXRvOyB0ZXh0LWFsaWduOiBjZW50ZXI7IGNsZWFyOiBib3RoOyc+CjxzY3JpcHQgYXN5bmMgdHlwZT0ndGV4dC9qYXZhc2NyaXB0JyBzcmM9J2h0dHBzOi8vY2RuLmNvbm5hdGl4LmNvbS9taW4vY29ubmF0aXgucmVuZGVyZXIuaW5mZWVkLm1pbi5qcycgZGF0YS1jb25uYXRpeC10b2tlbj0nMjUyMjZiZDctNTYxNC00MTAwLWIyMjYtNjE0ZmZjZmJmMGJkJz48L3NjcmlwdD48L2Rpdj4K'));
+  });
+  </script>
+<script>
+    jQuery(document).ready(function() {
+    ai_insert ('after', '#taboola-below-article-thumbnails', jQuery.base64Decode ('PGRpdiBjbGFzcz0nY29kZS1ibG9jayBjb2RlLWJsb2NrLTEwJyBzdHlsZT0nbWFyZ2luOiA4cHggMDsgY2xlYXI6IGJvdGg7Jz4KPGRpdiBpZD0iZW5nYWdlX3RydWVwdW5kaXQiPjwvZGl2Pg0KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPg0KKGZ1bmN0aW9uKCkgew0KdmFyIG1ldGE9ZG9jdW1lbnQuaGVhZC5xdWVyeVNlbGVjdG9yKCJtZXRhW25hbWU9J2tleXdvcmRzJ10iKSxrPSExO21ldGEmJihrPW1ldGEuY29udGVudCksa3x8KG1ldGE9ZG9jdW1lbnQuaGVhZC5xdWVyeVNlbGVjdG9yKCJtZXRhW3Byb3BlcnR5PSdvZzp0aXRsZSddIikpJiYoaz1tZXRhLmNvbnRlbnQpLGt8fChtZXRhPWRvY3VtZW50LmhlYWQucXVlcnlTZWxlY3RvcigibWV0YVtwcm9wZXJ0eT0ndGl0bGUnXSIpKSYmKGs9bWV0YS5jb250ZW50KSxrPWs/ZW5jb2RlVVJJKGspOiIiOw0KdmFyIHJlZmVyZXI9IiI7dHJ5e2lmKHJlZmVyZXI9ZG9jdW1lbnQucmVmZXJyZXIsInVuZGVmaW5lZCI9PXR5cGVvZiByZWZlcmVyfHwiIj09cmVmZXJlcil0aHJvdyJ1bmRlZmluZWQifWNhdGNoKGV4Y2VwdGlvbil7cmVmZXJlcj1kb2N1bWVudC5sb2NhdGlvbi5ocmVmLCgiIj09cmVmZXJlcnx8InVuZGVmaW5lZCI9PXR5cGVvZiByZWZlcmVyKSYmKHJlZmVyZXI9ZG9jdW1lbnQuVVJMKX1yZWZlcmVyPXJlZmVyZXIuc3Vic3RyKDAsNzAwKTsNCnZhciByY2VsID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgic2NyaXB0Iik7DQpyY2VsLmlkPSAncmNfJyArIE1hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIDEwMDApOw0KcmNlbC50eXBlID0gJ3RleHQvamF2YXNjcmlwdCc7DQpyY2VsLnNyYyA9ICIvL3RyZW5kcy5lbmdhZ2UuaW0vZmVlZC5qcy5waHA/dz04OTk2OSZ0PSIrcmNlbC5pZCsiJmM9IisobmV3IERhdGUoKSkuZ2V0VGltZSgpKyImd2lkdGg9Iisod2luZG93Lm91dGVyV2lkdGggfHwgZG9jdW1lbnQuZG9jdW1lbnRFbGVtZW50LmNsaWVudFdpZHRoKSsiJnJlZmVyZXI9IityZWZlcmVyKyImaz0iK2s7DQpyY2VsLmFzeW5jID0gdHJ1ZTsNCnZhciByY2RzID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImVuZ2FnZV90cnVlcHVuZGl0Iik7IHJjZHMuYXBwZW5kQ2hpbGQocmNlbCk7DQp9KSgpOw0KPC9zY3JpcHQ+DQo8L2Rpdj4K'));
+  });
+  </script>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXW4B3P"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<script type="text/javascript">
+		(function() {
+		var referer="";try{if(referer=document.referrer,"undefined"==typeof referer||""==referer)throw"undefined"}catch(exception){referer=document.location.href,(""==referer||"undefined"==typeof referer)&&(referer=document.URL)}referer=referer.substr(0,700);
+		var rcel = document.createElement("script");
+		rcel.id = 'rc_' + Math.floor(Math.random() * 1000);
+		rcel.type = 'text/javascript';
+		rcel.src = "https://trends.revcontent.com/serve.js.php?w=87942&t="+rcel.id+"&c="+(new Date()).getTime()+"&width="+(window.outerWidth || document.documentElement.clientWidth)+"&referer="+referer;
+		rcel.async = true;
+		var rcds = document.getElementById("rcjsload_d0b225"); rcds.appendChild(rcel);
+		})();
+		</script>
+<script type="text/javascript">
+window._taboola = window._taboola || [];
+_taboola.push({flush: true});
+</script> <div style="display:none">
+</div>
+
+<script type="text/javascript">
+			var _qevents = _qevents || [];
+
+			(function() {
+				var elem = document.createElement('script');
+				elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+				elem.async = true;
+				elem.type = "text/javascript";
+				var scpt = document.getElementsByTagName('script')[0];
+				scpt.parentNode.insertBefore(elem, scpt);
+			})();
+
+			_qevents.push({
+				qacct:"p-gVPDLMht2dTf3",
+				source:"wp"
+			});
+		</script>
+<noscript>
+		<div style="display:none;">
+			<img src="//pixel.quantserve.com/pixel/p-gVPDLMht2dTf3.gif" border="0" height="1" width="1" alt="Quantcast"/>
+		</div>
+		</noscript>
+
+<script type='text/javascript' src='https://truepundit.com/wp-content/plugins/jetpack/_inc/build/photon/photon.min.js' defer onload=''></script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js' defer onload=''></script>
+<script type='text/javascript' src='https://truepundit.com/wp-content/plugins/simple-follow-buttons/js/sfb.min.js' defer onload=''></script>
+<script type='text/javascript' src='https://cdn.plaid.com/link/stable/link-initialize.js' defer onload=''></script>
+<script type='text/javascript' src='https://secure.gravatar.com/js/gprofiles.js' defer onload=''></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://truepundit.com/wp-content/plugins/jetpack/modules/wpgroho.js' defer onload=''></script>
+<script type='text/javascript' src='https://truepundit.com/wp-content/plugins/jetpack/_inc/build/twitter-timeline.min.js' defer onload=''></script>
+<script type='text/javascript' src='https://truepundit.com/wp-includes/js/wp-embed.min.js' defer onload=''></script>
+<script type='text/javascript' src='https://stats.wp.com/e-201808.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:5.8',blog:'112693375',post:'675794',tz:'-5',srv:'truepundit.com'} ]);
+	_stq.push([ 'clickTrackerInit', '112693375', '675794' ]);
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"55e6906457","applicationID":"97201659","transactionName":"ZARaNkIAD0NTWxBeCV1OeQFECA5eHUsNWQFfBA==","queueTime":0,"applicationTime":956,"atts":"SENZQAoaHE0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
