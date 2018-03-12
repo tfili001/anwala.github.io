@@ -1,0 +1,2 @@
+#!/bin/bash
+make -f 417_1.mk; clear; ./Debug/417_1
