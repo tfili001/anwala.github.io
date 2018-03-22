@@ -2,6 +2,12 @@
 # -*- coding: utf-8 -*-
 from math import sqrt
 # A dictionary of movie critics and their ratings of a small set of movies
+from heapq import nsmallest
+# For lowest item in list
+
+
+path='/home/tim/Documents/A6/ml-100k'
+
 critics = {
     'Lisa Rose': {
         'Lady in the Water': 2.5,
@@ -218,12 +224,12 @@ def getRecommendedItems(prefs, itemMatch, user):
     rankings.sort()
     rankings.reverse()
     return rankings
-    
-    
-def loadMovieLens(path='/home/tim/Documents/A6/ml-100k'):
+
+
+def loadMovieLens():
   # Get movie titles
     movies = {}
-    for line in open(path + '/u.item',encoding = "ISO-8859-1"):
+    for line in open(path + '/u.item',encoding="ISO-8859-1"):
         (id, title) = line.split('|')[0:2]
         movies[id] = title
   # Load data
@@ -233,6 +239,35 @@ def loadMovieLens(path='/home/tim/Documents/A6/ml-100k'):
         prefs.setdefault(user, {})
         prefs[user][movies[movieid]] = float(rating)
     return prefs
-    
-print(loadMovieLens(),"\n")
+
+def compareUsers(prefs,p1):
+    rank_set = []
+    i=1
+    with open(path + '/u.user') as f:
+        for size, l in enumerate(f):
+            pass
+
+    #print("Size = ",size)
+    f = open(path + '/u.user','r')
+    for item in range(0,size+1):
+        #print(i)
+        rank_set.append([sim_pearson(prefs, str(p1), str(i)),i])
+        i+=1      
+
+    highest = sorted(zip(rank_set), reverse=True)[:5]
+    print("Most Correlated")
+    for rank in highest:
+        print(rank)
+
+    lowest = nsmallest(5,rank_set)
+    print("\nLeast Correlated")
+    for rank in lowest:
+        print(rank)
+
+
+prefs = loadMovieLens()
+
+#compareUsers(prefs,"33")
+
+
 
