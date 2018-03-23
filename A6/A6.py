@@ -4,7 +4,9 @@ from math import sqrt
 # A dictionary of movie critics and their ratings of a small set of movies
 from heapq import nsmallest
 # For lowest item in list
+import pandas as pd
 
+# Remove seen_list duplicates
 
 path='/home/tim/Documents/A6/ml-100k'
 
@@ -255,19 +257,48 @@ def compareUsers(prefs,p1):
         i+=1      
 
     highest = sorted(zip(rank_set), reverse=True)[:5]
-    print("Most Correlated")
+    print("Most Correlated\n")
     for rank in highest:
         print(rank)
 
     lowest = nsmallest(5,rank_set)
-    print("\nLeast Correlated")
+    print("Least Correlated")
     for rank in lowest:
         print(rank)
+'''
+get list of recommended films   V
+get list of films already seen  V
+	remove duplicates
 
+
+Remove films already seen from recommended list
+'''
+def removeSeen(prefs,p1):
+    rec_list = getRecommendations(prefs,p1)
+    seen_list = []
+    f = open(path + '/u.data','r')
+    data_list = f.readlines()
+
+    for line in data_list:
+        line = line.strip('\n')
+        seen_list.append([line.split()[1],line.split()[2]])
+    # Remove duplicates
+    df = pd.DataFrame(seen_list)
+    df = df.drop_duplicates([0])
+    seen_no_dup = df.values.tolist()
+    # Remove movies seen
+    for line in seen_no_dup:
+        try:
+            del rec_list[int(line[0])]
+        except IndexError:
+            pass
+
+    for line in rec_list:        
+        print(line)
 
 prefs = loadMovieLens()
+removeSeen(prefs,"33")
+#def getRecommendations(prefs, person, similarity=sim_pearson):
 
 #compareUsers(prefs,"33")
-
-
 
