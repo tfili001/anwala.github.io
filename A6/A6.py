@@ -5,8 +5,11 @@ from math import sqrt
 from heapq import nsmallest
 # For lowest item in list
 import pandas as pd
-
 # Remove seen_list duplicates
+
+import re
+# Get between | in u.item
+import operator
 
 path='/home/tim/Documents/A6/ml-100k'
 
@@ -265,17 +268,24 @@ def compareUsers(prefs,p1):
     print("Least Correlated")
     for rank in lowest:
         print(rank)
-'''
-get list of recommended films   V
-get list of films already seen  V
-	remove duplicates
 
+def addRatings(rating_list,rec_list):
+    f = open(path + '/u.item','r',encoding="ISO-8859-1")
+    rating_list = f.readlines()
+    end_list = []
+    for line in rating_list:
+        for x in rec_list:
+            if x[1] == line.split("|")[1].split("|")[0]:
+                index = int(line.split("|")[0].split("|")[0])
+                end_list.append([x[0],index,x[1]])
 
-Remove films already seen from recommended list
-'''
+    return end_list
+
 def removeSeen(prefs,p1):
     rec_list = getRecommendations(prefs,p1)
     seen_list = []
+    rating_list = []
+
     f = open(path + '/u.data','r')
     data_list = f.readlines()
 
@@ -293,12 +303,87 @@ def removeSeen(prefs,p1):
         except IndexError:
             pass
 
-    for line in rec_list:        
-        print(line)
+    f.close()
+    end_list = addRatings(rating_list,rec_list)
+
+    highest = sorted(zip(end_list), reverse=True)[:5]
+
+    print("Top 5 Recommended")
+    for item in highest:
+        print(item)
+    
+    lowest = nsmallest(5,end_list)
+    print("Bottom 5 Recommended")
+    for item in lowest:
+        print(item)
+
+''' 
+For each film, generate a list
+of the top 5 most correlated and bottom 5 least correlated films.
+
+
+Based on your knowledge of the resulting films, do you agree with
+the results?  In other words, do you personally like / dislike
+the resulting films?
+'''
+def displayMaxMin(list,n):
+
+    highest = sorted(zip(list), reverse=True)[:n]
+
+
+    for item in highest:
+        print(item)
+
+
+
+def maxminRecommendedFilms():
+    f = open(path + '/u.item','r',encoding="ISO-8859-1")
+    filmID = 272
+    max_list = []
+    min_list = []
+    data_list = f.readlines()
+    genre_val = data_list[272]
+
+
+    genre_val = genre_val[-39:].replace("|", "")
+    for line in data_list:
+        genre = line[-39:].replace("|", "")
+
+        true_count = 1
+        false_count = 1
+        for i in range(0,19):
+
+            if genre[i] == "1" and genre_val[i] == "1":
+
+                if true_count != 1:
+                    max_list=max_list[:-1]
+
+                
+                max_list.append([true_count,genre.strip(),line.split("|")[0].split("|")[0]])
+
+                true_count+=1
+
+        if true_count == 1:
+            min_list.append([true_count,genre.strip(),line.split("|")[0].split("|")[0]])
+
+
+    print("Top Recommended")
+    displayMaxMin(max_list,5)
+
+    print("Bottom Recommended")
+    displayMaxMin(min_list,5)
+
+    print("Genre Val\n",genre_val)
+
 
 prefs = loadMovieLens()
-removeSeen(prefs,"33")
-#def getRecommendations(prefs, person, similarity=sim_pearson):
+item_list = ["272"]
+
+#0100001000000000100
+
+#def getRecommendedItems(prefs, itemMatch, user):
 
 #compareUsers(prefs,"33")
+#removeSeen(prefs,"33")
 
+maxminRecommendedFilms()
