@@ -281,7 +281,7 @@ def addRatings(rating_list,rec_list):
 
     return end_list
 
-def removeSeen(prefs,p1):
+def notSeen(prefs,p1):
     rec_list = getRecommendations(prefs,p1)
     seen_list = []
     rating_list = []
@@ -317,28 +317,15 @@ def removeSeen(prefs,p1):
     for item in lowest:
         print(item)
 
-''' 
-For each film, generate a list
-of the top 5 most correlated and bottom 5 least correlated films.
 
-
-Based on your knowledge of the resulting films, do you agree with
-the results?  In other words, do you personally like / dislike
-the resulting films?
-'''
 def displayMaxMin(list,n):
-
     highest = sorted(zip(list), reverse=True)[:n]
-
-
     for item in highest:
         print(item)
 
 
-
-def maxminRecommendedFilms():
+def maxminRecommendedFilms(filmID):
     f = open(path + '/u.item','r',encoding="ISO-8859-1")
-    filmID = 272
     max_list = []
     min_list = []
     data_list = f.readlines()
@@ -349,22 +336,20 @@ def maxminRecommendedFilms():
     for line in data_list:
         genre = line[-39:].replace("|", "")
 
-        true_count = 1
+        count = 1
         false_count = 1
         for i in range(0,19):
 
             if genre[i] == "1" and genre_val[i] == "1":
 
-                if true_count != 1:
+                if count != 1:
                     max_list=max_list[:-1]
+      
+                max_list.append([count,genre.strip(),line.split("|")[0].split("|")[0],line.split("|")[1].split("|")[0]])
+                count+=1
 
-                
-                max_list.append([true_count,genre.strip(),line.split("|")[0].split("|")[0]])
-
-                true_count+=1
-
-        if true_count == 1:
-            min_list.append([true_count,genre.strip(),line.split("|")[0].split("|")[0]])
+        if count == 1:
+            min_list.append([count,genre.strip(),line.split("|")[0].split("|")[0],line.split("|")[1].split("|")[0]])
 
 
     print("Top Recommended")
@@ -375,15 +360,32 @@ def maxminRecommendedFilms():
 
     print("Genre Val\n",genre_val)
 
+def closestUsers(amount,identity):
+    f = open(path + '/u.user','r',encoding="ISO-8859-1")
+    data_list = f.readlines()
+    for i in range(0,amount):
+        for line in data_list:
+             count=0
+             for a in range(0,3):
+                 if identity[a] in line.split("|")[count+1].split("|")[0]:
+                     count+=1
+
+
+             if count == 3:
+                 print(line)
+                 
+
+
+
 
 prefs = loadMovieLens()
-item_list = ["272"]
+
 
 #0100001000000000100
 
 #def getRecommendedItems(prefs, itemMatch, user):
-
+identity = ["23","M","student"]
+closestUsers(3,identity)
 #compareUsers(prefs,"33")
-#removeSeen(prefs,"33")
-
-maxminRecommendedFilms()
+#notSeen(prefs,"33")
+#maxminRecommendedFilms(272)
