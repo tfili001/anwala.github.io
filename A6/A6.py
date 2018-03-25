@@ -419,8 +419,6 @@ def closestUsers(amount,identity):
         tmp=line.split()[0]
         ct+=1
 
-
-    print("________________________")
     
     lowest = sorted(movie_list,key=lambda item: (item.split()[0],item.split()[2]),reverse=False)
     
@@ -446,15 +444,17 @@ prefs = loadMovieLens()
 #def getRecommendedItems(prefs, itemMatch, user):
 
 identity = ["23","M","student"]
-#closestUsers(3,identity)
 
 
 
+print("Closest Users\n_________________________")
+closestUsers(3,identity)
 
+print("Compare Users\n_________________________")
 compareUsers(prefs,"33")
 
-
-#notSeen(prefs,"33")
-print("______________________________")
-#maxminRecommendedFilms(272)
+print("Not Seen\n______________________________")
+notSeen(prefs,"33")
+print("Max Recommended\n_______________________")
+maxminRecommendedFilms(272)
 
