@@ -121,7 +121,7 @@ def topMatches(
     similarity=sim_pearson,
 ):
     '''
-    Returns the best matches for person from the prefs dictionary. 
+    Returns the best matches for person from the prefs dictionary.
     Number of results and similarity function are optional params.
     '''
 
@@ -254,10 +254,13 @@ def compareUsers(prefs,p1):
 
     #print("Size = ",size)
     f = open(path + '/u.user','r')
+    user_list = f.readlines()
     for item in range(0,size+1):
         #print(i)
-        rank_set.append([sim_pearson(prefs, str(p1), str(i)),i])
-        i+=1      
+        stats = user_list[0].split()[0].replace("|"," ")
+        stats = [stats.split()[0],stats.split()[1],stats.split()[3],stats.split()[4]]
+        rank_set.append([sim_pearson(prefs, str(p1), str(i)),i,stats])
+        i+=1
 
     highest = sorted(zip(rank_set), reverse=True)[:5]
     print("Most Correlated\n")
@@ -278,7 +281,7 @@ def addRatings(rating_list,rec_list):
             if x[1] == line.split("|")[1].split("|")[0]:
                 index = int(line.split("|")[0].split("|")[0])
                 end_list.append([x[0],index,x[1]])
-
+    f.close()
     return end_list
 
 def notSeen(prefs,p1):
@@ -307,11 +310,14 @@ def notSeen(prefs,p1):
     end_list = addRatings(rating_list,rec_list)
 
     highest = sorted(zip(end_list), reverse=True)[:5]
+    delimiters = "()[],'"
 
     print("Top 5 Recommended")
-    for item in highest:
-        print(item)
-    
+
+    for line in highest:
+        print(line)
+
+
     lowest = nsmallest(5,end_list)
     print("Bottom 5 Recommended")
     for item in lowest:
@@ -337,14 +343,13 @@ def maxminRecommendedFilms(filmID):
         genre = line[-39:].replace("|", "")
 
         count = 1
-        false_count = 1
         for i in range(0,19):
 
             if genre[i] == "1" and genre_val[i] == "1":
 
                 if count != 1:
                     max_list=max_list[:-1]
-      
+
                 max_list.append([count,genre.strip(),line.split("|")[0].split("|")[0],line.split("|")[1].split("|")[0]])
                 count+=1
 
@@ -363,6 +368,12 @@ def maxminRecommendedFilms(filmID):
 def closestUsers(amount,identity):
     f = open(path + '/u.user','r',encoding="ISO-8859-1")
     data_list = f.readlines()
+    user_list = []
+    movie_list = []
+    select_user_list = []
+    final_list = []
+    f.close()
+    # Add similiar users
     for i in range(0,amount):
         for line in data_list:
              count=0
@@ -370,22 +381,80 @@ def closestUsers(amount,identity):
                  if identity[a] in line.split("|")[count+1].split("|")[0]:
                      count+=1
 
-
              if count == 3:
-                 print(line)
-                 
+                 user_list.append(line)
+    # Get favorite movies
+    f = open(path + '/u.data','r',encoding="ISO-8859-1")
+    rate_list = f.readlines()
+    f.close()
 
+    select_user_list = [user_list[0],user_list[1],user_list[2]]
+    
+    for user in select_user_list:
+
+        for line in rate_list:
+            if user.split("|")[0] == line.split()[0]:
+                movie_list.append(line)
+
+    movie_list = sorted(movie_list, key=lambda user: user.split()[2],reverse=True)
+    movie_list = sorted(movie_list, key=lambda user: user.split()[0],reverse=True)
+
+    f = open(path + '/u.item','r',encoding="ISO-8859-1")
+    item_list = f.readlines()
+
+
+
+    tmp = ""
+    ct = 0
+    for line in movie_list:
+        
+        
+        if line.split()[0]!=tmp:
+             print("Top 3 Favorite")
+             print("User          Rating      Time              Title")
+             for i in range(0,3):
+
+                 print(movie_list[ct+i].replace("\n"," "),end=" ") 
+                 print(item_list[int(movie_list[ct+i].split()[1])].split("|")[1])
+        tmp=line.split()[0]
+        ct+=1
+
+
+    print("________________________")
+    
+    lowest = sorted(movie_list,key=lambda item: (item.split()[0],item.split()[2]),reverse=False)
+    
+    tmp = ""
+    ct = 0
+    for line in lowest:
+        
+        
+        if line.split()[0]!=tmp:
+             print("Bottom 3 Favorite")
+             print("User          Rating      Time              Title")
+             for i in range(0,3):
+
+                 print(lowest[ct+i].replace("\n"," "),end=" ") 
+                 print(item_list[int(lowest[ct+i].split()[1])].split("|")[1])
+        tmp=line.split()[0]
+        ct+=1
 
 
 
 prefs = loadMovieLens()
 
-
-#0100001000000000100
-
 #def getRecommendedItems(prefs, itemMatch, user):
+
 identity = ["23","M","student"]
-closestUsers(3,identity)
-#compareUsers(prefs,"33")
+#closestUsers(3,identity)
+
+
+
+
+compareUsers(prefs,"33")
+
+
 #notSeen(prefs,"33")
+print("______________________________")
 #maxminRecommendedFilms(272)
+
