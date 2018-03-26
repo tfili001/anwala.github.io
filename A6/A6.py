@@ -257,9 +257,9 @@ def compareUsers(prefs,p1):
     user_list = f.readlines()
     for item in range(0,size+1):
         #print(i)
-        stats = user_list[0].split()[0].replace("|"," ")
+        stats = user_list[item].split()[0].replace("|"," ")
         stats = [stats.split()[0],stats.split()[1],stats.split()[3],stats.split()[4]]
-        rank_set.append([sim_pearson(prefs, str(p1), str(i)),i,stats])
+        rank_set.append([sim_pearson(prefs,str(p1), str(i)),stats])
         i+=1
 
     highest = sorted(zip(rank_set), reverse=True)[:5]
@@ -335,7 +335,7 @@ def maxminRecommendedFilms(filmID):
     max_list = []
     min_list = []
     data_list = f.readlines()
-    genre_val = data_list[272]
+    genre_val = data_list[filmID]
 
 
     genre_val = genre_val[-39:].replace("|", "")
@@ -351,6 +351,7 @@ def maxminRecommendedFilms(filmID):
                     max_list=max_list[:-1]
 
                 max_list.append([count,genre.strip(),line.split("|")[0].split("|")[0],line.split("|")[1].split("|")[0]])
+
                 count+=1
 
         if count == 1:
@@ -457,4 +458,6 @@ print("Not Seen\n______________________________")
 notSeen(prefs,"33")
 print("Max Recommended\n_______________________")
 maxminRecommendedFilms(272)
+print("Min Recommended\n_______________________")
+maxminRecommendedFilms(311)
 
