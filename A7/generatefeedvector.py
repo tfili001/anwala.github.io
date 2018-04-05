@@ -47,7 +47,7 @@ path = "/home/tim/Documents/A7/"
 
 apcount = {}
 wordcounts = {}
-feedlist = [line for line in open(path + 'feedlist.txt')]
+feedlist = [line for line in open(path + 'output.txt')]
 
 for feedurl in feedlist:
     try:
