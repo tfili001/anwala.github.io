@@ -2,6 +2,10 @@
 # -*- coding: utf-8 -*-
 import feedparser
 import re
+from feedgen.feed import FeedGenerator
+# feedgen is used to convert blogs to RSS feeds
+import pycurl
+
 
 def getwordcounts(url):
     '''
@@ -47,18 +51,38 @@ path = "/home/tim/Documents/A7/"
 
 apcount = {}
 wordcounts = {}
+
+
+
 feedlist = [line for line in open(path + 'output.txt')]
 
+
+i=0
 for feedurl in feedlist:
     try:
-        (title, wc) = getwordcounts(feedurl)
+	
+        url_title = feedurl.replace("http://","")
+        url_title = url_title.replace("www","")
+        url_title = url_title.replace(".","")
+        url_title = url_title.replace("com","")
+        
+        c.setopt(c.URL,feedurl)
+       
+
+        soup = bs4.BeautifulSoup(body, 'xml')
+
+        i+=1
+
+
+        wc = getwordcounts(feed_url)
+
         wordcounts[title] = wc
         for (word, count) in wc.items():
             apcount.setdefault(word, 0)
             if count > 1:
                 apcount[word] += 1
     except:
-        print ('Failed to parse feed %s' % feedurl)
+        print('Failed to parse feed %s' % feedurl)
 
 wordlist = []
 for (w, bc) in apcount.items():

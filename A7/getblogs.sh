@@ -1,21 +1,29 @@
-rm blognames.txt
-touch blognames.txt
+rm input.txt
+touch input.txt
+rm output.txt
+touch output.txt
 clear
-n=30
 
+n=5
 
 line (){ 
-    printf "_______________________________________________________________________________\n"
-		
+    printf "_______________________________________________________________________________\n"		
 }
+url="http://www.blogger.com/next-blog?navBar=true&blogID=3471633091411211117"
 
  for i in `seq 1 $n`;
         do clear
                  
-            	printf "Loading URLs "$i/$n"\n"
+            	printf "Getting Blog URLs "$i/$n"\n"
                 line
-                curl -I -L 'http://www.blogger.com/next-blog?navBar=true&blogID=3471633091411211117' | grep -Eo '(http|https)://[^/"]+' | awk {'print $1'} | tr -d ';' | sort -u | cat >> blognames.txt
-
+                curl -I -L $url  | grep -E '^Location:' | awk '{print $2}' |  cat >> input.txt
         done   
 
-cat blognames.txt
+# Remove duplicates
+sort input.txt | uniq > output.txt
+sed -i 'blogger/d' output.txt
+clear
+
+printf "Gathering Complete "$n/$n"\n"
+
+cat output.txt
