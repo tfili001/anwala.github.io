@@ -59,6 +59,7 @@ feedlist = [line for line in open(path + 'newfeeds.txt')]
 
 i=0
 for feedurl in feedlist:
+   for feedurl in feedlist:
     try:
 
         url_title = feedurl.replace("http://","")
@@ -67,7 +68,7 @@ for feedurl in feedlist:
         url_title = url_title.replace("/","")
         url_title = url_title.replace(".","")
         
-
+        feedurl=feedurl.replace('"','')
 
 
         i+=1
@@ -75,7 +76,7 @@ for feedurl in feedlist:
 
         (url_title,wc) = getwordcounts(feedurl)
 
-        wordcounts[title] = wc
+        wordcounts[url_title] = wc
         for (word, count) in wc.items():
             apcount.setdefault(word, 0)
             if count > 1:
@@ -84,6 +85,7 @@ for feedurl in feedlist:
     except:
         print('Failed to parse feed %s' % feedurl)
 
+
 wordlist = []
 for (w, bc) in apcount.items():
     frac = float(bc) / len(feedlist)
@@ -91,16 +93,19 @@ for (w, bc) in apcount.items():
         wordlist.append(w)
 
 
-out = open(path + 'blogdata1.txt', 'w')
+out = open(path + 'blogdata.txt', 'w')
 out.write('Blog')
 for word in wordlist:
     out.write('\t%s' % word)
 
+
+
 out.write('\n')
+
 for (blog, wc) in wordcounts.items():
     print(blog)
     out.write(blog)
-
+    print("length ",len(wordlist))
     for word in wordlist:
         if word in wc:
             out.write('\t%d' % wc[word])
