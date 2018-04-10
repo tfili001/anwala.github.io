@@ -56,32 +56,26 @@ wordcounts = {}
 
 feedlist = [line for line in open(path + 'newfeeds.txt')]
 
-
+n = len(feedlist)
 i=0
 for feedurl in feedlist:
-   for feedurl in feedlist:
+
     try:
-
-        url_title = feedurl.replace("http://","")
-        url_title = url_title.replace("www","")
-        url_title = url_title.replace("com","")
-        url_title = url_title.replace("/","")
-        url_title = url_title.replace(".","")
-        
-        feedurl=feedurl.replace('"','')
-
-
         i+=1
+        os.system("clear")
+        print(i,"/",n)
 
 
-        (url_title,wc) = getwordcounts(feedurl)
-
-        wordcounts[url_title] = wc
+   
+        (title,wc) = getwordcounts(feedurl)
+        
+        wordcounts[title] = wc
         for (word, count) in wc.items():
             apcount.setdefault(word, 0)
             if count > 1:
                 apcount[word] += 1
-        print("True")
+
+
     except:
         print('Failed to parse feed %s' % feedurl)
 
@@ -99,13 +93,12 @@ for word in wordlist:
     out.write('\t%s' % word)
 
 
-
 out.write('\n')
 
 for (blog, wc) in wordcounts.items():
     print(blog)
     out.write(blog)
-    print("length ",len(wordlist))
+
     for word in wordlist:
         if word in wc:
             out.write('\t%d' % wc[word])

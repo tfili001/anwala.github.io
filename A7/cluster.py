@@ -3,7 +3,7 @@
 from PIL import Image, ImageDraw
 from math import sqrt
 import random
-
+import cluster
 
 def readfile(filename):
     file = open(filename)
@@ -145,7 +145,7 @@ def getdepth(clust):
     return max(getdepth(clust.left), getdepth(clust.right)) + clust.distance
 
 
-def drawdendrogram(clust, labels, jpeg='clusters.jpg'):
+def drawdendrogram(clust, labels, jpeg):
   # height and width
     h = getheight(clust) * 20
     w = 1200
@@ -309,20 +309,25 @@ def scaledown(data, distance=pearson, rate=0.01):
         totalerror = 0
         for k in range(n):
             for j in range(n):
-                if j == k:
-                    continue
-        # The error is percent difference between the distances
-                errorterm = (fakedist[j][k] - realdist[j][k]) / realdist[j][k]
 
-        # Each point needs to be moved away from or towards the other
-        # point in proportion to how much error it has
-                grad[k][0] += (loc[k][0] - loc[j][0]) / fakedist[j][k] \
-                    * errorterm
-                grad[k][1] += (loc[k][1] - loc[j][1]) / fakedist[j][k] \
-                    * errorterm
+                try:
+                    if j == k:
+                        continue
 
-        # Keep track of the total error
-                totalerror += abs(errorterm)
+                    errorterm = (fakedist[j][k] - realdist[j][k]) / realdist[j][k]
+
+
+
+                    grad[k][0] += (loc[k][0] - loc[j][0]) / fakedist[j][k] \
+                        * errorterm
+                    grad[k][1] += (loc[k][1] - loc[j][1]) / fakedist[j][k] \
+                        * errorterm
+
+
+                    totalerror += abs(errorterm)
+                except ZeroDivisionError as error:
+                    print("Divide by Zero error")
+
         print(totalerror)
 
     # If the answer got worse by moving the points, we are done
@@ -337,7 +342,7 @@ def scaledown(data, distance=pearson, rate=0.01):
 
     return loc
 
-def draw2d(data, labels, jpeg='mds2d.jpg'):
+def draw2d(data, labels, jpeg):
     img = Image.new('RGB', (2000, 2000), (255, 255, 255))
     draw = ImageDraw.Draw(img)
     for i in range(len(data)):
@@ -348,13 +353,24 @@ def draw2d(data, labels, jpeg='mds2d.jpg'):
     img.save('/home/tim/Documents/A7/pic.jpg','JPEG')
 
 
-f = open(path + "blogdata.txt")
-label_list = f.readlines()
-label_list = [str(item).encode('utf8') for item in label_list]
+path = '/home/tim/Documents/A7/'
 
-
+f = open(path + "blognames.txt")
+blognames = f.readlines()
 f.close()
+blognames = [str(item).encode('utf8') for item in blognames]
+data=cluster.readfile(path+"blogdata.txt")
+clust = cluster.hcluster(rows=data)
 
-draw2d(data=readfile(path+"blogdata.txt"), labels=label_list, jpeg='mds2d.jpg')
+
+#drawdendrogram(clust,blognames,jpeg=path+"blogclust.jpg")
+#cluster.printclust(clust,labels=blognames)
+#kclust = cluster.kcluster(data, k=5)
+
+
+# MD5 messages
+coords=cluster.scaledown(data)
+cluster.draw2d(coords,blognames,jpeg=path+"blogs2d.jpg")
+
 
 
