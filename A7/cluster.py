@@ -350,7 +350,7 @@ def draw2d(data, labels, jpeg):
         y = (data[i][1] + 0.5) * 1000
         draw.text((x, y), labels[i], (0, 0, 0))
 
-    img.save('/home/tim/Documents/A7/pic.jpg','JPEG')
+    img.save(jpeg,'JPEG')
 
 
 path = '/home/tim/Documents/A7/'
