@@ -309,6 +309,8 @@ def scaledown(data, distance=pearson, rate=0.01):
         totalerror = 0
         for k in range(n):
             for j in range(n):
+                print("k = ",k)
+                print("j = ",j)
 
                 try:
                     if j == k:
@@ -365,8 +367,14 @@ clust = cluster.hcluster(rows=data)
 
 #drawdendrogram(clust,blognames,jpeg=path+"blogclust.jpg")
 #cluster.printclust(clust,labels=blognames)
-#kclust = cluster.kcluster(data, k=5)
-
+'''
+print("5 ___________________________")
+kclust = cluster.kcluster(data, k= 5)
+print("10___________________________")
+kclust = cluster.kcluster(data, k=10)
+print("20___________________________")
+kclust = cluster.kcluster(data, k=20)
+'''
 
 # MD5 messages
 coords=cluster.scaledown(data)
