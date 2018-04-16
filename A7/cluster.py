@@ -367,18 +367,31 @@ clust = cluster.hcluster(rows=data)
 
 #drawdendrogram(clust,blognames,jpeg=path+"blogclust.jpg")
 #cluster.printclust(clust,labels=blognames)
-'''
-print("5 ___________________________")
-kclust = cluster.kcluster(data, k= 5)
-print("10___________________________")
-kclust = cluster.kcluster(data, k=10)
-print("20___________________________")
-kclust = cluster.kcluster(data, k=20)
-'''
 
+
+
+kclust = cluster.kcluster(data, k= 5)
+print("1st centroid ",[blognames[r] for r in kclust[0]])
+print("2nd centroid ",[blognames[r] for r in kclust[1]])
+print("3rd centroid ",[blognames[r] for r in kclust[2]])
+print("4th centroid ",[blognames[r] for r in kclust[3]])
+
+
+kclust = cluster.kcluster(data, k= 10)
+print("1st centroid ",[blognames[r] for r in kclust[0]])
+print("2nd centroid ",[blognames[r] for r in kclust[1]])
+print("3rd centroid ",[blognames[r] for r in kclust[2]])
+print("4th centroid ",[blognames[r] for r in kclust[3]])
+
+kclust = cluster.kcluster(data, k= 20)
+print("1st centroid ",[blognames[r] for r in kclust[0]])
+print("2nd centroid ",[blognames[r] for r in kclust[1]])
+print("3rd centroid ",[blognames[r] for r in kclust[2]])
+print("4th centroid ",[blognames[r] for r in kclust[3]])
+'''
 # MD5 messages
 coords=cluster.scaledown(data)
 cluster.draw2d(coords,blognames,jpeg=path+"blogs2d.jpg")
-
+'''
 
 
