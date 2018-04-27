@@ -1,0 +1,20 @@
+
+
+Classifying "the banking dinner" as Spam
+		Spam	Not Spam
+Training		X
+Training Spam		X
+Testing			X
+Testing  Spam		X
+
+________________________________________
+
+Classifying "twitter" and "follow" as Spam
+
+		Spam	Not Spam
+Training		X
+Training Spam		X
+Testing			X
+Testing  Spam		X
+
+

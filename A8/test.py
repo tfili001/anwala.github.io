@@ -3,10 +3,10 @@ from subprocess import check_output
 
 cl = docclass.naivebayes(docclass.getwords)
 #remove previous db file
-check_output(['rm', 'TestingSpam1.db'])
+check_output(['rm', 'TrainingSpam.db'])
 
-cl.setdb('TestingSpam1.db')
+cl.setdb('TrainingSpam_out.db')
 docclass.spamTrain(cl)
 
 #classify text: "the banking dinner" as spam or not spam
-print( cl.classify('the banking dinner') )
+print( cl.classify('twitter') )

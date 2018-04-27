@@ -208,6 +208,7 @@ def sampletrain(cl):
 
 def spamTrain(cl):
   cl.train('the the', 'not spam')
+  cl.train('twitter', 'follow')
   cl.train('cheap cheap cheap banking the', 'spam')
   cl.train('the', 'not spam')
   cl.train('cheap cheap banking banking banking the the', 'spam')
